@@ -39,9 +39,7 @@ export async function PartySelector(selectorEl)
 		party.forEach((p, i) => { selectorEl.options.add(new Option(p.name.official, (i + 1), false, false)) });
 	}
 
-	selectorEl.addEventListener('click', (e) => {
-		setupSelector(parties)
-	});
+    setupSelector(parties)
 
 	selectorEl.addEventListener('change', (e) => {
 		if (selectorEl.value === "0") {

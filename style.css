@@ -15,12 +15,12 @@
     justify-content: center;
 }
 
-.modal .container {
+/*.modal .container {
     display: flex;
     flex-flow: column;
     background-color: #ffffff;
     box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.03);
-}
+}*/
 
 .modal .container.zoom {
     transform: scale(0.5);
@@ -75,33 +75,12 @@
     width: 100%;
 }
 
-.modal .container .footer {
+/*.modal .container .footer {
     border-top: 1px solid #e6e9ec;
     background-color: #f9fafc;
     padding: 15px;
     display: flex;
-}
-
-.modal .container .footer button {
-    display: inline-flex;
-    appearance: none;
-    border: none;
-    background-color: #3a75d5;
-    color: #ffffff;
-    border-radius: 4px;
-    padding: 7px 12px;
-    font-size: 14px;
-    margin-right: 7px;
-    cursor: pointer;
-}
-
-.modal .container .footer button:last-child {
-    margin-right: 0;
-}
-
-.modal .container .footer button:hover {
-    background-color: #326fd3;
-}
+}*/
 
 .modal .container .footer button.alt {
     font-weight: 500;
@@ -146,4 +125,10 @@
 .modal.open .container.slide {
     transform: translateY(0);
     transition: all 0.5s ease;
+}
+
+@layer components {
+    .modal .container .footer button {
+        @apply w-full py-3 text-sm text-center text-gray-500 transition duration-150 ease-linear bg-white border border-gray-200 rounded-lg hover:bg-gray-100
+    }
 }

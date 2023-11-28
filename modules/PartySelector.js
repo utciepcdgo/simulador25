@@ -1,7 +1,17 @@
 import axios from 'axios';
+import Modal from './Modal.js';
 
+
+/**
+ * @async
+ * @param selectorEl {HTMLSelectElement} - The selector element
+ */
 export async function PartySelector(selectorEl)
 {
+	/**
+	 * @typedef {Object} parties
+	 * @type {Promise<axios.AxiosResponse<any>> | *}
+	 */
 	let data = axios({
 		method: 'get', url: 'https://restcountries.com/v3.1/region/americas?fields=name', responseType: 'json',
 	});
@@ -18,10 +28,24 @@ export async function PartySelector(selectorEl)
 	 * @param {Array<parties>} party - Array of party objects
 	 */
 	const setupSelector = (party) => {
-		// selectorEl.options.forEach((option) => { console.log(option) });
-		// party.forEach((party, index) => { selectorEl.options.add(new Option(party.name.common, index + " " + party.name.official)) });
-		party.forEach((party, index) => { console.log(party.name.common) });
+		// Clear the selector
+		//TODO: Verificar este método, no permite seleccionar una opción.
+		selectorEl.innerHTML = "";
+
+		// Add the default option
+		selectorEl.options.add(new Option("Seleccione un Partido Político", '0', false, false));
+
+		// Add the parties
+		party.forEach((p, i) => { selectorEl.options.add(new Option(p.name.official, (i + 1), false, false)) });
 	}
 
-	selectorEl.addEventListener('click', () => { setupSelector(parties) });
+	selectorEl.addEventListener('click', (e) => {
+		setupSelector(parties)
+	});
+
+	selectorEl.addEventListener('change', (e) => {
+		if (selectorEl.value === "0") {
+			Modal.alert('Seleccione una opción válida.')
+		}
+	})
 }

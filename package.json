@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@tabler/icons": "^2.42.0",
-    "axios": "^1.6.2"
+    "axios": "^1.6.2",
+    "flowbite": "^2.2.0"
   }
 }

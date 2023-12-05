@@ -1,6 +1,6 @@
 import axios from 'axios';
-import Modal from './Modal.js';
-
+import Modal from '../components/Modal.js';
+import {chunkArray, getArrayFromObject} from '../functions';
 
 /**
  * @async
@@ -46,4 +46,11 @@ export async function PartySelector(selectorEl)
 			Modal.alert('Seleccione una opción válida.')
 		}
 	})
+
+	chunkArray(parties, 3).forEach((chunk) => {
+		console.log(chunk);
+	})
+
+	console.log("GetArr: ", getArrayFromObject(parties));
+
 }

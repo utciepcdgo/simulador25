@@ -132,3 +132,83 @@
         @apply w-full py-3 text-sm text-center text-gray-500 transition duration-150 ease-linear bg-white border border-gray-200 rounded-lg hover:bg-gray-100
     }
 }
+
+/* Main styles */
+.sliding-background {
+    @apply absolute top-0 bottom-0 left-0 right-0;
+    background: url("./public/_g5__collage.png") repeat;
+    backdrop-filter: blur(0.9);
+    opacity: 0.3;
+    -webkit-animation: bg-scrolling-reverse 5s infinite;
+    -moz-animation: bg-scrolling-reverse 5s infinite;
+    -o-animation: bg-scrolling-reverse 5s infinite;
+    animation: bg-scrolling-reverse 5s infinite;
+    -webkit-animation-timing-function: linear;
+    -moz-animation-timing-function: linear;
+    -o-animation-timing-function: linear;
+    animation-timing-function: linear;
+}
+
+._g4__button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
+    background-size: 50% 100%;
+}
+._g4__button::before {
+  animation: SidebarCreate-module_rainbowSlide-feOE0 .75s linear infinite;
+}
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 119px 91px;
+    }
+}
+
+@-moz-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 119px 91px;
+    }
+}
+
+@-o-keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 119px 91px;
+    }
+}
+
+@keyframes bg-scrolling-reverse {
+    100% {
+        background-position: 119px 91px;
+    }
+}
+
+@-webkit-keyframes bg-scrolling {
+    0% {
+        background-position: 119px 91px;
+    }
+}
+
+@-moz-keyframes bg-scrolling {
+    0% {
+        background-position: 119px 91px;
+    }
+}
+
+@-o-keyframes bg-scrolling {
+    0% {
+        background-position: 119px 91px;
+    }
+}
+
+@keyframes bg-scrolling {
+    0% {
+        background-position: 119px 91px;
+    }
+}
+

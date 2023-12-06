@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Modal from '../components/Modal.js';
-import Blocks from '../public/data/_blocks.json';
-import {chunkArray, getArrayFromObject} from '../functions';
+import Parties from '../public/data/_parties.json';
 
 /**
  * @async
@@ -24,8 +23,8 @@ export async function PartySelector(selectorEl)
 
 	let p = [];
 
-	for (let party of Blocks) {
-		p.push(party.party.name)
+	for (let party of Parties) {
+		p.push(party.name)
 	}
 
 	/**
@@ -50,24 +49,6 @@ export async function PartySelector(selectorEl)
 		if (selectorEl.value === "0") {
 			Modal.alert('Seleccione una opción válida.')
 			return;
-		}
-
-		// chunkArray(parties, 3).forEach((chunk) => {
-		// 	console.log(chunk);
-		// })
-
-		for (let party of Blocks) {
-			if (party.id === selectorEl.value) {
-				console.warn("Party: ", party.party.name)
-				for (let block of party.blocks) {
-					for (let key in block) {
-						for (let district of block[key].districts) {
-							console.log("District: ", district.district_capital);
-						}
-					}
-
-				}
-			}
 		}
 	})
 }

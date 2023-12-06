@@ -1,27 +1,27 @@
 [
   {
     "id": "1",
-    "party_name": "PAN-PRI-PRD",
+    "name": "Fuerza y Corazón por Durango",
     "logo": "https://"
   },
   {
     "id":  "2",
-    "party_name": "PVEM-MORENA",
+    "name": "Sigamos Haciendo Historia en Durango",
     "logo": "https://"
   },
   {
     "id":  "3",
-    "party_name": "PT",
+    "name": "Partido del Trabajo",
     "logo": "https://"
   },
   {
     "id":  "4",
-    "party_name": "PVEM",
+    "name": "Partido Verde Ecologista de México",
     "logo": "https://"
   },
   {
     "id":  "5",
-    "party_name": "MORENA",
+    "name": "MORENA",
     "logo": "https://"
   }
 ]

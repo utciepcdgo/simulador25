@@ -17,3 +17,13 @@ export function getArrayFromObject(object: any): any[] {
 
     return array;
 }
+
+export function prependHTML(html: string, element: HTMLElement, HTMLTagType: string, DeleteFirstChild: boolean = false): void {
+    const el = document.createElement(HTMLTagType);
+    el.innerHTML = html;
+    element.insertBefore(el.firstChild, element.firstChild);
+
+    if (DeleteFirstChild) {
+        element.removeChild(element.childNodes[0]);
+    }
+}

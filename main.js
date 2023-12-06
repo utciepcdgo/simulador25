@@ -1,5 +1,7 @@
 import './style.css'
 import {PartySelector} from './modules/PartySelector.js';
+import Blocks from './public/data/_blocks.json';
+import {prependHTML} from "./functions";
 
 document.querySelector('#app').innerHTML = `
 	<div class="dark:text-white">
@@ -11,7 +13,7 @@ document.querySelector('#app').innerHTML = `
                         <option value="0">Seleccione un Partido Político</option>
                     </select>
                 </div>
-                <div class="col-span-2 flex-row space-y-10">                  
+                <div class="col-span-2 flex-row space-y-10 _sim__spacing">            
                     <div class="bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md" data-block="1" data-blocktype="electoral_block">
                         <h1 class="text-2xl font-sans font-semibold">Bloque 1</h1>
                         <h3 class="mb-5 text-lg font-medium text-gray-900 dark:text-white">How much do you expect to use each month?</h3>
@@ -90,5 +92,36 @@ document.querySelector('#app').innerHTML = `
 		</div>
 	</div>
 `
+
+// document.querySelector('div._sim__spacing').prepend("<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Ya seleccionó uno :D.</p>")
+
 let partySelectorEl = document.querySelector('#parties');
 PartySelector(partySelectorEl)
+
+prependHTML("<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Seleccione un Partido Político.</p>", document.querySelector('div._sim__spacing'), 'div')
+
+console.log(document.querySelector('div._sim__spacing').childNodes[0])
+
+partySelectorEl.addEventListener('change', (e) => {
+
+    prependHTML("<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Ya seleccionó uno :D.</p>", document.querySelector('div._sim__spacing'), 'div', true)
+
+    // content = "<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Ya seleccionó uno :D.</p>";
+
+    for (let party of Blocks) {
+        if (party.id === e.target.value) {
+            console.warn("Party: ", party.party.name)
+            for (let block of party.blocks) {
+                for (let key in block) {
+                    // Prints the block number
+                    console.log("Bloque: ", key);
+                    for (let district of block[key].districts) {
+                        // Prints the district capital inside n block
+                        console.log("District: ", district.district_capital);
+                    }
+                }
+
+            }
+        }
+    }
+})

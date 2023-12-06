@@ -1,7 +1,10 @@
 [
   {
     "id": "1",
-    "party": "PAN-PRI-PRD",
+    "party": {
+      "name": "Fuerza y Corazón por Durango",
+      "acronym": "FyCxDGO"
+    },
     "blocks": [
       {
         "1": {
@@ -130,7 +133,10 @@
   },
   {
     "id": "2",
-    "party": "PVEM-MORENA",
+    "party": {
+      "name": "Sigamos Haciendo Historia en Durango",
+      "acronym": "SHHDGO"
+    },
     "blocks": [
       {
         "1": {
@@ -209,6 +215,75 @@
               "votes_percentage": 25.36,
               "votes_textual": "Veinticinco punto treinta y seis",
               "district_capital": "Durango"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "party": {
+      "name": "Partido Verde Ecologista de México",
+      "acronym": "PVEM"
+    },
+    "blocks": [
+      {
+        "1": {
+          "districts": [
+            {
+              "district_decimal": "1",
+              "district_roman": "I",
+              "votes_percentage": 1.74,
+              "votes_textual": "Sesenta y tres punto cero uno",
+              "district_capital": "Gómez Palacio"
+            },
+            {
+              "district_decimal": "12",
+              "district_roman": "XII",
+              "votes_percentage": 55.30,
+              "votes_textual": "Cincuenta y cinco punto treinta",
+              "district_capital": "Gómez Palacio"
+            }
+          ]
+        }
+      },
+      {
+        "2": {
+          "districts": [
+            {
+              "district_decimal": "11",
+              "district_roman": "XI",
+              "votes_percentage": 51.05,
+              "votes_textual": "Cincuenta y uno punto cero cinco",
+              "district_capital": "Gómez Palacio"
+            },
+            {
+              "district_decimal": "13",
+              "district_roman": "XIII",
+              "votes_percentage": 44.11,
+              "votes_textual": "Cuarenta y cuatro punto once",
+              "district_capital": "Lerdo"
+            }
+          ]
+        }
+      },
+      {
+        "3": {
+          "districts": [
+            {
+              "district_decimal": "8",
+              "district_roman": "VIII",
+              "votes_percentage": 40.67,
+              "votes_textual": "Cuarenta y cero punto sesenta y siete",
+              "district_capital": "Guadalupe Victoria"
+            },
+            {
+              "district_decimal": "7",
+              "district_roman": "VII",
+              "votes_percentage": 38.76,
+              "votes_textual": "Treinta y ocho punto setenta y seis",
+              "district_capital": "Santiago Papasquiaro"
             }
           ]
         }

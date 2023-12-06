@@ -1,0 +1,27 @@
+[
+  {
+    "id": "1",
+    "party_name": "PAN-PRI-PRD",
+    "logo": "https://"
+  },
+  {
+    "id":  "2",
+    "party_name": "PVEM-MORENA",
+    "logo": "https://"
+  },
+  {
+    "id":  "3",
+    "party_name": "PT",
+    "logo": "https://"
+  },
+  {
+    "id":  "4",
+    "party_name": "PVEM",
+    "logo": "https://"
+  },
+  {
+    "id":  "5",
+    "party_name": "MORENA",
+    "logo": "https://"
+  }
+]

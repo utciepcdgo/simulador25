@@ -138,29 +138,15 @@
     @apply absolute top-0 bottom-0 left-0 right-0;
     background: url("./public/_g5__collage.png") repeat;
     backdrop-filter: blur(0.9);
-    opacity: 0.3;
-    -webkit-animation: bg-scrolling-reverse 5s infinite;
-    -moz-animation: bg-scrolling-reverse 5s infinite;
-    -o-animation: bg-scrolling-reverse 5s infinite;
-    animation: bg-scrolling-reverse 5s infinite;
-    -webkit-animation-timing-function: linear;
-    -moz-animation-timing-function: linear;
-    -o-animation-timing-function: linear;
-    animation-timing-function: linear;
-}
-
-._g4__button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 100%;
-    background: linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b);
-    background-size: 50% 100%;
-}
-._g4__button::before {
-  animation: SidebarCreate-module_rainbowSlide-feOE0 .75s linear infinite;
+    opacity: 0.1;
+    -webkit-animation: bg-scrolling-reverse 8s infinite;
+    -moz-animation: bg-scrolling-reverse 8s infinite;
+    -o-animation: bg-scrolling-reverse 8s infinite;
+    animation: bg-scrolling-reverse 8s infinite;
+    -webkit-animation-timing-function: ease-in;
+    -moz-animation-timing-function: ease-in;
+    -o-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
 }
 
 /* Animations */

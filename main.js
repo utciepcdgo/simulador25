@@ -37,10 +37,10 @@ let partySelectorEl = document.querySelector('#parties');
 PartySelector(partySelectorEl)
 
 document.addEventListener('DOMContentLoaded', () => {
-	prependHTML("<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Seleccione un Partido Político.</p>", document.querySelector('div._sim__spacing'), 'div')
+    prependHTML("<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Seleccione un Partido Político.</p>", document.querySelector('div._sim__spacing'), 'div')
 
 
-	let _e__blocks = document.querySelector('._e__blocks');
+    let _e__blocks = document.querySelector('._e__blocks');
 
 // Blocks.forEach(party => {
 // 	party.blocks.forEach(block => {
@@ -59,28 +59,28 @@ document.addEventListener('DOMContentLoaded', () => {
 // console.log(Blocks);
 
 
-	partySelectorEl.addEventListener('change', (e) => {
+    partySelectorEl.addEventListener('change', (e) => {
 
-		// prependHTML("<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Ya seleccionó uno :D.</p>", document.querySelector('div._sim__spacing'), 'div', true)
+        // prependHTML("<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Ya seleccionó uno :D.</p>", document.querySelector('div._sim__spacing'), 'div', true)
 
-		// content = "<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Ya seleccionó uno :D.</p>";
+        // content = "<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Ya seleccionó uno :D.</p>";
 
-		_e__blocks.innerHTML = "";
+        _e__blocks.innerHTML = "";
 
-		for (let party of Blocks) {
-			if (party.id === e.target.value) {
-				console.warn("Party: ", party.party.name)
-				for (let block of party.blocks) {
-					for (let key in block) {
-						// Prints the block number
-						console.log("Bloque: ", key);
-						_e__blocks.innerHTML += `
+        for (let party of Blocks) {
+            if (party.id === e.target.value) {
+                console.warn("Party: ", party.party.name)
+                for (let block of party.blocks) {
+                    for (let key in block) {
+                        // Prints the block number
+                        console.log("Bloque: ", key);
+                        _e__blocks.innerHTML += `
 						<div class="bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md" data-block="1" data-blocktype="electoral_block">
     						<h1 class="text-2xl font-sans font-semibold">Bloque ` + key + `</h1>
 							<div id="accordion-collapse" data-accordion="collapse">`
-						for (let district of block[key].districts) {
-							// Prints the district capital inside n block
-							_e__blocks.innerHTML += `
+                        for (let district of block[key].districts) {
+                            // Prints the district capital inside n block
+                            _e__blocks.innerHTML += `
 								<h2 id="accordion-collapse-heading-` + district.uuid + `" class="mb-2.5">
 									<button type="button"
 											class="flex items-center justify-between w-full bg-white dark:bg-gray-900 p-3 rounded dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 shadow-2xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border border-gray-200 dark:border-gray-700"
@@ -153,15 +153,15 @@ document.addEventListener('DOMContentLoaded', () => {
 										</ul>
 									</div>
 								</div>`
-						}
-						_e__blocks.innerHTML += `
+                        }
+                        _e__blocks.innerHTML += `
 							</div>
 						</div>`
-					}
+                    }
 
-				}
-			}
-		}
-	})
+                }
+            }
+        }
+    })
 });
 

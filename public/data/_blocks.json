@@ -14,35 +14,40 @@
               "district_roman": "IV",
               "votes_percentage": 54.85,
               "votes_textual": "Cincuenta y cuatro punto ochenta y cinco",
-              "district_capital": "Durango"
+              "district_capital": "Durango",
+              "uuid": "e7808984"
             },
             {
               "district_decimal": "7",
               "district_roman": "VII",
               "votes_percentage": 54.16,
               "votes_textual": "Cincuenta y cuatro punto dieciséis",
-              "district_capital": "Santiago Papasquiaro"
+              "district_capital": "Santiago Papasquiaro",
+              "uuid": "e05aa206"
             },
             {
               "district_decimal": "6",
               "district_roman": "VI",
               "votes_percentage": 53.36,
               "votes_textual": "Cincuenta y tres punto treinta y seis",
-              "district_capital": "Durango"
+              "district_capital": "Durango",
+              "uuid": "90704dcd"
             },
             {
               "district_decimal": "1",
               "district_roman": "I",
               "votes_percentage": 51.28,
               "votes_textual": "Cincuenta y uno punto veintiocho",
-              "district_capital": "Durango"
+              "district_capital": "Durango",
+              "uuid": "c6099fb4"
             },
             {
               "district_decimal": "5",
               "district_roman": "V",
               "votes_percentage": 49.51,
               "votes_textual": "Cuarenta y nueve punto cincuenta y uno",
-              "district_capital": "Durango"
+              "district_capital": "Durango",
+              "uuid": "0dcafed2"
             }
           ]
         }
@@ -55,35 +60,40 @@
               "district_roman": "VIII",
               "votes_percentage": 46.35,
               "votes_textual": "Cuarenta y seis punto treinta y cinco",
-              "district_capital": "Guadalupe Victoria"
+              "district_capital": "Guadalupe Victoria",
+              "uuid": "2054eb3f"
             },
             {
               "district_decimal": "15",
               "district_roman": "XV",
               "votes_percentage": 45.74,
               "votes_textual": "Cuarenta y cinco punto setenta y cuatro",
-              "district_capital": "Pueblo Nuevo"
+              "district_capital": "Pueblo Nuevo",
+              "uuid": "b320500b"
             },
             {
               "district_decimal": "3",
               "district_roman": "III",
               "votes_percentage": 45.61,
               "votes_textual": "Cuarenta y cinco punto sesenta y uno",
-              "district_capital": "Durango"
+              "district_capital": "Durango",
+              "uuid": "8fe6fe8f"
             },
             {
               "district_decimal": "13",
               "district_roman": "XIII",
               "votes_percentage": 45.07,
               "votes_textual": "Cuarenta y cinco punto cero siete",
-              "district_capital": "Lerdo"
+              "district_capital": "Lerdo",
+              "uuid": "297951c6"
             },
             {
               "district_decimal": "9",
               "district_roman": "IX",
               "votes_percentage": 43.04,
               "votes_textual": "Cuarenta y tres punto cero cuatro",
-              "district_capital": "Mapimí"
+              "district_capital": "Mapimí",
+              "uuid": "9a431f04"
             }
           ]
         }
@@ -96,35 +106,40 @@
               "district_roman": "XI",
               "votes_percentage": 39.96,
               "votes_textual": "Treinta y nueve punto noventa y seis",
-              "district_capital": "Gómez Palacio"
+              "district_capital": "Gómez Palacio",
+              "uuid": "34133653"
             },
             {
               "district_decimal": "2",
               "district_roman": "II",
               "votes_percentage": 38.67,
               "votes_textual": "Treinta y ocho punto sesenta y siete",
-              "district_capital": "Durango"
+              "district_capital": "Durango",
+              "uuid": "67f83f71"
             },
             {
               "district_decimal": "12",
               "district_roman": "XII",
               "votes_percentage": 43.04,
               "votes_textual": "Cuarenta y tres punto cero cuatro",
-              "district_capital": "Gómez Palacio"
+              "district_capital": "Gómez Palacio",
+              "uuid": "9a84b3a5"
             },
             {
               "district_decimal": "14",
               "district_roman": "XIV",
               "votes_percentage": 36.45,
               "votes_textual": "Treinta y seis punto cuarenta y cinco",
-              "district_capital": "Cuencamé"
+              "district_capital": "Cuencamé",
+              "uuid": "fbcd7983"
             },
             {
               "district_decimal": "10",
               "district_roman": "X",
               "votes_percentage": 30.64,
               "votes_textual": "Treinta y cero punto sesenta y cuatro",
-              "district_capital": "Gómez Palacio"
+              "district_capital": "Gómez Palacio",
+              "uuid": "d62a965d"
             }
           ]
         }
@@ -146,21 +161,24 @@
               "district_roman": "X",
               "votes_percentage": 63.01,
               "votes_textual": "Sesenta y tres punto cero uno",
-              "district_capital": "Gómez Palacio"
+              "district_capital": "Gómez Palacio",
+              "uuid": "54bf6e91"
             },
             {
               "district_decimal": "12",
               "district_roman": "XII",
-              "votes_percentage": 55.30,
+              "votes_percentage": 55.3,
               "votes_textual": "Cincuenta y cinco punto treinta",
-              "district_capital": "Gómez Palacio"
+              "district_capital": "Gómez Palacio",
+              "uuid": "0b995907"
             },
             {
               "district_decimal": "14",
               "district_roman": "XIV",
               "votes_percentage": 51.34,
               "votes_textual": "Cincuenta y uno punto treinta y cuatro",
-              "district_capital": "Cuencamé"
+              "district_capital": "Cuencamé",
+              "uuid": "9373a89c"
             }
           ]
         }
@@ -173,21 +191,24 @@
               "district_roman": "XI",
               "votes_percentage": 51.05,
               "votes_textual": "Cincuenta y uno punto cero cinco",
-              "district_capital": "Gómez Palacio"
+              "district_capital": "Gómez Palacio",
+              "uuid": "b16f870d"
             },
             {
               "district_decimal": "13",
               "district_roman": "XIII",
               "votes_percentage": 44.11,
               "votes_textual": "Cuarenta y cuatro punto once",
-              "district_capital": "Lerdo"
+              "district_capital": "Lerdo",
+              "uuid": "14ae5fa7"
             },
             {
               "district_decimal": "9",
               "district_roman": "IX",
               "votes_percentage": 43.88,
               "votes_textual": "Cuarenta y tres punto ochenta y ocho",
-              "district_capital": "Mapimí"
+              "district_capital": "Mapimí",
+              "uuid": "63e7529e"
             }
           ]
         }
@@ -200,21 +221,24 @@
               "district_roman": "VIII",
               "votes_percentage": 40.67,
               "votes_textual": "Cuarenta y cero punto sesenta y siete",
-              "district_capital": "Guadalupe Victoria"
+              "district_capital": "Guadalupe Victoria",
+              "uuid": "26638006"
             },
             {
               "district_decimal": "7",
               "district_roman": "VII",
               "votes_percentage": 38.76,
               "votes_textual": "Treinta y ocho punto setenta y seis",
-              "district_capital": "Santiago Papasquiaro"
+              "district_capital": "Santiago Papasquiaro",
+              "uuid": "f0a23637"
             },
             {
               "district_decimal": "2",
               "district_roman": "II",
               "votes_percentage": 25.36,
               "votes_textual": "Veinticinco punto treinta y seis",
-              "district_capital": "Durango"
+              "district_capital": "Durango",
+              "uuid": "c51fed5a"
             }
           ]
         }
@@ -236,14 +260,16 @@
               "district_roman": "I",
               "votes_percentage": 1.74,
               "votes_textual": "Sesenta y tres punto cero uno",
-              "district_capital": "Gómez Palacio"
+              "district_capital": "Gómez Palacio",
+              "uuid": "a07d9078"
             },
             {
               "district_decimal": "12",
               "district_roman": "XII",
-              "votes_percentage": 55.30,
+              "votes_percentage": 55.3,
               "votes_textual": "Cincuenta y cinco punto treinta",
-              "district_capital": "Gómez Palacio"
+              "district_capital": "Gómez Palacio",
+              "uuid": "151818db"
             }
           ]
         }
@@ -256,14 +282,16 @@
               "district_roman": "XI",
               "votes_percentage": 51.05,
               "votes_textual": "Cincuenta y uno punto cero cinco",
-              "district_capital": "Gómez Palacio"
+              "district_capital": "Gómez Palacio",
+              "uuid": "8e72c3fa"
             },
             {
               "district_decimal": "13",
               "district_roman": "XIII",
               "votes_percentage": 44.11,
               "votes_textual": "Cuarenta y cuatro punto once",
-              "district_capital": "Lerdo"
+              "district_capital": "Lerdo",
+              "uuid": "7a55cb51"
             }
           ]
         }
@@ -276,14 +304,16 @@
               "district_roman": "VIII",
               "votes_percentage": 40.67,
               "votes_textual": "Cuarenta y cero punto sesenta y siete",
-              "district_capital": "Guadalupe Victoria"
+              "district_capital": "Guadalupe Victoria",
+              "uuid": "b0b01ec4"
             },
             {
               "district_decimal": "7",
               "district_roman": "VII",
               "votes_percentage": 38.76,
               "votes_textual": "Treinta y ocho punto setenta y seis",
-              "district_capital": "Santiago Papasquiaro"
+              "district_capital": "Santiago Papasquiaro",
+              "uuid": "f6d19685"
             }
           ]
         }

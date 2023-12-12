@@ -6,7 +6,7 @@ import _ from 'lodash';
 
 document.querySelector('#app').innerHTML = `
 	<div class="dark:text-white">
-		<div class="container mx-auto">
+		<div class="mx-auto">
             <div class="grid w-full gap-6 md:grid-cols-3 grid-flow-row-dense auto-cols-max hover:auto-cols-min">
                 <div>
                     <label for="parties" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Seleccione un Partido Político</label>
@@ -16,7 +16,7 @@ document.querySelector('#app').innerHTML = `
                     
                     
 					<h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Reglas:</h2>
-					<ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400">
+					<ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400 sticky top-0">
 						<li class="flex items-center">
 							<svg class="w-3.5 h-3.5 me-2 flex-shrink-0 _c__one" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
 								<path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 		// Comparing
 		Object.keys(p).forEach(key => {
-			((p[key][0].checked && p[key][1].checked)) ? _c__one.classList.add('text-green-400') : _c__one.classList.add('text-gray-400')
+			((p[key][0].checked && p[key][1].checked)) ? _c__one.classList.replace('text-gray-400', 'text-green-400') : _c__one.classList.replace('text-green-400', 'text-gray-400')
 		})
 
 		// Últimos bloques de mujeres

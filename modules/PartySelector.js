@@ -37,7 +37,7 @@ export async function PartySelector(selectorEl)
 		selectorEl.innerHTML = "";
 
 		// Add the default option
-		selectorEl.options.add(new Option("Seleccione un Partido Político", '0', false, false));
+		selectorEl.options.add(new Option("Seleccione un Partido Político o Coalición", '0', false, false));
 
 		// Add the parties
 		party.forEach((p, i) => { selectorEl.options.add(new Option(p, (i + 1), false, false)) });

@@ -198,3 +198,5 @@
     }
 }
 
+.some-sticky-element .js-is-sticky { background-color: red; }
+.some-sticky-element .js-is-stuck { background-color: green; }

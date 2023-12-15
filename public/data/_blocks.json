@@ -1,6 +1,7 @@
 [
   {
     "id": "1",
+    "number_districts": "15",
     "party": {
       "name": "Fuerza y Corazón por Durango",
       "acronym": "FyCxDGO"
@@ -148,6 +149,7 @@
   },
   {
     "id": "2",
+    "number_districts": "9",
     "party": {
       "name": "Sigamos Haciendo Historia en Durango",
       "acronym": "SHHDGO"

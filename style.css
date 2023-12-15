@@ -197,6 +197,9 @@
         background-position: 119px 91px;
     }
 }
-
-.some-sticky-element .js-is-sticky { background-color: red; }
-.some-sticky-element .js-is-stuck { background-color: green; }
+div._e__fixed {
+    transition: all 0.5s ease 0s;
+}
+div.nav--fixed {
+    @apply sticky top-0 z-50 shadow-lg rounded top-[8em] p-4;
+}

@@ -155,7 +155,25 @@ document.addEventListener('DOMContentLoaded', () => {
     partySelectorEl.addEventListener('change', (e) => {
 
         stickybitsInstancetoBeUpdated.update();
-        console.log(stickybitsInstancetoBeUpdated)
+        const _c__districts = {
+            header: {
+                name: "Distrito",
+                decimal: "Decimal",
+                roman: "Romano",
+            },
+            candidates: {
+                p: {
+                    sex: "Sexo",
+                    option: "Ninguna",
+                },
+                s: {
+                    sex: "Sexo",
+                    option: "Ninguna",
+                },
+            }
+        }
+        let _c__districts_list = [];
+
         _e__blocks.innerHTML = "";
         let _HTML__content = '';
 
@@ -170,16 +188,16 @@ document.addEventListener('DOMContentLoaded', () => {
                             + '<div id="accordion-collapse" data-accordion="collapse">'
                         for (const [index, district] of block[key].districts.entries()) {
                             // Prints the district capital inside n block
-                            _HTML__content += '<form id="_e__blocks_form"><h2 id="accordion-collapse-heading-' + district.uuid + '" class="mb-2.5">'
+                            _HTML__content +='<div class="bg-gray-100 dark:bg-gray-900 mb-5 p-5">'
+                                + '     <h2 class="mb-2.5">'
                                 + '       <button type="button" class="flex items-center justify-between w-full bg-white dark:bg-gray-900 p-3 rounded dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 shadow-2xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border border-gray-200 dark:border-gray-700" data-accordion-target="#accordion-collapse-body-' + district.uuid + '" aria-expanded="true" aria-controls="accordion-collapse-body-' + district.uuid + '">'
                                 + '           <span class="font-bold">' + district.district_roman + '. ' + district.district_capital + '</span>'
                                 + '           <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">'
                                 + '               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>'
                                 + '           </svg>'
                                 + '       </button>'
-                                + '    </h2>'
-                                + '    <div id="accordion-collapse-body-' + district.uuid + '" class="" aria-labelledby="accordion-collapse-heading-' + district.uuid + '">'
-                                + '        <div class="p-5 bg-gray-100 dark:bg-gray-900 rounded flex space-x-5">'
+                                + '     </h2>'
+                                + '        <div class="p-5 rounded flex space-x-5">'
                                 + '			  <h1 class="font-sans font-semibold py-3">Propietario</h1>'
                                 + '            <ul class="grid w-full gap-6 md:grid-cols-3">'
                                 + '                <li>'
@@ -357,7 +375,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         _HTML__content += '' +
                             '</div>' +
-                            '</div></form>'
+                            '</div>'
                     }
 
                 }
@@ -516,11 +534,13 @@ document.addEventListener('DOMContentLoaded', () => {
 			if (_e__female_formula[e].length > 1) {
 				if (_e__female_formula[e][0].value === "female" && _e__female_formula[e][1].value !== "female") {
 					Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
-					console.log(_e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position)
-					console.log(document.querySelector('label[for="'+ _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position +'"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600'))
+					document.querySelector('label[for="'+ _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position +'"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
 				}
 			}
 		})
+
+        let _c__selected = document.querySelectorAll('input[type="radio"]:checked');
+        console.log("_c__selected: ", _c__selected)
 
     })
 });

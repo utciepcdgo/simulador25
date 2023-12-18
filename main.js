@@ -1,6 +1,7 @@
 import './style.css'
 import {valueOf} from 'lodash/seq.js';
 import {PartySelector} from './modules/PartySelector.js';
+import Modal from './components/Modal.js';
 // import {v4 as uuidv4} from 'uuid';
 import Blocks from './public/data/_blocks.json';
 import stickybits from 'stickybits'
@@ -169,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             + '<div id="accordion-collapse" data-accordion="collapse">'
                         for (const [index, district] of block[key].districts.entries()) {
                             // Prints the district capital inside n block
-                            _HTML__content += '<h2 id="accordion-collapse-heading-' + district.uuid + '" class="mb-2.5">'
+                            _HTML__content += '<form id="_e__blocks_form"><h2 id="accordion-collapse-heading-' + district.uuid + '" class="mb-2.5">'
                                 + '       <button type="button" class="flex items-center justify-between w-full bg-white dark:bg-gray-900 p-3 rounded dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 shadow-2xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border border-gray-200 dark:border-gray-700" data-accordion-target="#accordion-collapse-body-' + district.uuid + '" aria-expanded="true" aria-controls="accordion-collapse-body-' + district.uuid + '">'
                                 + '           <span class="font-bold">' + district.district_roman + '. ' + district.district_capital + '</span>'
                                 + '           <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">'
@@ -199,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '                    </label>'
                                 + '                </li>'
                                 + '                <li>'
-                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-p" name="' + district.uuid + '-p" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="male" class="hidden peer" required>'
+                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-p" name="' + district.uuid + '-p" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="genderqueer" class="hidden peer" required>'
                                 + '                   <label for="genderqueer-' + district.uuid + '-p" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                 + '                        <div class="block">'
                                 + '                            <div class="w-full text-lg font-semibold">No Binario</div>'
@@ -285,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '                    </label>'
                                 + '                </li>'
                                 + '                <li>'
-                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="male" class="hidden peer" required>'
+                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="genderqueer" class="hidden peer" required>'
                                 + '                   <label for="genderqueer-' + district.uuid + '-s" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                 + '                        <div class="block">'
                                 + '                            <div class="w-full text-lg font-semibold">No Binario</div>'
@@ -356,7 +357,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         }
                         _HTML__content += '' +
                             '</div>' +
-                            '</div>'
+                            '</div></form>'
                     }
 
                 }
@@ -458,6 +459,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /**
          * INTEGRACIÓN PARITARIA DE CADA BLOQUE
+         * @TODO: Falta verificar la información para obtener el género de la primera candidatura en RP.
          * */
 
         let _e__male_by_block = _.groupBy(_.orderBy(Array.from(document.querySelectorAll('input[value="male"]')), function (e) {
@@ -506,12 +508,19 @@ document.addEventListener('DOMContentLoaded', () => {
         /**
          * PARIDAD DE MUJERES
          * */
-        let _e__female_formula = _.groupBy(Array.from(document.querySelectorAll('input[value="female"]')).filter(f => f.checked), function (e) {
+        let _e__female_formula = _.groupBy(Array.from(document.querySelectorAll('input[type="radio"]')).filter(f => f.checked), function (e) {
             return e.dataset.uuid
         })
 
-        console.info("_e__female_formula: ", _e__female_formula);
-
+		Object.keys(_e__female_formula).forEach((e) => {
+			if (_e__female_formula[e].length > 1) {
+				if (_e__female_formula[e][0].value === "female" && _e__female_formula[e][1].value !== "female") {
+					Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
+					console.log(_e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position)
+					console.log(document.querySelector('label[for="'+ _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position +'"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600'))
+				}
+			}
+		})
 
     })
 });

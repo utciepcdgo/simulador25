@@ -11,7 +11,7 @@ import _ from 'lodash';
 document.querySelector('#app').innerHTML = `
 	<div class="dark:text-white">
 		<div class="mx-auto">
-            <div class="grid w-full gap-6 md:grid-cols-6 grid-flow-row-dense auto-cols-max hover:auto-cols-min">
+            <div class="grid w-full gap-6 md:grid-cols-6 grid-flow-row-dense auto-cols-max">
                 <div data-sticky-container class="relative h-full">
                     <label for="parties" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Seleccione un Partido Político  o Coalición</label>
                     <select name="parties" id="parties" class="mb-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ">
@@ -91,7 +91,7 @@ document.querySelector('#app').innerHTML = `
                         </div>
                     </div>
                 </div>
-                <div class="col-span-5 flex _sim__spacing">            
+                <div class="col-span-5 flex mx-auto _sim__spacing space-x-5">            
                     <div class="_e__blocks_mr"></div>
                     <div class="_e__blocks_rp">
                     </div>
@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             + '<div id="accordion-collapse" data-accordion="collapse">'
                         for (const [index, district] of block[key].districts.entries()) {
                             // Prints the district capital inside n block
-                            _HTML__content +='<div class="bg-gray-100 dark:bg-gray-900 mb-5 p-5">'
+                            _HTML__content += '<div class="bg-gray-100 dark:bg-gray-900 mb-5 p-5">'
                                 + '     <h2 class="mb-2.5">'
                                 + '       <button type="button" class="flex items-center justify-between w-full bg-white dark:bg-gray-900 p-3 rounded dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 shadow-2xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border border-gray-200 dark:border-gray-700" data-accordion-target="#accordion-collapse-body-' + district.uuid + '" aria-expanded="true" aria-controls="accordion-collapse-body-' + district.uuid + '">'
                                 + '           <span class="font-bold">' + district.district_roman + '. ' + district.district_capital + '</span>'
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '                        </svg>'
                                 + '                    </label>'
                                 + '                </li>' +
-                                                   '<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">';
+                                '<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">';
                             if (district.district_decimal !== "15") {
                                 _HTML__content += '<li class="flex items-center col-span-2">'
                                     + '                    <div class="flex items-center">'
@@ -339,7 +339,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '                        </svg>'
                                 + '                    </label>'
                                 + '                </li>' +
-                                                   '<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 w-full">'
+                                '<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 w-full">'
                             if (district.district_decimal !== "15") {
                                 _HTML__content += '<li class="flex items-center col-span-2">'
                                     + '                    <div class="flex items-center">'
@@ -388,19 +388,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         let _HTML__content_rp = '';
 
-        _HTML__content_rp += `<h1 class="font-sans font-semibold text-2xl py-3 mt-8">Representación Proporcional</h1>`
+        _HTML__content_rp += `<div class="bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md"><h1 class="font-sans font-semibold text-2xl py-3 my-4">Representación Proporcional</h1>`
         for (let i = 0; i < 10; i++) {
-             _HTML__content_rp += `
+            _HTML__content_rp += `
                 <div class="flex-col bg-gray-100 dark:bg-gray-900 mb-5 p-5 w-full">
-                    <h1 class="text-lg font-sans font-semibold">Fórmula `+ (i + 1) +`</h1>
+                    <h1 class="text-lg font-sans font-semibold">Fórmula ` + (i + 1) + `</h1>
                     <div class="flex">
                         <div class="p-5 bg-gray-100 dark:bg-gray-900 rounded flex space-x-5">
                             <span class="font-bold">Propietario</span>
                             <ul class="grid w-full gap-6 md:grid-cols-2">
                                 <li>
-                                    <input type="radio" id="female-`+ i +`-p-rp" name="`+ i +`-p-rp" value="female" class="hidden peer"
+                                    <input type="radio" id="female-` + i + `-p-rp" name="` + i + `-p-rp" value="female-rp" class="hidden peer"
                                            required>
-                                    <label for="female-`+ i +`-p-rp"
+                                    <label for="female-` + i + `-p-rp"
                                            class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
                                             <div class="w-full text-lg font-semibold">Mujer</div>
@@ -420,8 +420,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </label>
                                 </li>
                                 <li>
-                                    <input type="radio" id="genderqueer-`+ i +`-p-rp" name="`+ i +`-p-rp" value="genderqueer" class="hidden peer">
-                                    <label for="genderqueer-`+ i +`-p-rp"
+                                    <input type="radio" id="genderqueer-` + i + `-p-rp" name="` + i + `-p-rp" value="genderqueer-rp" class="hidden peer">
+                                    <label for="genderqueer-` + i + `-p-rp"
                                            class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
                                             <div class="w-full text-lg font-semibold">No binario</div>
@@ -436,8 +436,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </label>
                                 </li>
                                 <li>
-                                    <input type="radio" id="male-`+ i +`-p-rp" name="`+ i +`-p-rp" value="male" class="hidden peer">
-                                    <label for="male-`+ i +`-p-rp"
+                                    <input type="radio" id="male-` + i + `-p-rp" name="` + i + `-p-rp" value="male-rp" class="hidden peer">
+                                    <label for="male-` + i + `-p-rp"
                                            class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
                                             <div class="w-full text-lg font-semibold">Hombre</div>
@@ -456,9 +456,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </label>
                                 </li>
                                 <li class="col-span-2">
-                                    <input type="radio" id="g5-`+ i +`-p-rp" name="`+ i +`-p-rp" value="g5"
-                                           class="hidden peer">
-                                    <label for="g5-`+ i +`-p-rp"
+                                    <input type="radio" id="g5-` + i + `-p-rp" name="` + i + `-p-rp" value="g5-rp" class="hidden peer">
+                                    <label for="g5-` + i + `-p-rp"
                                            class="inline-flex overflow-hidden relative items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
                                             <div class="w-full text-lg font-semibold">Grupos Sociales en Desventaja</div>
@@ -472,9 +471,9 @@ document.addEventListener('DOMContentLoaded', () => {
                             <span class="font-bold mb-4">Suplente</span>
                             <ul class="grid w-full gap-6 md:grid-cols-2">
                                 <li>
-                                    <input type="radio" id="hosting-small" name="hosting" value="female" class="hidden peer"
+                                    <input type="radio" id="female-` + i + `-s-rp" name="` + i + `-s-rp" value="female-rp" class="hidden peer"
                                            required>
-                                    <label for="hosting-small"
+                                    <label for="female-` + i + `-s-rp"
                                            class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
                                             <div class="w-full text-lg font-semibold">Mujer</div>
@@ -494,8 +493,24 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </label>
                                 </li>
                                 <li>
-                                    <input type="radio" id="hosting-big" name="hosting" value="hosting-big" class="hidden peer">
-                                    <label for="hosting-big"
+                                    <input type="radio" id="genderqueer-` + i + `-s-rp" name="` + i + `-s-rp" value="genderqueer-rp" class="hidden peer">
+                                    <label for="genderqueer-` + i + `-s-rp"
+                                           class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                        <div class="block">
+                                            <div class="w-full text-lg font-semibold">No binario</div>
+                                        </div>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 11a5 5 0 1 1 0 10a5 5 0 0 1 0 -10z" />
+                                            <path d="M12 11v-8" />
+                                            <path d="M14.5 4.5l-5 3" />
+                                            <path d="M9.5 4.5l5 3" />
+                                        </svg>
+                                    </label>
+                                </li>
+                                <li>
+                                    <input type="radio" id="male-` + i + `-s-rp" name="` + i + `-s-rp" value="male-rp" class="hidden peer">
+                                    <label for="male-` + i + `-s-rp"
                                            class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
                                             <div class="w-full text-lg font-semibold">Hombre</div>
@@ -514,9 +529,8 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </label>
                                 </li>
                                 <li class="col-span-2">
-                                    <input type="radio" id="hosting-biggest" name="hosting" value="hosting-biggest"
-                                           class="hidden peer">
-                                    <label for="hosting-biggest"
+                                    <input type="radio" id="g5-` + i + `-s-rp" name="` + i + `-s-rp" value="g5-rp" class="hidden peer">
+                                    <label for="g5-` + i + `-s-rp"
                                            class="inline-flex overflow-hidden relative items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
                                             <div class="w-full text-lg font-semibold">Grupos sociales en desventaja</div>
@@ -530,6 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
              `;
         }
+        _HTML__content_rp += `</div>`
         _e__blocks_rp.innerHTML += _HTML__content_rp;
         _e__blocks.innerHTML += _HTML__content;
 
@@ -619,11 +634,46 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let _e__males = Array.from(document.querySelectorAll('input[value="male"]')).filter(j => j.checked),
             _e__females = Array.from(document.querySelectorAll('input[value="female"]')).filter(j => j.checked),
-            _e__nums_positions = (parseInt(Blocks[(partySelectorEl.value - 1)].number_districts) * 2);
+            _e__nums_positions = (parseInt(Blocks[(partySelectorEl.value - 1)].number_districts));
 
-        document.querySelector('._e__male_counter').innerHTML = _e__males.length + ' (' + _.round((_e__males.length / _e__nums_positions) * 100, 2) + '%)'
-        document.querySelector('._e__female_counter').innerHTML = _e__females.length + ' (' + _.round((_e__females.length / _e__nums_positions) * 100, 2) + '%)'
+        console.error("_e__nums_positions: ", _e__nums_positions)
 
+        /**
+         * CONTEO DE FÓRMULAS.
+         * HOMBRES
+         * */
+        let _e__males_checked = Array.from(document.querySelectorAll('input[value="male"]')).filter(j => j.checked);
+
+        let _e__males_formulas = _.groupBy(_e__males_checked, function (e) {
+                return e.dataset.uuid
+            }),
+            _e__males_formulas_array = [];
+
+        Object.keys(_e__males_formulas).forEach(key => {
+            (_e__males_formulas[key].length > 1) ? _e__males_formulas_array.push(1) : _e__males_formulas_array.push(0)
+        });
+
+        console.log("_e__males_formulas_array: ", _.sum(_e__males_formulas_array))
+
+        /**
+         * MUJERES
+         * */
+
+        let _e__females_checked = Array.from(document.querySelectorAll('input[value="female"]')).filter(j => j.checked);
+
+        let _e__females_formulas = _.groupBy(_e__females_checked, function (e) {
+                return e.dataset.uuid
+            }),
+            _e__females_formulas_array = [];
+
+        Object.keys(_e__females_formulas).forEach(key => {
+            (_e__females_formulas[key].length > 1) ? _e__females_formulas_array.push(1) : _e__females_formulas_array.push(0)
+        });
+
+        console.log("_e__females_formulas_array: ", _.sum(_e__females_formulas_array))
+
+        document.querySelector('._e__male_counter').innerHTML = _e__males.length + ' (' + _.round((_e__males.length / _e__nums_positions) * 100, 2) + '%)' + '<br>' + _.sum(_e__males_formulas_array) + ' (' + _.round((_.sum(_e__males_formulas_array) / _e__nums_positions) * 100, 2) + '%)'
+        document.querySelector('._e__female_counter').innerHTML = _e__females.length + ' (' + _.round((_e__females.length / _e__nums_positions) * 100, 2) + '%)' + '<br>' + _.sum(_e__females_formulas_array) + ' (' + _.round((_.sum(_e__females_formulas_array) / _e__nums_positions) * 100, 2) + '%)'
 
         /**
          * INTEGRACIÓN PARITARIA DE CADA BLOQUE
@@ -671,8 +721,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         (_e__block_par[0] === 1 && _e__block_par[1] === 1 && _e__block_par[2] === 1) ? (_c__three.classList.replace('text-gray-400', 'text-green-400')) : (_c__three.classList.replace('text-green-400', 'text-gray-400'));
 
-        console.log("_e__block_par: ", _e__block_par)
-
         /**
          * PARIDAD DE MUJERES
          * */
@@ -680,14 +728,14 @@ document.addEventListener('DOMContentLoaded', () => {
             return e.dataset.uuid
         })
 
-		Object.keys(_e__female_formula).forEach((e) => {
-			if (_e__female_formula[e].length > 1) {
-				if (_e__female_formula[e][0].value === "female" && _e__female_formula[e][1].value !== "female") {
-					Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
-					document.querySelector('label[for="'+ _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position +'"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
-				}
-			}
-		})
+        Object.keys(_e__female_formula).forEach((e) => {
+            if (_e__female_formula[e].length > 1) {
+                if (_e__female_formula[e][0].value === "female" && _e__female_formula[e][1].value !== "female") {
+                    Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
+                    document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
+                }
+            }
+        })
 
         let _c__selected = document.querySelectorAll('input[type="radio"]:checked');
         console.log("_c__selected: ", _c__selected)

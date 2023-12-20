@@ -19,36 +19,42 @@ document.querySelector('#app').innerHTML = `
                     </select>
                     <div class="_e__sticky">
 					    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Reglas:</h2>
-                        <ul class="max-w-md space-y-1 text-gray-500 list-inside dark:text-gray-400 top-0 mb-3 sticky">
-                            <li class="flex items-center">
-                                <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__one" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <ul class="max-w-md flex-col space-y-2 text-gray-500 list-inside dark:text-gray-400 top-0 mb-3 sticky">
+                            <li class="flex items-start text-justify">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__one" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                  </svg>
                                 Al menos un bloque deberá ser encabezado por fórmula de mujeres.
                             </li>
-                            <li class="flex items-center">
-                                <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-green-400 _c__two" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <li class="flex items-start text-justify">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-green-400 _c__two" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                  </svg>
                                 No postular candidaturas mujeres en los dos últimos distritos del tercer bloque.
                             </li>
-                            <li class="flex items-center">
-                                <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__30y" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <li class="flex items-start text-justify">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__30y" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                  </svg>
                                 Fórmula de jóvenes en alguno de los distritos. (30 años cumplidos al día de la elección)
                             </li>
-                            <li class="flex items-center">
+                            <li class="flex items-center text-justify">
                                 <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__indigenous" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                  </svg>
                                 Fórmula de indígenas en el Distrito XV.
                             </li>
-                            <li class="flex items-center">
+                            <li class="flex items-center text-justify">
                                 <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__three" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                  </svg>
                                 Integración paritaria de cada bloque.
+                            </li>
+                            <li class="flex items-start text-justify">
+                                <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__four" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                                 </svg>
+                                Fórmula de candidaturas dentro de los primeros tres lugares en las listas de representación proporcional la cual deberá corresponder a personas pertenecientes al G5.
                             </li>
                         </ul>
                         <div class="flex space-x-3 mb-5">
@@ -178,6 +184,7 @@ document.addEventListener('DOMContentLoaded', () => {
         let _c__districts_list = [];
 
         _e__blocks.innerHTML = "";
+        _e__blocks_rp.innerHTML = "";
         let _HTML__content = '';
 
         for (let party of Blocks) {
@@ -195,19 +202,17 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '     <h2 class="mb-2.5">'
                                 + '       <button type="button" class="flex items-center justify-between w-full bg-white dark:bg-gray-900 p-3 rounded dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 shadow-2xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border border-gray-200 dark:border-gray-700" data-accordion-target="#accordion-collapse-body-' + district.uuid + '" aria-expanded="true" aria-controls="accordion-collapse-body-' + district.uuid + '">'
                                 + '           <span class="font-bold">' + district.district_roman + '. ' + district.district_capital + '</span>'
-                                + '           <svg data-accordion-icon class="w-3 h-3 rotate-180 shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">'
-                                + '               <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5 5 1 1 5"/>'
-                                + '           </svg>'
                                 + '       </button>'
                                 + '     </h2>'
-                                + '        <div class="p-5 rounded flex space-x-5">'
-                                + '			  <h1 class="font-sans font-semibold py-3">Propietario</h1>'
-                                + '            <ul class="grid w-full gap-6 md:grid-cols-2">'
+                                + '        <div class="rounded flex divide-x divide-gray-600">'
+                                + '        <div class="mr-2.5">'
+                                + '			   <h1 class="font-sans font-semibold py-3">Propietario</h1>'
+                                + '            <ul class="grid w-full gap-3 md:grid-cols-3">'
                                 + '                <li>'
-                                + '                   <input type="radio" id="female-' + district.uuid + '-p" name="' + district.uuid + '-p" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="female" class="hidden peer" required>'
-                                + '                   <label for="female-' + district.uuid + '-p" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                + '                   <input type="radio" id="female-' + district.uuid + '-p" name="' + district.uuid + '-p" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="female" class="hidden peer" required>'
+                                + '                   <label for="female-' + district.uuid + '-p" class="transition-all ease-linear inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                 + '                        <div class="block">'
-                                + '                            <div class="w-full text-lg font-semibold">Mujer</div>'
+                                + '                            <div class="font-semibold">Mujer</div>'
                                 + '                        </div>'
                                 + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                                 + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
@@ -221,10 +226,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '                    </label>'
                                 + '                </li>'
                                 + '                <li>'
-                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-p" name="' + district.uuid + '-p" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="genderqueer" class="hidden peer" required>'
-                                + '                   <label for="genderqueer-' + district.uuid + '-p" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-p" name="' + district.uuid + '-p" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="genderqueer" class="hidden peer" required>'
+                                + '                   <label for="genderqueer-' + district.uuid + '-p" class="transition-all ease-linear inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                 + '                        <div class="block">'
-                                + '                            <div class="w-full text-lg font-semibold">No Binario</div>'
+                                + '                            <div class="font-semibold">No Binario</div>'
                                 + '                        </div>'
                                 + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                                 + '                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
@@ -236,10 +241,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '                    </label>'
                                 + '                </li>'
                                 + '                <li>'
-                                + '                   <input type="radio" id="male-' + district.uuid + '-p" name="' + district.uuid + '-p" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="male" class="hidden peer">'
-                                + '                   <label for="male-' + district.uuid + '-p" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                + '                   <input type="radio" id="male-' + district.uuid + '-p" name="' + district.uuid + '-p" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="male" class="hidden peer">'
+                                + '                   <label for="male-' + district.uuid + '-p" class="transition-all ease-linear inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                 + '                        <div class="block">'
-                                + '                            <div class="w-full text-lg font-semibold">Hombre</div>'
+                                + '                            <div class="font-semibold">Hombre</div>'
                                 + '                        </div>'
                                 + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                                 + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
@@ -251,13 +256,12 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '                            <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>'
                                 + '                        </svg>'
                                 + '                    </label>'
-                                + '                </li>' +
-                                '<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700">';
+                                + '                </li>'
                             if (district.district_decimal !== "15") {
                                 _HTML__content += '<li class="flex items-center col-span-2">'
                                     + '                    <div class="flex items-center">'
-                                    + '                         <input type="checkbox" data-uuid="' + district.uuid + '" data-position="p" data-block="' + key + '" id="youth-' + district.uuid + '-p" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
-                                    + '                         <label for="youth-' + district.uuid + '-p" class="inline-flex overflow-hidden relative items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                    + '                         <input type="checkbox" data-list="mr" data-uuid="' + district.uuid + '" data-position="p" data-block="' + key + '" id="youth-' + district.uuid + '-p" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
+                                    + '                         <label for="youth-' + district.uuid + '-p" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                     + '						          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                                     + '						          	  <path class="cls-2" d="m10,16v5"/>'
                                     + '						          	  <path class="cls-2" d="m14,16v5"/>'
@@ -266,102 +270,15 @@ document.addEventListener('DOMContentLoaded', () => {
                                     + '						          	  <path class="cls-2" d="m19,5.08c0,4.92-2.67,3.92-4,3.92"/>'
                                     + '						          	  <path class="cls-2" d="m10,4c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>'
                                     + '						          </svg>'
-                                    + '                               <span>Jóven</span>'
+                                    + '                               <span class="font-semibold">Jóven</span>'
                                     + '                         </label>'
                                     + '                    </div>'
                                     + '                </li>';
                             } else {
                                 _HTML__content += '<li class="flex items-center col-span-2">'
                                     + '                    <div class="flex items-center">'
-                                    + '                         <input id="indigenous-' + district.uuid + '-p" type="checkbox" data-uuid="' + district.uuid + '" data-position="p" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
-                                    + '                         <label for="indigenous-' + district.uuid + '-p" class="inline-flex overflow-hidden relative items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                    + '						        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                    + '						        	  <path class="cls-1" d="m8,15v5"/>'
-                                    + '						        	  <path class="cls-1" d="m12,15v5"/>'
-                                    + '						        	  <path class="cls-1" d="m7,8h6l2.8,7H4.2l2.8-7Z"/>'
-                                    + '						        	  <path class="cls-1" d="m19,11c-3-3-4.67-3-6-3l-3,7-3-7c-1.33,0-3.5.5-6,3"/>'
-                                    + '						        	  <path class="cls-1" d="m8,3c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>'
-                                    + '						        </svg>'
-                                    + '                             <span>Indígena</span>'
-                                    + '                         </label>'
-                                    + '                    </div>'
-                                    + '                </li>';
-                            }
-                            _HTML__content += '</ul>'
-                                + '			  <h1 class="font-sans font-semibold py-3">Suplente</h1>'
-                                + '			  <ul class="grid w-full gap-6 md:grid-cols-2">'
-                                + '                <li>'
-                                + '                   <input type="radio" id="female-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="female" class="hidden peer" required>'
-                                + '                   <label for="female-' + district.uuid + '-s" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                + '                        <div class="block">'
-                                + '                            <div class="w-full text-lg font-semibold">Mujer</div>'
-                                + '                        </div>'
-                                + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '                            <path d="M10 16v5"/>'
-                                + '                            <path d="M14 16v5"/>'
-                                + '                            <path d="M8 16h8l-2 -7h-4z"/>'
-                                + '                            <path d="M5 11c1.667 -1.333 3.333 -2 5 -2"/>'
-                                + '                            <path d="M19 11c-1.667 -1.333 -3.333 -2 -5 -2"/>'
-                                + '                            <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>'
-                                + '                        </svg>'
-                                + '                    </label>'
-                                + '                </li>'
-                                + '                <li>'
-                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="genderqueer" class="hidden peer" required>'
-                                + '                   <label for="genderqueer-' + district.uuid + '-s" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                + '                        <div class="block">'
-                                + '                            <div class="w-full text-lg font-semibold">No Binario</div>'
-                                + '                        </div>'
-                                + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '                         <path d="M12 11a5 5 0 1 1 0 10a5 5 0 0 1 0 -10z" />'
-                                + '                         <path d="M12 11v-8" />'
-                                + '                         <path d="M14.5 4.5l-5 3" />'
-                                + '                         <path d="M9.5 4.5l5 3" />'
-                                + '                          </svg>'
-                                + '                    </label>'
-                                + '                </li>'
-                                + '                <li>'
-                                + '                   <input type="radio" id="male-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-block="' + key + '" data-level="' + (index + 1) + '" data-uuid="' + district.uuid + '" value="male" class="hidden peer">'
-                                + '                   <label for="male-' + district.uuid + '-s" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                + '                        <div class="block">'
-                                + '                            <div class="w-full text-lg font-semibold">Hombre</div>'
-                                + '                        </div>'
-                                + '                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-man" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '                            <path d="M10 16v5"/>'
-                                + '                            <path d="M14 16v5"/>'
-                                + '                            <path d="M9 9h6l-1 7h-4z"/>'
-                                + '                            <path d="M5 11c1.333 -1.333 2.667 -2 4 -2"/>'
-                                + '                            <path d="M19 11c-1.333 -1.333 -2.667 -2 -4 -2"/>'
-                                + '                            <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>'
-                                + '                        </svg>'
-                                + '                    </label>'
-                                + '                </li>' +
-                                '<hr class="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700 w-full">'
-                            if (district.district_decimal !== "15") {
-                                _HTML__content += '<li class="flex items-center col-span-2">'
-                                    + '                    <div class="flex items-center">'
-                                    + '                         <input type="checkbox" data-uuid="' + district.uuid + '" data-position="s" data-block="' + key + '" id="youth-' + district.uuid + '-s" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
-                                    + '                         <label for="youth-' + district.uuid + '-s" class="inline-flex overflow-hidden relative items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                    + '						          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                    + '						          	  <path class="cls-2" d="m10,16v5"/>'
-                                    + '						          	  <path class="cls-2" d="m14,16v5"/>'
-                                    + '						          	  <path class="cls-2" d="m9,9h6l-1,7h-4l-1-7Z"/>'
-                                    + '						          	  <path class="cls-2" d="m5,5.08c0,4.01,2.67,3.92,4,3.92"/>'
-                                    + '						          	  <path class="cls-2" d="m19,5.08c0,4.92-2.67,3.92-4,3.92"/>'
-                                    + '						          	  <path class="cls-2" d="m10,4c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>'
-                                    + '						          </svg>'
-                                    + '                               <span>Jóven</span>'
-                                    + '                         </label>'
-                                    + '                    </div>'
-                                    + '                </li>';
-                            } else {
-                                _HTML__content += '<li class="flex items-center col-span-2">'
-                                    + '                    <div class="flex items-center">'
-                                    + '                         <input id="indigenous-' + district.uuid + '-s" type="checkbox" data-uuid="' + district.uuid + '" data-position="s" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
-                                    + '                         <label for="indigenous-' + district.uuid + '-s" class="inline-flex overflow-hidden relative items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                    + '                         <input id="indigenous-' + district.uuid + '-p" type="checkbox" data-list="mr" data-uuid="' + district.uuid + '" data-position="p" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
+                                    + '                         <label for="indigenous-' + district.uuid + '-p" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                     + '						        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                                     + '						        	  <path class="cls-1" d="m8,15v5"/>'
                                     + '						        	  <path class="cls-1" d="m12,15v5"/>'
@@ -376,7 +293,96 @@ document.addEventListener('DOMContentLoaded', () => {
                             }
                             _HTML__content += '</ul>'
                                 + '        </div>'
-                                + '    </div>';
+                                + '        <div class="pl-2.5">'
+                                + '			  <h1 class="font-sans font-semibold py-3">Suplente</h1>'
+                                + '			  <ul class="grid w-full gap-3 md:grid-cols-3">'
+                                + '                <li>'
+                                + '                   <input type="radio" id="female-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="female" class="hidden peer" required>'
+                                + '                   <label for="female-' + district.uuid + '-s" class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                + '                        <div class="block">'
+                                + '                            <div class="font-semibold">Mujer</div>'
+                                + '                        </div>'
+                                + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
+                                + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
+                                + '                            <path d="M10 16v5"/>'
+                                + '                            <path d="M14 16v5"/>'
+                                + '                            <path d="M8 16h8l-2 -7h-4z"/>'
+                                + '                            <path d="M5 11c1.667 -1.333 3.333 -2 5 -2"/>'
+                                + '                            <path d="M19 11c-1.667 -1.333 -3.333 -2 -5 -2"/>'
+                                + '                            <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>'
+                                + '                        </svg>'
+                                + '                    </label>'
+                                + '                </li>'
+                                + '                <li>'
+                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="genderqueer" class="hidden peer" required>'
+                                + '                   <label for="genderqueer-' + district.uuid + '-s" class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                + '                        <div class="block">'
+                                + '                            <div class="font-semibold">No Binario</div>'
+                                + '                        </div>'
+                                + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
+                                + '                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
+                                + '                         <path d="M12 11a5 5 0 1 1 0 10a5 5 0 0 1 0 -10z" />'
+                                + '                         <path d="M12 11v-8" />'
+                                + '                         <path d="M14.5 4.5l-5 3" />'
+                                + '                         <path d="M9.5 4.5l5 3" />'
+                                + '                          </svg>'
+                                + '                    </label>'
+                                + '                </li>'
+                                + '                <li>'
+                                + '                   <input type="radio" id="male-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="male" class="hidden peer">'
+                                + '                   <label for="male-' + district.uuid + '-s" class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                + '                        <div class="block">'
+                                + '                            <div class="font-semibold">Hombre</div>'
+                                + '                        </div>'
+                                + '                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-man" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
+                                + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
+                                + '                            <path d="M10 16v5"/>'
+                                + '                            <path d="M14 16v5"/>'
+                                + '                            <path d="M9 9h6l-1 7h-4z"/>'
+                                + '                            <path d="M5 11c1.333 -1.333 2.667 -2 4 -2"/>'
+                                + '                            <path d="M19 11c-1.333 -1.333 -2.667 -2 -4 -2"/>'
+                                + '                            <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>'
+                                + '                        </svg>'
+                                + '                    </label>'
+                                + '                </li>'
+                            if (district.district_decimal !== "15") {
+                                _HTML__content += '<li class="flex items-center col-span-2">'
+                                    + '                    <div class="flex items-center">'
+                                    + '                         <input type="checkbox" data-list="mr" data-uuid="' + district.uuid + '" data-position="s" data-block="' + key + '" id="youth-' + district.uuid + '-s" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
+                                    + '                         <label for="youth-' + district.uuid + '-s" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                    + '						          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
+                                    + '						          	  <path class="cls-2" d="m10,16v5"/>'
+                                    + '						          	  <path class="cls-2" d="m14,16v5"/>'
+                                    + '						          	  <path class="cls-2" d="m9,9h6l-1,7h-4l-1-7Z"/>'
+                                    + '						          	  <path class="cls-2" d="m5,5.08c0,4.01,2.67,3.92,4,3.92"/>'
+                                    + '						          	  <path class="cls-2" d="m19,5.08c0,4.92-2.67,3.92-4,3.92"/>'
+                                    + '						          	  <path class="cls-2" d="m10,4c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>'
+                                    + '						          </svg>'
+                                    + '                               <span>Jóven</span>'
+                                    + '                         </label>'
+                                    + '                    </div>'
+                                    + '                </li>';
+                            } else {
+                                _HTML__content += '<li class="flex items-center col-span-2">'
+                                    + '                    <div class="flex items-center">'
+                                    + '                         <input id="indigenous-' + district.uuid + '-s" type="checkbox" data-list="mr" data-uuid="' + district.uuid + '" data-position="s" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
+                                    + '                         <label for="indigenous-' + district.uuid + '-s" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
+                                    + '						        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
+                                    + '						        	  <path class="cls-1" d="m8,15v5"/>'
+                                    + '						        	  <path class="cls-1" d="m12,15v5"/>'
+                                    + '						        	  <path class="cls-1" d="m7,8h6l2.8,7H4.2l2.8-7Z"/>'
+                                    + '						        	  <path class="cls-1" d="m19,11c-3-3-4.67-3-6-3l-3,7-3-7c-1.33,0-3.5.5-6,3"/>'
+                                    + '						        	  <path class="cls-1" d="m8,3c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>'
+                                    + '						        </svg>'
+                                    + '                             <span>Indígena</span>'
+                                    + '                         </label>'
+                                    + '                    </div>'
+                                    + '                </li>';
+                            }
+                            _HTML__content += '</ul>'
+                                + '        </div>'
+                                + '    </div>'
+                                + '</div>';
                         }
                         _HTML__content += '' +
                             '</div>' +
@@ -389,21 +395,21 @@ document.addEventListener('DOMContentLoaded', () => {
         let _HTML__content_rp = '';
 
         _HTML__content_rp += `<div class="bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md"><h1 class="font-sans font-semibold text-2xl py-3 my-4">Representación Proporcional</h1>`
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 5; i++) {
             _HTML__content_rp += `
                 <div class="flex-col bg-gray-100 dark:bg-gray-900 mb-5 p-5 w-full">
                     <h1 class="text-lg font-sans font-semibold">Fórmula ` + (i + 1) + `</h1>
-                    <div class="flex">
-                        <div class="p-5 bg-gray-100 dark:bg-gray-900 rounded flex space-x-5">
-                            <span class="font-bold">Propietario</span>
-                            <ul class="grid w-full gap-6 md:grid-cols-2">
+                    <div class="flex divide-x divide-gray-600">
+                        <div class="p-2 bg-gray-100 dark:bg-gray-900 rounded flex-col space-y-3">
+                            <span class="font-bold py-3">Propietario</span>
+                            <ul class="grid w-full gap-3 md:grid-cols-3">
                                 <li>
-                                    <input type="radio" id="female-` + i + `-p-rp" name="` + i + `-p-rp" value="female-rp" class="hidden peer"
+                                    <input type="radio" id="female-rp` + i + `-p-rp" name="` + i + `-p-rp" value="female-rp" data-position="p" data-position="p" data-list="rp" data-level="`+ i +`" class="hidden peer"
                                            required>
-                                    <label for="female-` + i + `-p-rp"
-                                           class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <label for="female-rp` + i + `-p-rp"
+                                           class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
-                                            <div class="w-full text-lg font-semibold">Mujer</div>
+                                            <div class="font-semibold">Mujer</div>
                                         </div>
                                         <svg xmlns="http://www.w3.org/2000/svg"
                                              width="24"
@@ -420,11 +426,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </label>
                                 </li>
                                 <li>
-                                    <input type="radio" id="genderqueer-` + i + `-p-rp" name="` + i + `-p-rp" value="genderqueer-rp" class="hidden peer">
-                                    <label for="genderqueer-` + i + `-p-rp"
-                                           class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <input type="radio" id="genderqueer-rp` + i + `-p-rp" name="` + i + `-p-rp" value="genderqueer-rp" data-position="p"  data-position="p" data-list="rp" data-level="`+ i +`" class="hidden peer">
+                                    <label for="genderqueer-rp` + i + `-p-rp"
+                                           class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
-                                            <div class="w-full text-lg font-semibold">No binario</div>
+                                            <div class="font-semibold">No binario</div>
                                         </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -436,11 +442,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </label>
                                 </li>
                                 <li>
-                                    <input type="radio" id="male-` + i + `-p-rp" name="` + i + `-p-rp" value="male-rp" class="hidden peer">
-                                    <label for="male-` + i + `-p-rp"
-                                           class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <input type="radio" id="male-rp` + i + `-p-rp" name="` + i + `-p-rp" value="male-rp" data-position="p" data-position="p" data-list="rp" data-level="`+ i +`" class="hidden peer">
+                                    <label for="male-rp` + i + `-p-rp"
+                                           class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
-                                            <div class="w-full text-lg font-semibold">Hombre</div>
+                                            <div class="font-semibold">Hombre</div>
                                         </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24"
                                              height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -455,28 +461,33 @@ document.addEventListener('DOMContentLoaded', () => {
                                         </svg>
                                     </label>
                                 </li>
-                                <li class="col-span-2">
-                                    <input type="radio" id="g5-` + i + `-p-rp" name="` + i + `-p-rp" value="g5-rp" class="hidden peer">
-                                    <label for="g5-` + i + `-p-rp"
-                                           class="inline-flex overflow-hidden relative items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                        <div class="block">
-                                            <div class="w-full text-lg font-semibold">Grupos Sociales en Desventaja</div>
-                                        </div>
-                                        <div class="sliding-background"></div>
-                                    </label>
+                                <li class="flex items-center col-span-2">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="g5-`+ i +`-p" data-level="`+ i +`" data-position="p" data-position="p" value="g5" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
+                                        <label for="g5-`+ i +`-p" class="inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path class="cls-1" d="m8,15v5"/>
+                                                <path class="cls-1" d="m12,15v5"/>
+                                                <path class="cls-1" d="m7,8h6l2.8,7H4.2l2.8-7Z"/>
+                                                <path class="cls-1" d="m19,11c-3-3-4.67-3-6-3l-3,7-3-7c-1.33,0-3.5.5-6,3"/>
+                                                <path class="cls-1" d="m8,3c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>
+                                            </svg>
+                                            <span>Grupos sociales en desventaja</span>
+                                        </label>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="p-5 bg-gray-100 dark:bg-gray-900 rounded flex space-x-5">
-                            <span class="font-bold mb-4">Suplente</span>
-                            <ul class="grid w-full gap-6 md:grid-cols-2">
+                        <div class="p-3 bg-gray-100 dark:bg-gray-900 rounded flex-col space-y-3">
+                            <span class="font-bold">Suplente</span>
+                            <ul class="grid w-full gap-3 md:grid-cols-3">
                                 <li>
-                                    <input type="radio" id="female-` + i + `-s-rp" name="` + i + `-s-rp" value="female-rp" class="hidden peer"
+                                    <input type="radio" id="female-rp-` + i + `-s-rp" name="` + i + `-s-rp" value="female-rp" data-position="s" data-list="rp" data-level="`+ i +`" class="hidden peer"
                                            required>
-                                    <label for="female-` + i + `-s-rp"
-                                           class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <label for="female-rp-` + i + `-s-rp"
+                                           class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
-                                            <div class="w-full text-lg font-semibold">Mujer</div>
+                                            <div class="font-semibold">Mujer</div>
                                         </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-woman"
                                              width="24"
@@ -493,11 +504,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </label>
                                 </li>
                                 <li>
-                                    <input type="radio" id="genderqueer-` + i + `-s-rp" name="` + i + `-s-rp" value="genderqueer-rp" class="hidden peer">
-                                    <label for="genderqueer-` + i + `-s-rp"
-                                           class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <input type="radio" id="genderqueer-rp-` + i + `-s-rp" name="` + i + `-s-rp" value="genderqueer-rp" data-position="s" data-list="rp" data-level="`+ i +`" class="hidden peer">
+                                    <label for="genderqueer-rp-` + i + `-s-rp"
+                                           class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
-                                            <div class="w-full text-lg font-semibold">No binario</div>
+                                            <div class="font-semibold">No binario</div>
                                         </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -509,11 +520,11 @@ document.addEventListener('DOMContentLoaded', () => {
                                     </label>
                                 </li>
                                 <li>
-                                    <input type="radio" id="male-` + i + `-s-rp" name="` + i + `-s-rp" value="male-rp" class="hidden peer">
-                                    <label for="male-` + i + `-s-rp"
-                                           class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <input type="radio" id="male-rp-` + i + `-s-rp" name="` + i + `-s-rp" value="male-rp" data-position="s" data-list="rp" data-level="`+ i +`" class="hidden peer">
+                                    <label for="male-rp-` + i + `-s-rp"
+                                           class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                         <div class="block">
-                                            <div class="w-full text-lg font-semibold">Hombre</div>
+                                            <div class="font-semibold">Hombre</div>
                                         </div>
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-man" width="24"
                                              height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none"
@@ -528,15 +539,20 @@ document.addEventListener('DOMContentLoaded', () => {
                                         </svg>
                                     </label>
                                 </li>
-                                <li class="col-span-2">
-                                    <input type="radio" id="g5-` + i + `-s-rp" name="` + i + `-s-rp" value="g5-rp" class="hidden peer">
-                                    <label for="g5-` + i + `-s-rp"
-                                           class="inline-flex overflow-hidden relative items-center justify-between w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                        <div class="block">
-                                            <div class="w-full text-lg font-semibold">Grupos sociales en desventaja</div>
-                                        </div>
-                                        <div class="sliding-background"></div>
-                                    </label>
+                                <li class="flex items-center col-span-2">
+                                    <div class="flex items-center">
+                                        <input type="checkbox" id="g5-`+ i +`-s" data-level="`+ i +`" data-position="s" value="g5" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
+                                        <label for="g5-`+ i +`-s" class="inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                                <path class="cls-1" d="m8,15v5"/>
+                                                <path class="cls-1" d="m12,15v5"/>
+                                                <path class="cls-1" d="m7,8h6l2.8,7H4.2l2.8-7Z"/>
+                                                <path class="cls-1" d="m19,11c-3-3-4.67-3-6-3l-3,7-3-7c-1.33,0-3.5.5-6,3"/>
+                                                <path class="cls-1" d="m8,3c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>
+                                            </svg>
+                                            <span>Grupos sociales en desventaja</span>
+                                        </label>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
@@ -555,16 +571,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     document.addEventListener('change', (El) => {
-        let _e__male_owners = Array.from(_e__male).filter(e => e.dataset.position === 'p')
-        let _e__male_subs = Array.from(_e__male).filter(e => e.dataset.position === 's')
-
         // Primera palomita.
         let _c__one = document.querySelector('._c__one')
         // Segunda palomita.
         let _c__two = document.querySelector('._c__two'),
             _c__three = document.querySelector('._c__three'),
             _c__30y = document.querySelector('._c__30y'),
-            _c__indigenous = document.querySelector('._c__indigenous');
+            _c__indigenous = document.querySelector('._c__indigenous'),
+            _c__four = document.querySelector('._c__four');
 
         // Group by uuid or formula
         let p = _.groupBy(Array.from(document.querySelectorAll('input[value="female"]')).filter(f => f.dataset.level === '1'), function (e) {
@@ -672,8 +686,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log("_e__females_formulas_array: ", _.sum(_e__females_formulas_array))
 
-        document.querySelector('._e__male_counter').innerHTML = _e__males.length + ' (' + _.round((_e__males.length / _e__nums_positions) * 100, 2) + '%)' + '<br>' + _.sum(_e__males_formulas_array) + ' (' + _.round((_.sum(_e__males_formulas_array) / _e__nums_positions) * 100, 2) + '%)'
-        document.querySelector('._e__female_counter').innerHTML = _e__females.length + ' (' + _.round((_e__females.length / _e__nums_positions) * 100, 2) + '%)' + '<br>' + _.sum(_e__females_formulas_array) + ' (' + _.round((_.sum(_e__females_formulas_array) / _e__nums_positions) * 100, 2) + '%)'
+        document.querySelector('._e__male_counter').innerHTML = _e__males.filter(f => f.dataset.position === 'p').length + ' (' + _.round((_e__males.filter(f => f.dataset.position === 'p').length / _e__nums_positions) * 100, 2) + '%)' + '<br>' + _.sum(_e__males_formulas_array) + ' (' + _.round((_.sum(_e__males_formulas_array) / _e__nums_positions) * 100, 2) + '%)'
+        document.querySelector('._e__female_counter').innerHTML = _e__females.filter(f => f.dataset.position === 'p').length + ' (' + _.round((_e__females.filter(f => f.dataset.position === 'p').length / _e__nums_positions) * 100, 2) + '%)' + '<br>' + _.sum(_e__females_formulas_array) + ' (' + _.round((_.sum(_e__females_formulas_array) / _e__nums_positions) * 100, 2) + '%)'
+
+        /**
+         *  CONTEO DE PROPIETARIOS.
+         * */
+        let _e__male_p = Array.from(document.querySelectorAll('input[value="male"]:checked')).filter(f => f.dataset.position === 'p')
+
+        if (_e__male_p.length / _e__nums_positions > 0.5) {
+            let _h = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
+
+            Object.keys(_h).forEach((e) => {
+                (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
+            })
+
+        }
+
+        let _e__female_p = Array.from(document.querySelectorAll('input[value="female"]:checked')).filter(f => f.dataset.position === 'p')
+
+        if (_e__female_p.length / _e__nums_positions > 0.5) {
+            let _h = Array.from(document.querySelectorAll('input[value="male-rp"]')).filter(f => f.dataset.position === 'p')
+
+            Object.keys(_h).forEach((e) => {
+                (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
+            })
+
+        }
 
         /**
          * INTEGRACIÓN PARITARIA DE CADA BLOQUE
@@ -724,7 +763,7 @@ document.addEventListener('DOMContentLoaded', () => {
         /**
          * PARIDAD DE MUJERES
          * */
-        let _e__female_formula = _.groupBy(Array.from(document.querySelectorAll('input[type="radio"]')).filter(f => f.checked), function (e) {
+        let _e__female_formula = _.groupBy(Array.from(document.querySelectorAll('input[data-list="mr"]')).filter(f => f.checked), function (e) {
             return e.dataset.uuid
         })
 
@@ -733,13 +772,59 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (_e__female_formula[e][0].value === "female" && _e__female_formula[e][1].value !== "female") {
                     Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
                     document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
+                } else {
+                    document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
+                    document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-green-400')
+                    setTimeout(function () {
+                    document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-green-400', 'peer-checked:border-blue-600')
+                    }, 1000)
                 }
             }
         })
 
-        let _c__selected = document.querySelectorAll('input[type="radio"]:checked');
-        console.log("_c__selected: ", _c__selected)
+        /**
+         * PARIDAD DE GÉNERO G4 EN RP
+         * */
+		let _e__g4 = _.groupBy(Array.from(document.querySelectorAll('input[value="g5"]')), function (e) {
+			return e.dataset.level
+		}), _e__g4_array = [];
 
-    })
+		Object.keys(_e__g4).forEach(key => {
+			((_e__g4[key][0].checked && _e__g4[key][1].checked) ? _e__g4_array.push(1) : _e__g4_array.push(0))
+		})
+
+		if (_e__g4_array[0] === 1 || _e__g4_array[1] === 1 || _e__g4_array[2] === 1) {
+			_c__four.classList.replace('text-gray-400', 'text-green-400')
+		} else {
+			_c__four.classList.replace('text-green-400', 'text-gray-400')
+		}
+
+		console.log("_e__g4_array: ", _e__g4_array)
+
+		/**
+         * PARIDAD DE MUJERES EN RP
+         * */
+        let _e__female_formula_rp = _.groupBy(Array.from(document.querySelectorAll('input[data-list="rp"]')).filter(f => f.checked), function (e) {
+            return e.dataset.level
+        })
+
+		console.log("_e__female_formula_rp: ", _e__female_formula_rp)
+
+        Object.keys(_e__female_formula_rp).forEach((e) => {
+			console.log(_e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list)
+            if (_e__female_formula_rp[e].length > 1) {
+                if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value !== "female-rp") {
+                    Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
+                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
+                } else {
+                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
+                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-green-400')
+                    setTimeout(function () {
+                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]').classList.replace('peer-checked:border-green-400', 'peer-checked:border-blue-600')
+                    }, 1000)
+                }
+            }
+        })
+	})
 });
 

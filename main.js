@@ -811,16 +811,16 @@ document.addEventListener('DOMContentLoaded', () => {
 		console.log("_e__female_formula_rp: ", _e__female_formula_rp)
 
         Object.keys(_e__female_formula_rp).forEach((e) => {
-			console.log(_e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list)
+			let _temp__lbl = document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]');
             if (_e__female_formula_rp[e].length > 1) {
                 if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value !== "female-rp") {
                     Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
-                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
+                    _temp__lbl.classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
                 } else {
-                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
-                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-green-400')
+                    _temp__lbl.classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
+                    _temp__lbl.classList.replace('peer-checked:border-blue-600', 'peer-checked:border-green-400')
                     setTimeout(function () {
-                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]').classList.replace('peer-checked:border-green-400', 'peer-checked:border-blue-600')
+                    _temp__lbl.classList.replace('peer-checked:border-green-400', 'peer-checked:border-blue-600')
                     }, 1000)
                 }
             }

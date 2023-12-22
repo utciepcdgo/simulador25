@@ -260,7 +260,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (district.district_decimal !== "15") {
                                 _HTML__content += '<li class="flex items-center col-span-2">'
                                     + '                    <div class="flex items-center">'
-                                    + '                         <input type="checkbox" data-list="mr" data-uuid="' + district.uuid + '" data-position="p" data-block="' + key + '" id="youth-' + district.uuid + '-p" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
+                                    + '                         <input type="checkbox" data-uuid="' + district.uuid + '" data-position="p" data-block="' + key + '" id="youth-' + district.uuid + '-p" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
                                     + '                         <label for="youth-' + district.uuid + '-p" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                     + '						          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                                     + '						          	  <path class="cls-2" d="m10,16v5"/>'
@@ -277,7 +277,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             } else {
                                 _HTML__content += '<li class="flex items-center col-span-2">'
                                     + '                    <div class="flex items-center">'
-                                    + '                         <input id="indigenous-' + district.uuid + '-p" type="checkbox" data-list="mr" data-uuid="' + district.uuid + '" data-position="p" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
+                                    + '                         <input id="indigenous-' + district.uuid + '-p" type="checkbox" data-uuid="' + district.uuid + '" data-position="p" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
                                     + '                         <label for="indigenous-' + district.uuid + '-p" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                     + '						        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                                     + '						        	  <path class="cls-1" d="m8,15v5"/>'
@@ -348,7 +348,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             if (district.district_decimal !== "15") {
                                 _HTML__content += '<li class="flex items-center col-span-2">'
                                     + '                    <div class="flex items-center">'
-                                    + '                         <input type="checkbox" data-list="mr" data-uuid="' + district.uuid + '" data-position="s" data-block="' + key + '" id="youth-' + district.uuid + '-s" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
+                                    + '                         <input type="checkbox" data-uuid="' + district.uuid + '" data-position="s" data-block="' + key + '" id="youth-' + district.uuid + '-s" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
                                     + '                         <label for="youth-' + district.uuid + '-s" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                     + '						          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                                     + '						          	  <path class="cls-2" d="m10,16v5"/>'
@@ -365,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             } else {
                                 _HTML__content += '<li class="flex items-center col-span-2">'
                                     + '                    <div class="flex items-center">'
-                                    + '                         <input id="indigenous-' + district.uuid + '-s" type="checkbox" data-list="mr" data-uuid="' + district.uuid + '" data-position="s" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
+                                    + '                         <input id="indigenous-' + district.uuid + '-s" type="checkbox" data-uuid="' + district.uuid + '" data-position="s" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
                                     + '                         <label for="indigenous-' + district.uuid + '-s" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
                                     + '						        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
                                     + '						        	  <path class="cls-1" d="m8,15v5"/>'
@@ -656,15 +656,24 @@ document.addEventListener('DOMContentLoaded', () => {
          * CONTEO DE FÓRMULAS.
          * HOMBRES
          * */
-        let _e__males_checked = Array.from(document.querySelectorAll('input[value="male"]')).filter(j => j.checked);
+        let _e__males_checked = Array.from(document.querySelectorAll('input[value="male"]')).filter(j => j.checked),
+            _e__genderqueer_checked = Array.from(document.querySelectorAll('input[value="genderqueer"]')).filter(j => j.checked);
 
         let _e__males_formulas = _.groupBy(_e__males_checked, function (e) {
                 return e.dataset.uuid
             }),
-            _e__males_formulas_array = [];
+            _e__males_formulas_array = [],
+            _e__genderqueer_formulas = _.groupBy(_e__genderqueer_checked, function (e) {
+                return e.dataset.uuid
+            }),
+            _e__genderqueer_formulas_array = [];
 
         Object.keys(_e__males_formulas).forEach(key => {
             (_e__males_formulas[key].length > 1) ? _e__males_formulas_array.push(1) : _e__males_formulas_array.push(0)
+        });
+
+        Object.keys(_e__genderqueer_formulas).forEach(key => {
+            (_e__genderqueer_formulas[key].length > 1) ? _e__genderqueer_formulas_array.push(1) : _e__genderqueer_formulas_array.push(0)
         });
 
         console.log("_e__males_formulas_array: ", _.sum(_e__males_formulas_array))
@@ -686,7 +695,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log("_e__females_formulas_array: ", _.sum(_e__females_formulas_array))
 
-        document.querySelector('._e__male_counter').innerHTML = _e__males.filter(f => f.dataset.position === 'p').length + ' (' + _.round((_e__males.filter(f => f.dataset.position === 'p').length / _e__nums_positions) * 100, 2) + '%)' + '<br>' + _.sum(_e__males_formulas_array) + ' (' + _.round((_.sum(_e__males_formulas_array) / _e__nums_positions) * 100, 2) + '%)'
+        document.querySelector('._e__male_counter').innerHTML = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length) / _e__nums_positions) * 100, 2) + '%)' + '<br>' + (_.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array)) + ' (' + _.round(((_.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array)) / _e__nums_positions) * 100, 2) + '%)'
         document.querySelector('._e__female_counter').innerHTML = _e__females.filter(f => f.dataset.position === 'p').length + ' (' + _.round((_e__females.filter(f => f.dataset.position === 'p').length / _e__nums_positions) * 100, 2) + '%)' + '<br>' + _.sum(_e__females_formulas_array) + ' (' + _.round((_.sum(_e__females_formulas_array) / _e__nums_positions) * 100, 2) + '%)'
 
         /**
@@ -694,7 +703,7 @@ document.addEventListener('DOMContentLoaded', () => {
          * */
         let _e__male_p = Array.from(document.querySelectorAll('input[value="male"]:checked')).filter(f => f.dataset.position === 'p')
 
-        if (_e__male_p.length / _e__nums_positions > 0.5) {
+        if ((_e__male_p.length + _e__genderqueer_checked.length) / _e__nums_positions > 0.5) {
             let _h = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
 
             Object.keys(_h).forEach((e) => {

@@ -17,7 +17,7 @@ export default class Modal
 			this.options.element = document.createElement('div');
 			this.options.element.classList.add('modal');
 			this.options.element.innerHTML = `
-                <div class="container max-w-sm p-2 mx-auto bg-white border-[1px] border-gray-200 shadow rounded-xl hover:shadow-lg transition-all duration-150 ease-linear font-sans">
+                <div class="container max-w-sm p-2 mx-auto bg-white shadow rounded-xl hover:shadow-lg transition-all duration-150 ease-linear font-sans dark:bg-gray-800 dark:text-white">
                     <div class="header">
                         <button class="close">&times;</button> 
                     </div>
@@ -229,7 +229,7 @@ export default class Modal
 
 	static alert(value, success)
 	{
-		let modal = new Modal({content: value, header: '', footer: '<button class="success">Entendido</button>'});
+		let modal = new Modal({content: value, header: '', footer: '<button class="success dark:bg-gray-900">Entendido</button>'});
 		modal.footerElement.querySelector('.success').onclick = event => {
 			event.preventDefault();
 			if (success) {

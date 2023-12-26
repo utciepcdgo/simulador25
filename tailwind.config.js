@@ -3,6 +3,7 @@ export default {
     content: [
         './*.{html,js}',
         './modules/*.js',
+        './components/*.js',
         './node_modules/flowbite/**/*.js'
     ],
     darkMode: 'media', // or 'media' or 'class'

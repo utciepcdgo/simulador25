@@ -18,6 +18,8 @@
     "@tabler/icons": "^2.42.0",
     "axios": "^1.6.2",
     "flowbite": "^2.2.0",
+    "jspdf": "^2.5.1",
+    "jspdf-autotable": "^3.8.1",
     "lodash": "^4.17.21",
     "sticky-js": "^1.3.0",
     "stickybits": "^3.7.11",

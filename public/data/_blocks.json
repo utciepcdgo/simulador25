@@ -32,7 +32,7 @@
               "votes_percentage": 53.36,
               "votes_textual": "Cincuenta y tres punto treinta y seis",
               "district_capital": "Durango",
-              "uuid": "90704dcd"
+              "uuid": "f0704dcd"
             },
             {
               "district_decimal": "1",
@@ -48,7 +48,7 @@
               "votes_percentage": 49.51,
               "votes_textual": "Cuarenta y nueve punto cincuenta y uno",
               "district_capital": "Durango",
-              "uuid": "0dcafed2"
+              "uuid": "adcafed2"
             }
           ]
         }
@@ -62,7 +62,7 @@
               "votes_percentage": 46.35,
               "votes_textual": "Cuarenta y seis punto treinta y cinco",
               "district_capital": "Guadalupe Victoria",
-              "uuid": "2054eb3f"
+              "uuid": "b054eb3f"
             },
             {
               "district_decimal": "15",
@@ -78,7 +78,7 @@
               "votes_percentage": 45.61,
               "votes_textual": "Cuarenta y cinco punto sesenta y uno",
               "district_capital": "Durango",
-              "uuid": "8fe6fe8f"
+              "uuid": "cfe6fe8f"
             },
             {
               "district_decimal": "13",
@@ -86,7 +86,7 @@
               "votes_percentage": 45.07,
               "votes_textual": "Cuarenta y cinco punto cero siete",
               "district_capital": "Lerdo",
-              "uuid": "297951c6"
+              "uuid": "d97951c6"
             },
             {
               "district_decimal": "9",
@@ -94,7 +94,7 @@
               "votes_percentage": 43.04,
               "votes_textual": "Cuarenta y tres punto cero cuatro",
               "district_capital": "Mapimí",
-              "uuid": "9a431f04"
+              "uuid": "ea431f04"
             }
           ]
         }
@@ -108,7 +108,7 @@
               "votes_percentage": 39.96,
               "votes_textual": "Treinta y nueve punto noventa y seis",
               "district_capital": "Gómez Palacio",
-              "uuid": "34133653"
+              "uuid": "f4133653"
             },
             {
               "district_decimal": "2",
@@ -116,7 +116,7 @@
               "votes_percentage": 38.67,
               "votes_textual": "Treinta y ocho punto sesenta y siete",
               "district_capital": "Durango",
-              "uuid": "67f83f71"
+              "uuid": "a7f83f71"
             },
             {
               "district_decimal": "12",
@@ -124,7 +124,7 @@
               "votes_percentage": 43.04,
               "votes_textual": "Cuarenta y tres punto cero cuatro",
               "district_capital": "Gómez Palacio",
-              "uuid": "9a84b3a5"
+              "uuid": "a84b3a5"
             },
             {
               "district_decimal": "14",
@@ -132,7 +132,7 @@
               "votes_percentage": 36.45,
               "votes_textual": "Treinta y seis punto cuarenta y cinco",
               "district_capital": "Cuencamé",
-              "uuid": "fbcd7983"
+              "uuid": "bcd7983"
             },
             {
               "district_decimal": "10",
@@ -164,7 +164,7 @@
               "votes_percentage": 63.01,
               "votes_textual": "Sesenta y tres punto cero uno",
               "district_capital": "Gómez Palacio",
-              "uuid": "54bf6e91"
+              "uuid": "a4bf6e91"
             },
             {
               "district_decimal": "12",
@@ -172,7 +172,7 @@
               "votes_percentage": 55.3,
               "votes_textual": "Cincuenta y cinco punto treinta",
               "district_capital": "Gómez Palacio",
-              "uuid": "0b995907"
+              "uuid": "bb995907"
             },
             {
               "district_decimal": "14",
@@ -180,7 +180,7 @@
               "votes_percentage": 51.34,
               "votes_textual": "Cincuenta y uno punto treinta y cuatro",
               "district_capital": "Cuencamé",
-              "uuid": "9373a89c"
+              "uuid": "c373a89c"
             }
           ]
         }
@@ -202,7 +202,7 @@
               "votes_percentage": 44.11,
               "votes_textual": "Cuarenta y cuatro punto once",
               "district_capital": "Lerdo",
-              "uuid": "14ae5fa7"
+              "uuid": "d4ae5fa7"
             },
             {
               "district_decimal": "9",
@@ -210,7 +210,7 @@
               "votes_percentage": 43.88,
               "votes_textual": "Cuarenta y tres punto ochenta y ocho",
               "district_capital": "Mapimí",
-              "uuid": "63e7529e"
+              "uuid": "f3e7529e"
             }
           ]
         }
@@ -224,7 +224,7 @@
               "votes_percentage": 40.67,
               "votes_textual": "Cuarenta y cero punto sesenta y siete",
               "district_capital": "Guadalupe Victoria",
-              "uuid": "26638006"
+              "uuid": "a6638006"
             },
             {
               "district_decimal": "7",
@@ -232,7 +232,7 @@
               "votes_percentage": 38.76,
               "votes_textual": "Treinta y ocho punto setenta y seis",
               "district_capital": "Santiago Papasquiaro",
-              "uuid": "f0a23637"
+              "uuid": "b0a23637"
             },
             {
               "district_decimal": "2",

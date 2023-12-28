@@ -699,6 +699,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /**
          *  CONTEO DE PROPIETARIOS.
+         *  Se alternan géneros según selección en Mayoría Relativa.
          * */
         let _e__male_p = Array.from(document.querySelectorAll('input[value="male"]:checked')).filter(f => f.dataset.position === 'p')
 

@@ -17,13 +17,13 @@ export default class Modal
 			this.options.element = document.createElement('div');
 			this.options.element.classList.add('modal');
 			this.options.element.innerHTML = `
-                <div class="container max-w-sm p-2 mx-auto bg-white shadow rounded-xl hover:shadow-lg transition-all duration-150 ease-linear font-sans dark:bg-gray-800 dark:text-white">
+                <div class="container p-2 mx-auto bg-white shadow rounded-xl hover:shadow-lg transition-all duration-150 ease-linear font-sans dark:bg-gray-800 dark:text-white">
                     <div class="header">
                         <button class="close">&times;</button> 
                     </div>
                     <div class="content"></div>
                     <div class="footer flex flex-row mt-6 space-x-2 justify-evenly">
-                        <button class="close">Close</button>
+                        <button class="close">Cerrar</button>
                     </div>
                 </div>                        
             `;

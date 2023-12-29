@@ -48,7 +48,6 @@ export async function PartySelector(selectorEl)
 	selectorEl.addEventListener('change', (e) => {
 		if (selectorEl.value === "0") {
 			Modal.alert('Seleccione una opción válida.')
-			return;
 		}
 	})
 }

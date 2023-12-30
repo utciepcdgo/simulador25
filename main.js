@@ -1,5 +1,5 @@
 import './style.css'
-import {jsPDF} from './node_modules/jspdf';
+import {jsPDF} from "jspdf";
 import autoTable from 'jspdf-autotable'
 import {PartySelector} from './modules/PartySelector.js';
 import Modal from './components/Modal.js';
@@ -742,9 +742,9 @@ document.addEventListener('DOMContentLoaded', () => {
             let _h = Array.from(document.querySelectorAll('input[value="male-rp"]')).filter(f => f.dataset.position === 'p')
 
             Object.keys(_h).forEach((e) => {
-                (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
+                (_h[e].dataset.level % 2 === 0) ? document.querySelector('#female-rp'+ _h[e].dataset.level +'-p-rp').disabled = true : (_h[e].checked = false)
+                // (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
             })
-
         }
 
         /**
@@ -992,24 +992,29 @@ document.addEventListener('DOMContentLoaded', () => {
             rows = rows_grouped;
 
         doc.setFont('helvetica', 'bold')
-        doc.setFontSize(10)
+        doc.setFontSize(8)
 
         doc.addImage('https://i.imgur.com/9TJfat5.png', 'PNG', 20, 20, 150, 67);
 
-        doc.text('INSTITUTO ELECTORAL Y DE PARTICIPACIÓN CIUDADANA DEL ESTADO DE DURANGO', 300, 50, {
+        doc.text('INSTITUTO ELECTORAL Y DE PARTICIPACIÓN CIUDADANA DEL ESTADO DE DURANGO.', 300, 40, {
             align: 'center', maxWidth: 200,
         })
 
-        doc.setFontSize(14)
+        doc.setFontSize(10)
+        doc.text('SIMULADOR 2024', 300, 80, {
+            align: 'center', maxWidth: 200,
+        })
 
-        doc.text('Bloque 1', 300, 100, {
+        doc.setFontSize(12)
+
+        doc.text('Bloque 1', 300, 130, {
             align: 'center', fontSize: 14,
         })
 
         autoTable(doc, {
             head: [col],
             body: [...rows['1'].map(el => [el.district_roman, el.district_capital, el.genre_p, el.group_p, el.genre_s, el.group_s])],
-            startY: 120,
+            startY: 150,
             theme: 'grid',
             headStyles: {
                 fillColor: [0, 0, 0],
@@ -1021,14 +1026,14 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
 
-        doc.text('Bloque 2', 300, 300, {
+        doc.text('Bloque 2', 300, 330, {
             align: 'center',
         }).setFontSize(14).setFont(undefined, 'bold');
 
         autoTable(doc, {
             head: [col],
             body: [...rows['2'].map(el => [el.district_roman, el.district_capital, el.genre_p, el.group_p, el.genre_s, el.group_s])],
-            startY: 320,
+            startY: 350,
             theme: 'grid',
             headStyles: {
                 fillColor: [0, 0, 0],
@@ -1040,14 +1045,14 @@ document.addEventListener('DOMContentLoaded', () => {
             },
         });
 
-        doc.text('Bloque 3', 300, 500, {
+        doc.text('Bloque 3', 300, 530, {
             align: 'center',
         }).setFontSize(14).setFont(undefined, 'bold');
 
         autoTable(doc, {
             head: [col],
             body: [...rows['3'].map(el => [el.district_roman, el.district_capital, el.genre_p, el.group_p, el.genre_s, el.group_s])],
-            startY: 520,
+            startY: 550,
             theme: 'grid',
             headStyles: {
                 fillColor: [0, 0, 0],

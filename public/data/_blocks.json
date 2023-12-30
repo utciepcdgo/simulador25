@@ -397,6 +397,7 @@
   },
   {
     "id": "4",
+    "number_districts": "6",
     "party": {
       "name": "Partido Verde Ecologista de México",
       "acronym": "PVEM"
@@ -419,7 +420,7 @@
               "votes_percentage": 55.3,
               "votes_textual": "Cincuenta y cinco punto treinta",
               "district_capital": "Gómez Palacio",
-              "uuid": "151818db"
+              "uuid": "b51818db"
             }
           ]
         }
@@ -433,7 +434,7 @@
               "votes_percentage": 51.05,
               "votes_textual": "Cincuenta y uno punto cero cinco",
               "district_capital": "Gómez Palacio",
-              "uuid": "8e72c3fa"
+              "uuid": "ne72c3fa"
             },
             {
               "district_decimal": "13",
@@ -441,7 +442,7 @@
               "votes_percentage": 44.11,
               "votes_textual": "Cuarenta y cuatro punto once",
               "district_capital": "Lerdo",
-              "uuid": "7a55cb51"
+              "uuid": "ka55cb51"
             }
           ]
         }
@@ -455,7 +456,7 @@
               "votes_percentage": 40.67,
               "votes_textual": "Cuarenta y cero punto sesenta y siete",
               "district_capital": "Guadalupe Victoria",
-              "uuid": "b0b01ec4"
+              "uuid": "g0b01ec4"
             },
             {
               "district_decimal": "7",

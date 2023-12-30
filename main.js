@@ -1,7 +1,6 @@
 import './style.css'
-import {jsPDF} from "jspdf";
+import {jsPDF} from './node_modules/jspdf';
 import autoTable from 'jspdf-autotable'
-import {valueOf} from 'lodash/seq.js';
 import {PartySelector} from './modules/PartySelector.js';
 import Modal from './components/Modal.js';
 // import {v4 as uuidv4} from 'uuid';

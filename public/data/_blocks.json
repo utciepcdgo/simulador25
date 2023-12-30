@@ -249,6 +249,154 @@
   },
   {
     "id": "3",
+    "number_districts": "15",
+    "party": {
+      "name": "Partido del Trabajo",
+      "acronym": "PT"
+    },
+    "blocks": [
+      {
+        "1": {
+          "districts": [
+            {
+              "district_decimal": "4",
+              "district_roman": "IV",
+              "votes_percentage": 5.77,
+              "votes_textual": "Cincuenta y cuatro punto ochenta y cinco",
+              "district_capital": "Durango",
+              "uuid": "e7808974"
+            },
+            {
+              "district_decimal": "14",
+              "district_roman": "XIV",
+              "votes_percentage": 5.17,
+              "votes_textual": "Cinco punto diecisiete",
+              "district_capital": "Cuencamé",
+              "uuid": "e05aa201"
+            },
+            {
+              "district_decimal": "2",
+              "district_roman": "II",
+              "votes_percentage": 4.82,
+              "votes_textual": "Cuatro punto ochenta y dos",
+              "district_capital": "Durango",
+              "uuid": "f0704dc7"
+            },
+            {
+              "district_decimal": "3",
+              "district_roman": "III",
+              "votes_percentage": 4.71,
+              "votes_textual": "Cuatro punto setenta y uno",
+              "district_capital": "Durango",
+              "uuid": "c6099fb3"
+            },
+            {
+              "district_decimal": "6",
+              "district_roman": "VI",
+              "votes_percentage": 4.61,
+              "votes_textual": "Cuatro punto sesenta y uno",
+              "district_capital": "Durango",
+              "uuid": "bdc3fed3"
+            }
+          ]
+        }
+      },
+      {
+        "2": {
+          "districts": [
+            {
+              "district_decimal": "1",
+              "district_roman": "I",
+              "votes_percentage": 4.47,
+              "votes_textual": "Cuatro punto cuarenta y siete",
+              "district_capital": "Durango",
+              "uuid": "f054eb3b"
+            },
+            {
+              "district_decimal": "5",
+              "district_roman": "V",
+              "votes_percentage": 3.96,
+              "votes_textual": "Tres punto noventa y seis",
+              "district_capital": "Durango",
+              "uuid": "a320501b"
+            },
+            {
+              "district_decimal": "9",
+              "district_roman": "IX",
+              "votes_percentage": 3.88,
+              "votes_textual": "Tres punto ochenta y ocho",
+              "district_capital": "Mapimí",
+              "uuid": "df36fe8d"
+            },
+            {
+              "district_decimal": "15",
+              "district_roman": "XV",
+              "votes_percentage": 3.44,
+              "votes_textual": "Tres punto cuarenta y cuatro",
+              "district_capital": "Pueblo Nuevo",
+              "uuid": "b97951c4"
+            },
+            {
+              "district_decimal": "8",
+              "district_roman": "VIII",
+              "votes_percentage": 2.76,
+              "votes_textual": "Dos punto setenta y seis",
+              "district_capital": "Guadalupe Victoria",
+              "uuid": "fa431f3b"
+            }
+          ]
+        }
+      },
+      {
+        "3": {
+          "districts": [
+            {
+              "district_decimal": "7",
+              "district_roman": "VII",
+              "votes_percentage": 1.89,
+              "votes_textual": "Uno punto ochenta y nueve",
+              "district_capital": "Santiago Papasquiaro",
+              "uuid": "a4131673"
+            },
+            {
+              "district_decimal": "13",
+              "district_roman": "XIII",
+              "votes_percentage": 1.35,
+              "votes_textual": "Uno punto treinta y cinco",
+              "district_capital": "Lerdo",
+              "uuid": "c7d85f7a"
+            },
+            {
+              "district_decimal": "10",
+              "district_roman": "X",
+              "votes_percentage": 1.27,
+              "votes_textual": "Uno punto veintisiete",
+              "district_capital": "Gómez Palacio",
+              "uuid": "b04b3a7"
+            },
+            {
+              "district_decimal": "12",
+              "district_roman": "XII",
+              "votes_percentage": 1.23,
+              "votes_textual": "Uno punto veintitrés",
+              "district_capital": "Gómez Palacio",
+              "uuid": "4ca7a84"
+            },
+            {
+              "district_decimal": "11",
+              "district_roman": "XI",
+              "votes_percentage": 1.02,
+              "votes_textual": "Uno punto cero dos",
+              "district_capital": "Gómez Palacio",
+              "uuid": "d62b9a5f"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "4",
     "party": {
       "name": "Partido Verde Ecologista de México",
       "acronym": "PVEM"

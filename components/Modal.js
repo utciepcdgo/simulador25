@@ -18,7 +18,7 @@ export default class Modal
 			this.options.element.classList.add('modal');
 			this.options.element.innerHTML = `
                 <div class="container p-2 mx-auto bg-white shadow rounded-xl hover:shadow-lg transition-all duration-150 ease-linear font-sans dark:bg-gray-800 dark:text-white">
-                    <div class="header">
+                    <div class="header dark:text-white">
                         <button class="close">&times;</button> 
                     </div>
                     <div class="content"></div>

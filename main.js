@@ -62,7 +62,7 @@ document.querySelector('#app').innerHTML = `
                                 <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__four _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                  </svg>
-                                Fórmula de candidaturas dentro de los primeros tres lugares en las listas de representación proporcional la cual deberá corresponder a personas pertenecientes al G5.
+                                Fórmula de candidaturas dentro de los primeros tres lugares en las listas de representación proporcional la cual deberá corresponder a personas pertenecientes al G4.
                             </li>
                         </ul>
                         <div class="flex space-x-3 mb-5">
@@ -225,6 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '     <h2 class="mb-2.5">'
                                 + '       <button type="button" class="flex items-center justify-between w-full bg-white dark:bg-gray-900 p-3 rounded dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 shadow-2xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border border-gray-200 dark:border-gray-700" data-accordion-target="#accordion-collapse-body-' + district.uuid + '" aria-expanded="true" aria-controls="accordion-collapse-body-' + district.uuid + '">'
                                 + '           <span class="font-bold">' + district.district_roman + '. ' + district.district_capital + '</span>'
+                                + '           <span class="font-bold">' + district.votes_percentage + '%</span>'
                                 + '       </button>'
                                 + '     </h2>'
                                 + '        <div class="rounded flex divide-x divide-gray-600">'
@@ -903,7 +904,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("_e__female_formula_rp: ", _e__female_formula_rp)
 
         Object.keys(_e__female_formula_rp).forEach((e) => {
-            let _temp__lbl = document.querySelector('label[for="' + _e__female_formula_rp[e][1].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][1].dataset.position + '-' + _e__female_formula_rp[e][1].dataset.list + '"]');
+            let _temp__lbl = document.querySelector('label[for="' + _e__female_formula_rp[e][0].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][0].dataset.position + '-' + _e__female_formula_rp[e][0].dataset.list + '"]');
             if (_e__female_formula_rp[e].length > 1) {
                 if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value !== "female-rp") {
                     Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
@@ -931,7 +932,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return e !== 1
         })
 
-        // console.log("_c__check_array: ", _c__check_array)
+        console.log("_c__check_array: ", _c__check_array)
         let rows = [];
 
         Array.from(document.querySelectorAll('input[type="radio"][data-list="mr"]:checked')).forEach((e) => {

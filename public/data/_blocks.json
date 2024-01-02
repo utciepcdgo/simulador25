@@ -249,6 +249,82 @@
   },
   {
     "id": "3",
+    "number_districts": "6",
+    "party": {
+      "name": "Partido Verde Ecologista de México",
+      "acronym": "PVEM"
+    },
+    "blocks": [
+      {
+        "1": {
+          "districts": [
+            {
+              "district_decimal": "1",
+              "district_roman": "I",
+              "votes_percentage": 1.74,
+              "votes_textual": "Uno punto setenta y cuatro",
+              "district_capital": "Durango",
+              "uuid": "a07d9078"
+            },
+            {
+              "district_decimal": "3",
+              "district_roman": "III",
+              "votes_percentage": 2.11,
+              "votes_textual": "Dos punto once",
+              "district_capital": "Durango",
+              "uuid": "b51818db"
+            }
+          ]
+        }
+      },
+      {
+        "2": {
+          "districts": [
+            {
+              "district_decimal": "4",
+              "district_roman": "IV",
+              "votes_percentage": 2.00,
+              "votes_textual": "Dos punto cero",
+              "district_capital": "Durango",
+              "uuid": "ne72c3fa"
+            },
+            {
+              "district_decimal": "5",
+              "district_roman": "V",
+              "votes_percentage": 2.23,
+              "votes_textual": "Dos punto veintitrés",
+              "district_capital": "Durango",
+              "uuid": "ka55cb51"
+            }
+          ]
+        }
+      },
+      {
+        "3": {
+          "districts": [
+            {
+              "district_decimal": "6",
+              "district_roman": "VI",
+              "votes_percentage": 1.59,
+              "votes_textual": "Uno punto cincuenta y nueve",
+              "district_capital": "Durango",
+              "uuid": "g0b01ec4"
+            },
+            {
+              "district_decimal": "15",
+              "district_roman": "VX",
+              "votes_percentage": 18.90,
+              "votes_textual": "Dieciocho punto noventa",
+              "district_capital": "Pueblo Nuevo",
+              "uuid": "f6d19685"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "id": "4",
     "number_districts": "15",
     "party": {
       "name": "Partido del Trabajo",
@@ -396,31 +472,55 @@
     ]
   },
   {
-    "id": "4",
-    "number_districts": "6",
+    "id": "5",
+    "number_districts": "15",
     "party": {
-      "name": "Partido Verde Ecologista de México",
-      "acronym": "PVEM"
+      "name": "Movimiento Ciudadano",
+      "acronym": "MC"
     },
     "blocks": [
       {
         "1": {
           "districts": [
             {
-              "district_decimal": "1",
-              "district_roman": "I",
-              "votes_percentage": 1.74,
-              "votes_textual": "Uno punto setenta y cuatro",
+              "district_decimal": "5",
+              "district_roman": "V",
+              "votes_percentage": 9.01,
+              "votes_textual": "Nueve punto cero uno",
               "district_capital": "Durango",
-              "uuid": "a07d9078"
+              "uuid": "57408984h"
             },
             {
               "district_decimal": "3",
               "district_roman": "III",
-              "votes_percentage": 2.11,
-              "votes_textual": "Dos punto once",
+              "votes_percentage": 7.45,
+              "votes_textual": "Siete punto cuarenta y cinco",
               "district_capital": "Durango",
-              "uuid": "b51818db"
+              "uuid": "a05aa104"
+            },
+            {
+              "district_decimal": "2",
+              "district_roman": "II",
+              "votes_percentage": 7.36,
+              "votes_textual": "Siete punto treinta y seis",
+              "district_capital": "Durango",
+              "uuid": "dd704d3d"
+            },
+            {
+              "district_decimal": "6",
+              "district_roman": "VI",
+              "votes_percentage": 6.64,
+              "votes_textual": "Seis punto sesenta y cuatro",
+              "district_capital": "Durango",
+              "uuid": "e7890fd4"
+            },
+            {
+              "district_decimal": "1",
+              "district_roman": "I",
+              "votes_percentage": 5.74,
+              "votes_textual": "Cinco punto setenta y cuatro",
+              "district_capital": "Durango",
+              "uuid": "da4af7d5"
             }
           ]
         }
@@ -431,18 +531,42 @@
             {
               "district_decimal": "4",
               "district_roman": "IV",
-              "votes_percentage": 2.00,
-              "votes_textual": "Dos punto cero",
+              "votes_percentage": 5.61,
+              "votes_textual": "Cinco punto sesenta y uno",
               "district_capital": "Durango",
-              "uuid": "ne72c3fa"
+              "uuid": "b154eb4a"
             },
             {
-              "district_decimal": "5",
-              "district_roman": "V",
-              "votes_percentage": 2.23,
-              "votes_textual": "Dos punto veintitrés",
-              "district_capital": "Durango",
-              "uuid": "ka55cb51"
+              "district_decimal": "9",
+              "district_roman": "IX",
+              "votes_percentage": 4.88,
+              "votes_textual": "Cuatro punto ochenta y ocho",
+              "district_capital": "Mapimí",
+              "uuid": "c51150b8"
+            },
+            {
+              "district_decimal": "13",
+              "district_roman": "XIII",
+              "votes_percentage": 4.88,
+              "votes_textual": "Cuatro punto ochenta y ocho",
+              "district_capital": "Lerdo",
+              "uuid": "daf6fe8a"
+            },
+            {
+              "district_decimal": "8",
+              "district_roman": "VIII",
+              "votes_percentage": 3.64,
+              "votes_textual": "Tres punto sesenta y cuatro",
+              "district_capital": "Guadalupe Victoria",
+              "uuid": "e08951c7"
+            },
+            {
+              "district_decimal": "12",
+              "district_roman": "XII",
+              "votes_percentage": 2.70,
+              "votes_textual": "Dos punto setenta",
+              "district_capital": "Gómez Palacio",
+              "uuid": "fb431f55"
             }
           ]
         }
@@ -451,28 +575,52 @@
         "3": {
           "districts": [
             {
-              "district_decimal": "6",
-              "district_roman": "VI",
-              "votes_percentage": 1.59,
-              "votes_textual": "Uno punto cincuenta y nueve",
-              "district_capital": "Durango",
-              "uuid": "g0b01ec4"
+              "district_decimal": "11",
+              "district_roman": "XI",
+              "votes_percentage": 2.65,
+              "votes_textual": "Dos punto sesenta y cinco",
+              "district_capital": "Gómez Palacio",
+              "uuid": "a5233654"
+            },
+            {
+              "district_decimal": "14",
+              "district_roman": "XIV",
+              "votes_percentage": 2.44,
+              "votes_textual": "Dos punto cuarenta y cuatro",
+              "district_capital": "Cuencamé",
+              "uuid": "b8f83f72"
+            },
+            {
+              "district_decimal": "7",
+              "district_roman": "VII",
+              "votes_percentage": 1.67,
+              "votes_textual": "Uno punto sesenta y siete",
+              "district_capital": "Santiago Papasquiaro",
+              "uuid": "b94b3a6"
             },
             {
               "district_decimal": "15",
-              "district_roman": "VX",
-              "votes_percentage": 18.90,
-              "votes_textual": "Dieciocho punto noventa",
+              "district_roman": "XV",
+              "votes_percentage": 1.65,
+              "votes_textual": "Uno punto sesenta y cinco",
               "district_capital": "Pueblo Nuevo",
-              "uuid": "f6d19685"
+              "uuid": "cde7982"
+            },
+            {
+              "district_decimal": "10",
+              "district_roman": "X",
+              "votes_percentage": 1.50,
+              "votes_textual": "Uno punto cincuenta",
+              "district_capital": "Gómez Palacio",
+              "uuid": "e73a965c"
             }
           ]
         }
       }
     ]
   },
-    {
-    "id": "5",
+  {
+    "id": "6",
     "number_districts": "6",
     "party": {
       "name": "MORENA",

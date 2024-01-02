@@ -5,22 +5,27 @@
     "logo": "https://"
   },
   {
-    "id":  "2",
+    "id": "2",
     "name": "Sigamos Haciendo Historia en Durango",
     "logo": "https://"
   },
   {
-    "id":  "3",
-    "name": "Partido del Trabajo",
-    "logo": "https://"
-  },
-  {
-    "id":  "4",
+    "id": "3",
     "name": "Partido Verde Ecologista de México",
     "logo": "https://"
   },
   {
-    "id":  "5",
+    "id": "4",
+    "name": "Partido del Trabajo",
+    "logo": "https://"
+  },
+  {
+    "id": "5",
+    "name": "Movimiento Ciudadano",
+    "logo": "https://"
+  },
+  {
+    "id": "6",
     "name": "MORENA",
     "logo": "https://"
   }

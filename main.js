@@ -1,13 +1,13 @@
-import './style.css'
+import 'animate.css';
 import {jsPDF} from "jspdf";
 import autoTable from 'jspdf-autotable'
-import {PartySelector} from './modules/PartySelector.js';
+import _ from 'lodash';
+import stickybits from 'stickybits'
 import Modal from './components/Modal.js';
-import 'animate.css';
+import {PartySelector} from './modules/PartySelector.js';
 // import {v4 as uuidv4} from 'uuid';
 import Blocks from './public/data/_blocks.json';
-import stickybits from 'stickybits'
-import _ from 'lodash';
+import './style.css'
 
 
 document.querySelector('#app').innerHTML = `
@@ -904,7 +904,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log("_e__female_formula_rp: ", _e__female_formula_rp)
 
         Object.keys(_e__female_formula_rp).forEach((e) => {
-            let _temp__lbl = document.querySelector('label[for="' + _e__female_formula_rp[e][0].value + '-' + _e__female_formula_rp[e][1].dataset.level + '-' + _e__female_formula_rp[e][0].dataset.position + '-' + _e__female_formula_rp[e][0].dataset.list + '"]');
+            let _temp__lbl = document.querySelector('label[for="' + _e__female_formula_rp[e][0].value + '-' + _e__female_formula_rp[e][0].dataset.level + '-' + _e__female_formula_rp[e][0].dataset.position + '-' + _e__female_formula_rp[e][0].dataset.list + '"]');
             if (_e__female_formula_rp[e].length > 1) {
                 if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value !== "female-rp") {
                     Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
@@ -962,7 +962,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
         Object.keys(rows_grouped_p).forEach((e) => {
-            let _temp = rows_grouped_p[e].map((f) => {
+            rows_grouped[e] = rows_grouped_p[e].map((f) => {
                 return {
                     district_roman: f.district_roman,
                     district_capital: f.district_capital,
@@ -972,8 +972,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     genre_s: rows_grouped_s[e].filter(g => g.district_roman === f.district_roman)[0].genre,
                     group_s: rows_grouped_s[e].filter(g => g.district_roman === f.district_roman)[0].group,
                 }
-            })
-            rows_grouped[e] = _temp;
+            });
         })
 
 
@@ -985,7 +984,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // });
 
 
-        _c__check_array = [];
+        // _c__check_array = [];
         // rows_grouped = [];
     })
 
@@ -1002,13 +1001,16 @@ document.addEventListener('DOMContentLoaded', () => {
             align: 'center', maxWidth: 200,
         })
 
+        doc.text(new Date().toLocaleDateString('es-mx', { weekday:"long", year:"numeric", month:"long", day: "numeric"}), 490, 80, {
+            align: 'center', maxWidth: 200,
+        })
+
         doc.setFontSize(10)
         doc.text('SIMULADOR 2024', 300, 80, {
             align: 'center', maxWidth: 200,
         })
 
         doc.setFontSize(12)
-
         doc.text('Bloque 1', 300, 130, {
             align: 'center', fontSize: 14,
         })
@@ -1017,13 +1019,12 @@ document.addEventListener('DOMContentLoaded', () => {
             head: [col],
             body: [...rows['1'].map(el => [el.district_roman, el.district_capital, el.genre_p, el.group_p, el.genre_s, el.group_s])],
             startY: 150,
-            theme: 'grid',
+            theme: 'striped',
             headStyles: {
                 fillColor: [0, 0, 0],
                 textColor: [255, 255, 255],
                 fontSize: 8,
                 fontStyle: 'bold',
-                halign: 'center',
                 cellPadding: 10,
             },
         });
@@ -1036,13 +1037,12 @@ document.addEventListener('DOMContentLoaded', () => {
             head: [col],
             body: [...rows['2'].map(el => [el.district_roman, el.district_capital, el.genre_p, el.group_p, el.genre_s, el.group_s])],
             startY: 350,
-            theme: 'grid',
+            theme: 'striped',
             headStyles: {
                 fillColor: [0, 0, 0],
                 textColor: [255, 255, 255],
                 fontSize: 8,
                 fontStyle: 'bold',
-                halign: 'center',
                 cellPadding: 10,
             },
         });
@@ -1055,16 +1055,20 @@ document.addEventListener('DOMContentLoaded', () => {
             head: [col],
             body: [...rows['3'].map(el => [el.district_roman, el.district_capital, el.genre_p, el.group_p, el.genre_s, el.group_s])],
             startY: 550,
-            theme: 'grid',
+            theme: 'striped',
             headStyles: {
                 fillColor: [0, 0, 0],
                 textColor: [255, 255, 255],
                 fontSize: 8,
                 fontStyle: 'bold',
-                halign: 'center',
                 cellPadding: 10,
             },
         });
+
+        doc.setFontSize(8)
+        doc.text('Este sistema es una herramienta didáctica que NO sustituye la revisión que se hará al momento del registro de candidaturas.', 40, 800, {
+            maxWidth: 500
+        })
 
         doc.save('table.pdf')
     });

@@ -65,6 +65,10 @@ document.querySelector('#app').innerHTML = `
                                 Fórmula de candidaturas dentro de los primeros tres lugares en las listas de representación proporcional la cual deberá corresponder a personas pertenecientes al G4.
                             </li>
                         </ul>
+                        <div class="flex divide-x divide-black my-3">
+                            <span class="px-3"><b>P</b> = Propietario</span>
+                            <span class="px-3"><b>F</b> = Fórmula</span>
+                        </div>
                         <div class="flex space-x-3 mb-5">
                             <div class="flex-col text-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                 <div class="flex items-center justify-between mb-2">
@@ -719,8 +723,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log("_e__females_formulas_array: ", _.sum(_e__females_formulas_array))
 
-        document.querySelector('._e__male_counter').innerHTML = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length) / _e__nums_positions) * 100, 2) + '%)' + '<br>' + (_.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array)) + ' (' + _.round(((_.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array)) / _e__nums_positions) * 100, 2) + '%)'
-        document.querySelector('._e__female_counter').innerHTML = _e__females.filter(f => f.dataset.position === 'p').length + ' (' + _.round((_e__females.filter(f => f.dataset.position === 'p').length / _e__nums_positions) * 100, 2) + '%)' + '<br>' + _.sum(_e__females_formulas_array) + ' (' + _.round((_.sum(_e__females_formulas_array) / _e__nums_positions) * 100, 2) + '%)'
+        document.querySelector('._e__male_counter').innerHTML = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length) / _e__nums_positions) * 100, 2) + '%)P' + '<br>' + (_.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array)) + ' (' + _.round(((_.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array)) / _e__nums_positions) * 100, 2) + '%)F'
+        document.querySelector('._e__female_counter').innerHTML = _e__females.filter(f => f.dataset.position === 'p').length + ' (' + _.round((_e__females.filter(f => f.dataset.position === 'p').length / _e__nums_positions) * 100, 2) + '%)P' + '<br>' + _.sum(_e__females_formulas_array) + ' (' + _.round((_.sum(_e__females_formulas_array) / _e__nums_positions) * 100, 2) + '%)F'
 
 
         /**

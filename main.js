@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (let block of party.blocks) {
                     for (let key in block) {
                         // Prints the block number
-                        _HTML__content += '<div class="animate__animated animate__faster animate__fadeInDown bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md" data-block="' + key + '" data-blocktype="electoral_block">'
+                        _HTML__content += '<div class="animate__animated animate__zoomIn bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md" data-block="' + key + '" data-blocktype="electoral_block">'
                             + '<h1 class="text-2xl font-sans font-semibold py-3 text-red-400 _c__block_' + key + '_text">Bloque ' + key + '</h1>'
                             + '<div id="accordion-collapse" data-accordion="collapse">'
                         for (const [index, district] of block[key].districts.entries()) {

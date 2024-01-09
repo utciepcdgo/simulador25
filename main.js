@@ -62,7 +62,7 @@ document.querySelector('#app').innerHTML = `
                                 <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__four _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                  </svg>
-                                Fórmula de candidaturas dentro de los primeros tres lugares en las listas de representación proporcional la cual deberá corresponder a personas pertenecientes al G4.
+                                Fórmula de candidaturas de representación proporcional, dentro de los primeros tres lugares al menos una candidatura deberá corresponder a persona de un grupo social en desventaja
                             </li>
                         </ul>
                         <div class="flex divide-x divide-black my-3">
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
            <ol class="list-decimal ml-4 text-sm">
                <li class="text-justify">La información que el usuario ingrese en el Simulador no se almacena por ningún motivo, tenga a bien guardar su archivo de configuración si así lo desea.</li>
                <li class="text-justify">Este sistema es una herramienta didáctica que <b><u>NO</u></b> sustituye la revisión que se hará al momento del registro de candidaturas.</li>
-               <li class="text-justify">Las personas que se auto adscriban como no binarias serán consideradas para ocupar los lugares que le correspondan al género masculino, por ser este el sector que no ha sido históricamente discriminado. (Art. 13 numeral 1, fracción 1, inciso c de los Lineamientos para el registro de Candidaturas, integración de listas de representación proporcional e integración paritaria del Congreso del Estado de Durango para el Proceso Electoral Local 2023 – 2024.</li>
+               <li class="text-justify">Las personas que se auto adscriban como no binarias, serán consideradas para ocupar los lugares que le correspondan al género masculino, por ser este el sector que no ha sido históricamente discriminado. (Art. 13 numeral 1, fracción 1, inciso c de los Lineamientos para el registro de Candidaturas, integración de listas de representación proporcional e integración paritaria del Congreso del Estado de Durango para el Proceso Electoral Local 2023 – 2024.)</li>
            </ol>`,
         onOpen: function () {
             console.log('modal open');
@@ -852,7 +852,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Object.keys(_e__female_formula).forEach((e) => {
             if (_e__female_formula[e].length > 1) {
                 if (_e__female_formula[e][0].value === "female" && _e__female_formula[e][1].value !== "female") {
-                    Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
+                    Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
                     document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
                 } else {
                     document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
@@ -911,7 +911,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let _temp__lbl = document.querySelector('label[for="' + _e__female_formula_rp[e][0].value + '-' + _e__female_formula_rp[e][0].dataset.level + '-' + _e__female_formula_rp[e][0].dataset.position + '-' + _e__female_formula_rp[e][0].dataset.list + '"]');
             if (_e__female_formula_rp[e].length > 1) {
                 if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value !== "female-rp") {
-                    Modal.alert("Si el propietario es mujer, el suplente también debe ser mujer.")
+                    Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
                     _temp__lbl.classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
                 } else {
                     _temp__lbl.classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')

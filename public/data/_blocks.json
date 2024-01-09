@@ -121,7 +121,7 @@
             {
               "district_decimal": "12",
               "district_roman": "XII",
-              "votes_percentage": 43.04,
+              "votes_percentage": 36.65,
               "votes_textual": "Cuarenta y tres punto cero cuatro",
               "district_capital": "Gómez Palacio",
               "uuid": "a84b3a5"
@@ -259,18 +259,18 @@
         "1": {
           "districts": [
             {
-              "district_decimal": "1",
-              "district_roman": "I",
-              "votes_percentage": 1.74,
-              "votes_textual": "Uno punto setenta y cuatro",
-              "district_capital": "Durango",
+              "district_decimal": "15",
+              "district_roman": "XV",
+              "votes_percentage": 18.90,
+              "votes_textual": "Dieciocho punto noventa",
+              "district_capital": "Pueblo Nuevo",
               "uuid": "a07d9078"
             },
             {
-              "district_decimal": "3",
-              "district_roman": "III",
-              "votes_percentage": 2.11,
-              "votes_textual": "Dos punto once",
+              "district_decimal": "5",
+              "district_roman": "V",
+              "votes_percentage": 2.23,
+              "votes_textual": "Dos punto veintitrés",
               "district_capital": "Durango",
               "uuid": "b51818db"
             }
@@ -281,18 +281,18 @@
         "2": {
           "districts": [
             {
-              "district_decimal": "4",
-              "district_roman": "IV",
-              "votes_percentage": 2.00,
-              "votes_textual": "Dos punto cero",
+              "district_decimal": "3",
+              "district_roman": "III",
+              "votes_percentage": 2.11,
+              "votes_textual": "Dos punto once",
               "district_capital": "Durango",
               "uuid": "ne72c3fa"
             },
             {
-              "district_decimal": "5",
-              "district_roman": "V",
-              "votes_percentage": 2.23,
-              "votes_textual": "Dos punto veintitrés",
+              "district_decimal": "4",
+              "district_roman": "IV",
+              "votes_percentage": 2.00,
+              "votes_textual": "Dos punto cero",
               "district_capital": "Durango",
               "uuid": "ka55cb51"
             }
@@ -303,19 +303,19 @@
         "3": {
           "districts": [
             {
+              "district_decimal": "1",
+              "district_roman": "I",
+              "votes_percentage": 1.74,
+              "votes_textual": "Uno punto setenta y cuatro",
+              "district_capital": "Durango",
+              "uuid": "g0b01ec4"
+            },
+            {
               "district_decimal": "6",
               "district_roman": "VI",
               "votes_percentage": 1.59,
               "votes_textual": "Uno punto cincuenta y nueve",
               "district_capital": "Durango",
-              "uuid": "g0b01ec4"
-            },
-            {
-              "district_decimal": "15",
-              "district_roman": "VX",
-              "votes_percentage": 18.90,
-              "votes_textual": "Dieciocho punto noventa",
-              "district_capital": "Pueblo Nuevo",
               "uuid": "f6d19685"
             }
           ]
@@ -631,18 +631,18 @@
         "1": {
           "districts": [
             {
-              "district_decimal": "1",
-              "district_roman": "I",
-              "votes_percentage": 23.61,
-              "votes_textual": "Veintitrés punto sesenta y uno",
-              "district_capital": "Durango",
+              "district_decimal": "15",
+              "district_roman": "XV",
+              "votes_percentage": 26.50,
+              "votes_textual": "Veintiséis punto cincuenta",
+              "district_capital": "Pueblo Nuevo",
               "uuid": "a17d9078"
             },
             {
-              "district_decimal": "3",
-              "district_roman": "III",
-              "votes_percentage": 24.42,
-              "votes_textual": "Veinticuatro punto cuarenta y dos",
+              "district_decimal": "5",
+              "district_roman": "V",
+              "votes_percentage": 25.69,
+              "votes_textual": "Veinticinco punto sesenta y nueve",
               "district_capital": "Durango",
               "uuid": "b61818db"
             }
@@ -653,18 +653,18 @@
         "2": {
           "districts": [
             {
-              "district_decimal": "4",
-              "district_roman": "IV",
-              "votes_percentage": 23.92,
-              "votes_textual": "Veintitrés punto noventa y dos",
+              "district_decimal": "3",
+              "district_roman": "III",
+              "votes_percentage": 24.42,
+              "votes_textual": "Veinticuatro punto cuarenta y dos",
               "district_capital": "Durango",
               "uuid": "nf72c3fa"
             },
             {
-              "district_decimal": "5",
-              "district_roman": "V",
-              "votes_percentage": 25.69,
-              "votes_textual": "Veinticinco punto sesenta y nueve",
+              "district_decimal": "6",
+              "district_roman": "VI",
+              "votes_percentage": 24.04,
+              "votes_textual": "Veinticuatro punto cero cuatro",
               "district_capital": "Durango",
               "uuid": "kb55cb51"
             }
@@ -675,19 +675,19 @@
         "3": {
           "districts": [
             {
-              "district_decimal": "6",
-              "district_roman": "VI",
-              "votes_percentage": 24.04,
-              "votes_textual": "Veinticuatro punto cero cuatro",
+              "district_decimal": "4",
+              "district_roman": "IV",
+              "votes_percentage": 23.92,
+              "votes_textual": "Veintitrés punto noventa y dos",
               "district_capital": "Durango",
               "uuid": "g1b01ec4"
             },
             {
-              "district_decimal": "15",
-              "district_roman": "VX",
-              "votes_percentage": 26.50,
-              "votes_textual": "Veintiséis punto cincuenta",
-              "district_capital": "Pueblo Nuevo",
+              "district_decimal": "1",
+              "district_roman": "I",
+              "votes_percentage": 23.61,
+              "votes_textual": "Veintitrés punto sesenta y uno",
+              "district_capital": "Durango",
               "uuid": "f7d19685"
             }
           ]

@@ -5,7 +5,6 @@ import _ from 'lodash';
 import stickybits from 'stickybits'
 import Modal from './components/Modal.js';
 import {PartySelector} from './modules/PartySelector.js';
-// import {v4 as uuidv4} from 'uuid';
 import Blocks from './public/data/_blocks.json';
 import './style.css'
 
@@ -62,7 +61,7 @@ document.querySelector('#app').innerHTML = `
                                 <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__four _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                  </svg>
-                                Fórmula de candidaturas de representación proporcional, dentro de los primeros tres lugares al menos una candidatura deberá corresponder a persona de un grupo social en desventaja
+                                Fórmula de candidaturas de representación proporcional, dentro de los primeros tres lugares al menos una candidatura deberá corresponder a persona de un grupo social en desventaja
                             </li>
                         </ul>
                         <div class="flex divide-x divide-black my-3">
@@ -199,27 +198,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // prependHTML("<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Seleccione un Partido Político.</p>", document.querySelector('div._sim__spacing'), 'div')
     let _e__blocks = document.querySelector('._e__blocks_mr'), _e__blocks_rp = document.querySelector('._e__blocks_rp'),
         _e__female, // All female
         _e__male, // All male
         _e__pride; // All pride
-
-// Blocks.forEach(party => {
-// 	party.blocks.forEach(block => {
-// 		for (let key in block) {
-// 			block[key].districts.forEach(district => {
-// 				const uuid = uuidv4(); // Generate a unique UUID
-// 				const districtCapital = district.district_capital;
-// 				delete district.district_capital; // Remove the district_capital property
-// 				district.uuid = uuid; // Assign the unique UUID
-// 				district.district_capital = districtCapital; // Reassign the district_capital property
-// 			});
-// 		}
-// 	});
-// });
-//
-// console.log(Blocks);
 
     partySelectorEl.addEventListener('change', (e) => {
 

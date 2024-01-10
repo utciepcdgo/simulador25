@@ -65,7 +65,7 @@ document.querySelector('#app').innerHTML = `
                             </li>
                         </ul>
                         <div class="flex divide-x divide-black my-3">
-                            <span class="px-3"><b>P</b> = Propietario</span>
+                            <span class="px-3"><b>P</b> = Propietario(a)</span>
                             <span class="px-3"><b>F</b> = Fórmula</span>
                         </div>
                         <div class="flex space-x-3 mb-5">
@@ -900,7 +900,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
 		Object.keys(_e__female_formula_rp).forEach((e) => {
-			 if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "male-rp") {
+			 if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "male-rp" || _e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "genderqueer-rp") {
 				 Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
                  document.querySelector('label[for="'+ _e__female_formula_rp[e][1].id +'"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
 			 }
@@ -923,7 +923,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         console.log("_c__check_array: ", _c__check_array)
         console.log("_c__check: ", _c__check)
-			_c__check_array = [];
+
+        _c__check_array = [];
 
         let rows = [];
 

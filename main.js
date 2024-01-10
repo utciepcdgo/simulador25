@@ -997,17 +997,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 return e.formula
             });
 
-        // Object.keys(rows_grouped_p_rp).forEach((e) => {
-        //     rows_grouped_rp[e] = rows_grouped_p_rp[e].map((f) => {
-        //         return {
-        //             formula: f.formula,
-        //             genre_p: f.genre,
-        //             group_p: f.group,
-        //             genre_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].genre,
-        //             group_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].group,
-        //         }
-        //     });
-        // })
+        Object.keys(rows_grouped_p_rp).forEach((e) => {
+            rows_grouped_rp[e] = rows_grouped_p_rp[e].map((f) => {
+                return {
+                    formula: f.formula,
+                    genre_p: f.genre,
+                    group_p: f.group,
+                    genre_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].genre,
+                    group_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].group,
+                }
+            });
+        })
 
 
         console.log("rows_grouped_rp: ", rows_grouped_rp)
@@ -1128,7 +1128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         autoTable(doc, {
             head: [col_rp],
-            body: [...rows_rp['0'].map(el => [el.formula, el.genre_p, el.group_p, el.genre_s, el.group_s])],
+            body: [...rows_rp.map(el => [el.formula, el.genre_p, el.group_p, el.genre_s, el.group_s])],
             startY: 150,
             theme: 'striped',
             headStyles: {

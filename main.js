@@ -129,6 +129,7 @@ document.querySelector('#app').innerHTML = `
 
 let partySelectorEl = document.querySelector('#parties'),
     rows_grouped = [],
+    rows_grouped_rp = [],
     _c__check_array = [],
     _c_result;
 
@@ -485,7 +486,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		                        </li>
 		                        <li class="flex items-center col-span-2">
 		                            <div class="flex items-center">
-		                                <input type="checkbox" id="g5-` + i + `-p" data-level="` + i + `" data-position="p" data-position="p" value="g5" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
+		                                <input type="checkbox" id="g5-` + i + `-p" data-level="` + i + `" data-formula="`+ (i + 1) +`" data-position="p" value="g5" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
 		                                <label for="g5-` + i + `-p" class="inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
 		                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 		                                        <path class="cls-1" d="m8,15v5"/>
@@ -504,7 +505,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		                    <span class="font-bold">Suplente</span>
 		                    <ul class="grid w-full gap-3 md:grid-cols-3">
 		                        <li>
-		                            <input type="radio" id="female-rp-` + i + `-s-rp" name="` + i + `-s-rp" value="female-rp" data-position="s" data-list="rp" data-level="` + i + `" class="hidden peer"
+		                            <input type="radio" id="female-rp-` + i + `-s-rp" name="` + i + `-s-rp" value="female-rp" data-formula="`+ (i + 1) +`" data-position="s" data-list="rp" data-level="` + i + `" class="hidden peer"
 		                                   required>
 		                            <label for="female-rp-` + i + `-s-rp"
 		                                   class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
@@ -526,7 +527,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		                            </label>
 		                        </li>
 		                        <li>
-		                            <input type="radio" id="genderqueer-rp-` + i + `-s-rp" name="` + i + `-s-rp" value="genderqueer-rp" data-position="s" data-list="rp" data-level="` + i + `" class="hidden peer">
+		                            <input type="radio" id="genderqueer-rp-` + i + `-s-rp" name="` + i + `-s-rp" value="genderqueer-rp" data-formula="`+ (i + 1) +`" data-position="s" data-list="rp" data-level="` + i + `" class="hidden peer">
 		                            <label for="genderqueer-rp-` + i + `-s-rp"
 		                                   class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
 		                                <div class="block">
@@ -542,7 +543,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		                            </label>
 		                        </li>
 		                        <li>
-		                            <input type="radio" id="male-rp-` + i + `-s-rp" name="` + i + `-s-rp" value="male-rp" data-position="s" data-list="rp" data-level="` + i + `" class="hidden peer">
+		                            <input type="radio" id="male-rp-` + i + `-s-rp" name="` + i + `-s-rp" value="male-rp" data-formula="`+ (i + 1) +`" data-position="s" data-list="rp" data-level="` + i + `" class="hidden peer">
 		                            <label for="male-rp-` + i + `-s-rp"
 		                                   class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
 		                                <div class="block">
@@ -563,7 +564,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		                        </li>
 		                        <li class="flex items-center col-span-2">
 		                            <div class="flex items-center">
-		                                <input type="checkbox" id="g5-` + i + `-s" data-level="` + i + `" data-position="s" value="g5" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
+		                                <input type="checkbox" id="g5-` + i + `-s" data-level="` + i + `" data-formula="`+ (i + 1) +`" data-position="s" value="g5" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >
 		                                <label for="g5-` + i + `-s" class="inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
 		                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 		                                        <path class="cls-1" d="m8,15v5"/>
@@ -926,7 +927,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         _c__check_array = [];
 
-        let rows = [];
+        let rows = [], rows_rp = [];
 
         Array.from(document.querySelectorAll('input[type="radio"][data-list="mr"]:checked')).forEach((e) => {
             let _c__action_temp = document.querySelector('input[type="checkbox"]#' + e.dataset.uuid + '-' + e.dataset.position + ''),
@@ -941,7 +942,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 block: e.dataset.block,
             })
         })
-        console.log("rows: ", rows)
+        // console.log("rows: ", rows)
         rows_grouped = _.groupBy(rows, function (e) {
             return e.block
         })
@@ -968,8 +969,48 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         })
 
+        /**
+         * ROWS FOR RP
+         * Datos de RP extraídos de la selección.
+         * */
+        Array.from(document.querySelectorAll('input[type="radio"][data-list="rp"]:checked')).forEach((e) => {
+            let _c__action_temp = document.querySelector('input[type="checkbox"]#g5-' + e.dataset.level + '-' + e.dataset.position + ''),
+                _c__group = _c__action_temp.checked ? _c__action_temp.value : "Ninguno";
+            console.log("_c__action_temp_rp: ", _c__action_temp)
+            rows_rp.push({
+                formula: e.dataset.formula,
+                position: (e.dataset.position === "p") ? "Propietario(a)" : "Suplente",
+                genre: (e.value === "female-rp") ? "Mujer" : ((e.value === "male-rp") ? "Hombre" : "No binario"),
+                group: ((_c__group === 'g5') ? "G4" :  "Ninguno"),
+            })
+        })
+        console.log("rows_rp: ", rows_rp)
+        rows_grouped_rp = _.groupBy(rows_rp, function (e) {
+            return e.formula
+        })
 
-        // console.log("rows_grouped: ", rows_grouped['1'])
+        // COMBINE DATASET.POSITION P AND S AT ONCE ROW WITH ALL PROPERTIES.
+        let rows_grouped_p_rp = _.groupBy(rows_rp.filter(f => f.position === "Propietario(a)") , function (e) {
+                return e.formula
+            }),
+            rows_grouped_s_rp = _.groupBy(rows_rp.filter(f => f.position === "Suplente"), function (e) {
+                return e.formula
+            });
+
+        // Object.keys(rows_grouped_p_rp).forEach((e) => {
+        //     rows_grouped_rp[e] = rows_grouped_p_rp[e].map((f) => {
+        //         return {
+        //             formula: f.formula,
+        //             genre_p: f.genre,
+        //             group_p: f.group,
+        //             genre_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].genre,
+        //             group_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].group,
+        //         }
+        //     });
+        // })
+
+
+        console.log("rows_grouped_rp: ", rows_grouped_rp)
         // rows = [];
 
         // document.querySelector('._c__button_pdf').disabled = !_.sum(_c__check_array, function (e) {
@@ -981,7 +1022,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelector('._c__button_pdf').addEventListener('click', () => {
         let col = ["Distrito", "Cabecera", "Género Prop.", "Grupo Prop.", "Género Supl.", "Grupo Supl."],
-            rows = rows_grouped;
+            col_rp = ["Fórmula", "Género Prop.", "Grupo Prop.", "Género Supl.", "Grupo Supl."],
+            rows = rows_grouped,
+            rows_rp = rows_grouped_rp;
 
         doc.setFont('helvetica', 'bold')
         doc.setFontSize(8)
@@ -1062,7 +1105,40 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         doc.addPage()
-         // TODO: Agregar tabla para fórmulas de RP.
+
+        doc.addImage('https://i.imgur.com/9TJfat5.png', 'PNG', 20, 20, 150, 67);
+
+        doc.text('INSTITUTO ELECTORAL Y DE PARTICIPACIÓN CIUDADANA DEL ESTADO DE DURANGO.', 300, 40, {
+            align: 'center', maxWidth: 200,
+        })
+
+        doc.text(new Date().toLocaleDateString('es-mx', { weekday:"long", year:"numeric", month:"long", day: "numeric"}), 490, 80, {
+            align: 'center', maxWidth: 200,
+        })
+
+        doc.setFontSize(10)
+        doc.text('SIMULADOR 2024', 300, 80, {
+            align: 'center', maxWidth: 200,
+        })
+
+        doc.setFontSize(12)
+        doc.text('Representación Proporcional', 300, 130, {
+            align: 'center', fontSize: 14,
+        })
+
+        autoTable(doc, {
+            head: [col_rp],
+            body: [...rows_rp['0'].map(el => [el.formula, el.genre_p, el.group_p, el.genre_s, el.group_s])],
+            startY: 150,
+            theme: 'striped',
+            headStyles: {
+                fillColor: [0, 0, 0],
+                textColor: [255, 255, 255],
+                fontSize: 8,
+                fontStyle: 'bold',
+                cellPadding: 10,
+            },
+        });
 
         doc.save('table.pdf')
     });

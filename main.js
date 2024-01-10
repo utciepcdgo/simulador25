@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
            <ol class="list-decimal ml-4 text-sm">
                <li class="text-justify">La información que el usuario ingrese en el Simulador no se almacena por ningún motivo, tenga a bien guardar su archivo de configuración si así lo desea.</li>
                <li class="text-justify">Este sistema es una herramienta didáctica que <b><u>NO</u></b> sustituye la revisión que se hará al momento del registro de candidaturas.</li>
-               <li class="text-justify">Las personas que se auto adscriban como no binarias, serán consideradas para ocupar los lugares que le correspondan al género masculino, por ser este el sector que no ha sido históricamente discriminado. (Art. 13 numeral 1, fracción 1, inciso c de los Lineamientos para el registro de Candidaturas, integración de listas de representación proporcional e integración paritaria del Congreso del Estado de Durango para el Proceso Electoral Local 2023 – 2024.)</li>
+               <li class="text-justify">Las personas que se auto adscriban como no binarias, serán consideradas para ocupar los lugares que le correspondan al género masculino, por ser este el sector que no ha sido históricamente discriminado. (Art. 13 numeral 1, fracción 1, inciso c de los Lineamientos para el registro de Candidaturas, integración de listas de representación proporcional e integración paritaria del Congreso del Estado de Durango para el Proceso Electoral Local 2023 – 2024).</li>
            </ol>`,
         onOpen: function () {
             console.log('modal open');
@@ -228,7 +228,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 + '     </h2>'
                                 + '        <div class="rounded flex divide-x divide-gray-600">'
                                 + '        <div class="mr-2.5">'
-                                + '			   <h1 class="font-sans font-semibold py-3">Propietario</h1>'
+                                + '			   <h1 class="font-sans font-semibold py-3">Propietario(a)</h1>'
                                 + '            <ul class="grid w-full gap-3 md:grid-cols-3">'
                                 + '                <li>'
                                 + '                   <input type="radio" id="female-' + district.uuid + '-p" name="' + district.uuid + '-p" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="female" class="hidden peer" required>'
@@ -423,10 +423,10 @@ document.addEventListener('DOMContentLoaded', () => {
 		            <h1 class="text-lg font-sans font-semibold">Fórmula ` + (i + 1) + `</h1>
 		            <div class="flex divide-x divide-gray-600">
 		                <div class="p-2 bg-gray-100 dark:bg-gray-900 rounded flex-col space-y-3">
-		                    <span class="font-bold py-3">Propietario</span>
+		                    <span class="font-bold py-3">Propietario(a)</span>
 		                    <ul class="grid w-full gap-3 md:grid-cols-3">
 		                        <li>
-		                            <input type="radio" id="female-rp` + i + `-p-rp" name="` + i + `-p-rp" value="female-rp" data-position="p" data-position="p" data-list="rp" data-level="` + i + `" class="hidden peer"
+		                            <input type="radio" id="female-rp` + i + `-p-rp" name="` + i + `-p-rp" value="female-rp" data-formula="`+ (i + 1) +`" data-position="p" data-list="rp" data-level="` + i + `" class="hidden peer"
 		                                   required>
 		                            <label for="female-rp` + i + `-p-rp"
 		                                   class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
@@ -448,7 +448,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		                            </label>
 		                        </li>
 		                        <li>
-		                            <input type="radio" id="genderqueer-rp` + i + `-p-rp" name="` + i + `-p-rp" value="genderqueer-rp" data-position="p"  data-position="p" data-list="rp" data-level="` + i + `" class="hidden peer">
+		                            <input type="radio" id="genderqueer-rp` + i + `-p-rp" name="` + i + `-p-rp" value="genderqueer-rp" data-formula="`+ (i + 1) +`" data-position="p" data-list="rp" data-level="` + i + `" class="hidden peer">
 		                            <label for="genderqueer-rp` + i + `-p-rp"
 		                                   class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
 		                                <div class="block">
@@ -464,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		                            </label>
 		                        </li>
 		                        <li>
-		                            <input type="radio" id="male-rp` + i + `-p-rp" name="` + i + `-p-rp" value="male-rp" data-position="p" data-position="p" data-list="rp" data-level="` + i + `" class="hidden peer">
+		                            <input type="radio" id="male-rp` + i + `-p-rp" name="` + i + `-p-rp" value="male-rp" data-formula="`+ (i + 1) +`" data-position="p" data-list="rp" data-level="` + i + `" class="hidden peer">
 		                            <label for="male-rp` + i + `-p-rp"
 		                                   class="inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
 		                                <div class="block">
@@ -742,8 +742,8 @@ document.addEventListener('DOMContentLoaded', () => {
             let _h = Array.from(document.querySelectorAll('input[value="male-rp"]')).filter(f => f.dataset.position === 'p')
 
             Object.keys(_h).forEach((e) => {
-                (_h[e].dataset.level % 2 === 0) ? document.querySelector('#female-rp'+ _h[e].dataset.level +'-p-rp').disabled = true : (_h[e].checked = false)
-                // (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
+                // (_h[e].dataset.level % 2 === 0) ? document.querySelector('#female-rp'+ _h[e].dataset.level +'-p-rp').disabled = true : (_h[e].checked = false)
+                (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
             })
         }
 
@@ -899,29 +899,20 @@ document.addEventListener('DOMContentLoaded', () => {
             return e.dataset.level
         })
 
-        console.log("_e__female_formula_rp: ", _e__female_formula_rp)
+		Object.keys(_e__female_formula_rp).forEach((e) => {
+			 if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "male-rp") {
+				 Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
+                 document.querySelector('label[for="'+ _e__female_formula_rp[e][1].id +'"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
+			 }
 
-        Object.keys(_e__female_formula_rp).forEach((e) => {
-            let _temp__lbl = document.querySelector('label[for="' + _e__female_formula_rp[e][0].value + '-' + _e__female_formula_rp[e][0].dataset.level + '-' + _e__female_formula_rp[e][0].dataset.position + '-' + _e__female_formula_rp[e][0].dataset.list + '"]');
-            if (_e__female_formula_rp[e].length > 1) {
-                if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value !== "female-rp") {
-                    Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
-                    _temp__lbl.classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
-                } else {
-                    _temp__lbl.classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
-                    _temp__lbl.classList.replace('peer-checked:border-blue-600', 'peer-checked:border-green-400')
-                    setTimeout(function () {
-                        _temp__lbl.classList.replace('peer-checked:border-green-400', 'peer-checked:border-blue-600')
-                    }, 1000)
-                }
-            }
-        })
+             if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "female-rp") {
+                 document.querySelector('label[for="'+ _e__female_formula_rp[e][1].id +'"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
+			 }
+		})
 
         /**
          * BOTÓN VERIFICAR
          * */
-
-
         Object.keys(_c__check).forEach((e) => {
             _c__check[e].classList.contains('text-green-400') ? _c__check_array.push(1) : _c__check_array.push(0)
         })
@@ -931,6 +922,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         console.log("_c__check_array: ", _c__check_array)
+        console.log("_c__check: ", _c__check)
+			_c__check_array = [];
+
         let rows = [];
 
         Array.from(document.querySelectorAll('input[type="radio"][data-list="mr"]:checked')).forEach((e) => {
@@ -940,19 +934,19 @@ document.addEventListener('DOMContentLoaded', () => {
             rows.push({
                 district_roman: e.dataset.roman,
                 district_capital: e.dataset.district,
-                position: (e.dataset.position === "p") ? "Propietario" : "Suplente",
+                position: (e.dataset.position === "p") ? "Propietario(a)" : "Suplente",
                 genre: (e.value === "female") ? "Mujer" : ((e.value === "male") ? "Hombre" : "No binario"),
                 group: (_c__group === 'youth') ? "Jóven" : ((_c__group === 'indigenous') ? "Indígena" : "Ninguno"),
                 block: e.dataset.block,
             })
         })
-        // console.log("rows: ", rows)
+        console.log("rows: ", rows)
         rows_grouped = _.groupBy(rows, function (e) {
             return e.block
         })
 
         // COMBINE DATASET.POSITION P AND S AT ONCE ROW WITH ALL PROPERTIES.
-        let rows_grouped_p = _.groupBy(rows.filter(f => f.position === "Propietario"), function (e) {
+        let rows_grouped_p = _.groupBy(rows.filter(f => f.position === "Propietario(a)"), function (e) {
                 return e.block
             }),
             rows_grouped_s = _.groupBy(rows.filter(f => f.position === "Suplente"), function (e) {
@@ -981,8 +975,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // 	return e >= 6
         // });
 
-
-        // _c__check_array = [];
         // rows_grouped = [];
     })
 
@@ -1029,7 +1021,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         doc.text('Bloque 2', 300, 330, {
             align: 'center',
-        }).setFontSize(14).setFont(undefined, 'bold');
+        }).setFontSize(12).setFont(undefined, 'bold');
 
         autoTable(doc, {
             head: [col],
@@ -1047,7 +1039,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         doc.text('Bloque 3', 300, 530, {
             align: 'center',
-        }).setFontSize(14).setFont(undefined, 'bold');
+        }).setFontSize(12).setFont(undefined, 'bold');
 
         autoTable(doc, {
             head: [col],
@@ -1067,6 +1059,9 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.text('Este sistema es una herramienta didáctica que NO sustituye la revisión que se hará al momento del registro de candidaturas.', 40, 800, {
             maxWidth: 500
         })
+
+        doc.addPage()
+         // TODO: Agregar tabla para fórmulas de RP.
 
         doc.save('table.pdf')
     });

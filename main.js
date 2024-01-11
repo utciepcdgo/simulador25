@@ -181,7 +181,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let updating = false;
 
     const handleScroll = () => {
-        console.info('updating');
         if (window.scrollY >= threshold.top || window.pageYOffset >= threshold.top)
             $nav.classList.add('nav--fixed'); else
 
@@ -206,7 +205,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (e.target.value === '6' || e.target.value === '3') {
 
-			Modal.alert("El Partido Político seleccionado forma parte de una Coalición Parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias; que forman parte de la misma. Esto, con el fin de realizar los cálculos aritméticos necesarios para definir el género que encabezará el listado de Representación Proporcional. Haga clic en el botón azúl situado al lado derecho de su pantalla y seleccione el número de candidaturas por género.")
+			Modal.alert("El Partido Político seleccionado forma parte de una Coalición Parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias que forman parte de la misma. Esto, con el fin de realizar los cálculos aritméticos necesarios para definir el género que encabezará y alternará en el listado de Representación Proporcional. Haga clic en el botón azul situado al lado derecho de su pantalla y seleccione el número de candidaturas por género.")
 
             let _dynamic__settings_obj = document.querySelector('._settings__content');
 
@@ -843,7 +842,8 @@ document.addEventListener('DOMContentLoaded', () => {
             _a__male = document.querySelectorAll('input[value="male"]');
 
         let _a__merged_genderqueer_males = Array.from(_a__male).concat(Array.from(_a__genderqueer));
-        console.log("_a__merged_genderqueer_males ", _a__merged_genderqueer_males)
+
+        // console.log("_a__merged_genderqueer_males ", _a__merged_genderqueer_males)
 
         let _e__male_by_block = _.groupBy(_.orderBy(_a__merged_genderqueer_males, function (e) {
                 return e.dataset.level
@@ -870,7 +870,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Object.keys(_xx1m).forEach((e) => _xx1m[e].filter(f => f.checked).length === 2 ? _xxx1m.push(1) : _xxx1m.push(0));
         Object.keys(_xx1f).forEach((e) => _xx1f[e].filter(f => f.checked).length === 2 ? _xxx1f.push(1) : _xxx1f.push(0));
 
-        console.log("_xxx1m: ", _.sum(_xxx1m), " _xxx1f: ", _.sum(_xxx1f))
+        // console.log("_xxx1m: ", _.sum(_xxx1m), " _xxx1f: ", _.sum(_xxx1f))
 
         if (_.sum(_xxx1m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx1f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx1m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx1f) === Math.ceil((_e__nums_positions / 3) / 2)) {
             _c__block_1_text.classList.replace('text-red-400', 'text-green-400')
@@ -891,7 +891,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Object.keys(_xx2m).forEach((e) => _xx2m[e].filter(f => f.checked).length === 2 ? _xxx2m.push(1) : _xxx2m.push(0));
         Object.keys(_xx2f).forEach((e) => _xx2f[e].filter(f => f.checked).length === 2 ? _xxx2f.push(1) : _xxx2f.push(0));
 
-        console.log("_xxx2m: ", _.sum(_xxx2m), " _xxx2f: ", _.sum(_xxx2f))
+        // console.log("_xxx2m: ", _.sum(_xxx2m), " _xxx2f: ", _.sum(_xxx2f))
 
         if (_.sum(_xxx2m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx2f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx2m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx2f) === Math.ceil((_e__nums_positions / 3) / 2)) {
             _c__block_2_text.classList.replace('text-red-400', 'text-green-400')
@@ -1014,8 +1014,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return e !== 1
         })
 
-        console.log("_c__check_array: ", _c__check_array)
-        console.log("_c__check: ", _c__check)
+        // console.log("_c__check_array: ", _c__check_array)
+        // console.log("_c__check: ", _c__check)
 
         _c__check_array = [];
 
@@ -1068,7 +1068,7 @@ document.addEventListener('DOMContentLoaded', () => {
         Array.from(document.querySelectorAll('input[type="radio"][data-list="rp"]:checked')).forEach((e) => {
             let _c__action_temp = document.querySelector('input[type="checkbox"]#g5-' + e.dataset.level + '-' + e.dataset.position + ''),
                 _c__group = _c__action_temp.checked ? _c__action_temp.value : "Ninguno";
-            console.log("_c__action_temp_rp: ", _c__action_temp)
+            // console.log("_c__action_temp_rp: ", _c__action_temp)
             rows_rp.push({
                 formula: e.dataset.formula,
                 position: (e.dataset.position === "p") ? "Propietario(a)" : "Suplente",
@@ -1076,7 +1076,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 group: ((_c__group === 'g5') ? "G4" :  "Ninguno"),
             })
         })
-        console.log("rows_rp: ", rows_rp)
+        // console.log("rows_rp: ", rows_rp)
         rows_grouped_rp = _.groupBy(rows_rp, function (e) {
             return e.formula
         })
@@ -1102,7 +1102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
 
-        console.log("rows_grouped_rp: ", rows_grouped_rp)
+        // console.log("rows_grouped_rp: ", rows_grouped_rp)
         // rows = [];
 
         // document.querySelector('._c__button_pdf').disabled = !_.sum(_c__check_array, function (e) {

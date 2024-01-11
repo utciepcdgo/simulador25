@@ -2,31 +2,31 @@
   {
     "id": "1",
     "name": "Fuerza y Corazón por Durango",
-    "logo": "https://"
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PAN-PRI-PRD.svg"
   },
   {
     "id": "2",
     "name": "Sigamos Haciendo Historia en Durango",
-    "logo": "https://"
+    "logo": "hhttps://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PVEM-MORENA.svg"
   },
   {
     "id": "3",
     "name": "Partido Verde Ecologista de México",
-    "logo": "https://"
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PVEM.svg"
   },
   {
     "id": "4",
     "name": "Partido del Trabajo",
-    "logo": "https://"
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PT.svg"
   },
   {
     "id": "5",
     "name": "Movimiento Ciudadano",
-    "logo": "https://"
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/MC.svg"
   },
   {
     "id": "6",
     "name": "MORENA",
-    "logo": "https://"
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/MORENA.svg"
   }
 ]

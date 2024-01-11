@@ -1,13 +1,13 @@
 import 'animate.css';
-import { InputCounter } from 'flowbite';
+import {InputCounter} from 'flowbite';
 import {jsPDF} from "jspdf";
 import autoTable from 'jspdf-autotable'
 import _ from 'lodash';
-import {valueOf} from 'lodash/seq.js';
 import stickybits from 'stickybits'
 import Modal from './components/Modal.js';
 import {PartySelector} from './modules/PartySelector.js';
 import Blocks from './public/data/_blocks.json';
+import Parties from './public/data/_parties.json';
 import './style.css'
 
 
@@ -20,6 +20,7 @@ document.querySelector('#app').innerHTML = `
                     <select name="parties" id="parties" class="mb-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ">
                         <option value="0">Seleccione un Partido Político o Coalición</option>
                     </select>
+                    <div class="_p__emblema"></div>
                     <div class="_e__sticky">
 					    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Reglas:</h2>
                         <ul class="max-w-md flex-col space-y-2 text-gray-500 list-inside dark:text-gray-400 top-0 mb-3">
@@ -197,11 +198,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     let _e__blocks = document.querySelector('._e__blocks_mr'), _e__blocks_rp = document.querySelector('._e__blocks_rp'),
+        _p__emblema = document.querySelector('._p__emblema'),
         _e__female, // All female
         _e__male, // All male
         _e__pride; // All pride
 
     partySelectorEl.addEventListener('change', (e) => {
+
+        _p__emblema.innerHTML = `
+            <img src=` + Parties[(e.target.value - 1)].logo + `" alt="${e.target.value}" class="w-40 h-40 mx-auto">
+        `;
+
 
         if (e.target.value === '6' || e.target.value === '3') {
 

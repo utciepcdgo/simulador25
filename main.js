@@ -1,7 +1,9 @@
 import 'animate.css';
+import { InputCounter } from 'flowbite';
 import {jsPDF} from "jspdf";
 import autoTable from 'jspdf-autotable'
 import _ from 'lodash';
+import {valueOf} from 'lodash/seq.js';
 import stickybits from 'stickybits'
 import Modal from './components/Modal.js';
 import {PartySelector} from './modules/PartySelector.js';
@@ -64,10 +66,6 @@ document.querySelector('#app').innerHTML = `
                                 Fórmula de candidaturas de representación proporcional, dentro de los primeros tres lugares al menos una candidatura deberá corresponder a persona de un grupo social en desventaja
                             </li>
                         </ul>
-                        <div class="flex divide-x divide-black my-3">
-                            <span class="px-3"><b>P</b> = Propietario(a)</span>
-                            <span class="px-3"><b>F</b> = Fórmula</span>
-                        </div>
                         <div class="flex space-x-3 mb-5">
                             <div class="flex-col text-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                 <div class="flex items-center justify-between mb-2">
@@ -100,19 +98,17 @@ document.querySelector('#app').innerHTML = `
                                 <span class="font-bold">Hombres</span>
                             </div>
                         </div>
-                        <button class="_c__button_check w-full relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-                            <span class="w-full flex items-center justify-center relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
-                                <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-green-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                        <div class="flex">
+                            <button class="_c__button_check w-full justify-center flex items-center focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">
+                                <svg class="w-3.5 h-3.5 me-2 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                     <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
                                  </svg>
                                 <span>Verificar</span>
-                            </span>
-                        </button>
-                        <button class="_c__button_pdf w-full relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-red-200 via-red-300 to-yellow-200 group-hover:from-red-200 group-hover:via-red-300 group-hover:to-yellow-200 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-red-100 dark:focus:ring-red-400">
-                            <span class="w-full flex items-center justify-center relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                            </button>
+                            <button class="_c__button_pdf w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                                 <span>Generar archivo</span>
-                            </span>
-                        </button>
+                            </button>
+                        </div>
                     </div>
                 </div>
                 <div class="col-span-5 flex mx-auto _sim__spacing space-x-5">            
@@ -142,9 +138,11 @@ stickybits("_e__sticky", {
     useStickyClasses: true
 });
 
-const stickybitsInstancetoBeUpdated = stickybits("selector");
+stickybits("selector");
+
 PartySelector(partySelectorEl)
 
+// Check if the user is on a mobile device
 window.mobileCheck = function() {
   let check = false;
   (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
@@ -205,6 +203,87 @@ document.addEventListener('DOMContentLoaded', () => {
         _e__pride; // All pride
 
     partySelectorEl.addEventListener('change', (e) => {
+
+        if (e.target.value === '6' || e.target.value === '3') {
+
+			Modal.alert("El Partido Político seleccionado forma parte de una Coalición Parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias; que forman parte de la misma. Esto, con el fin de realizar los cálculos aritméticos necesarios para definir el género que encabezará el listado de Representación Proporcional. Haga clic en el botón azúl situado al lado derecho de su pantalla y seleccione el número de candidaturas por género.")
+
+            let _dynamic__settings_obj = document.querySelector('._settings__content');
+
+            _dynamic__settings_obj.innerHTML = `
+            <form class="flex flex-col w-full">
+				<div class="mb-3">
+					<p class="text-sm dark:text-white">Seleccione el número de candidaturas mujeres y hombres que forman parte de la coalición «Sigamos Haciendo Historia en Durango».</p>
+				</div>
+				<div class="flex justify-center space-x-3">
+					<div>
+						<label for="counter-input" class="block mb-1 text-sm text-gray-900 dark:text-white font-bold">Mujeres:</label>
+						<div class="relative flex items-center">
+							<button type="button" id="ci__female_decrement_button" data-input-counter-decrement="counter-input" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+								<svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+								</svg>
+							</button>
+							<input type="text" id="_ci__female" data-input-counter class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="0" required>
+							<button type="button" id="_ci__female_increment_button" data-input-counter-increment="_ci__female" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+								<svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div>
+						<label for="counter-input" class="block mb-1 text-sm text-gray-900 dark:text-white font-bold">Hombres:</label>
+						<div class="relative flex items-center">
+							<button type="button" id="ci__male_decrement_button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+								<svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h16"/>
+								</svg>
+							</button>
+							<input type="text" id="_ci__male" data-input-counter class="flex-shrink-0 text-gray-900 dark:text-white border-0 bg-transparent text-sm font-normal focus:outline-none focus:ring-0 max-w-[2.5rem] text-center" placeholder="" value="0" required>
+							<button type="button" id="_ci__male_increment_button" class="flex-shrink-0 bg-gray-100 dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 inline-flex items-center justify-center border border-gray-300 rounded-md h-5 w-5 focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none">
+								<svg class="w-2.5 h-2.5 text-gray-900 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
+									<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 1v16M1 9h16"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="mt-3">
+					<p class="text-xs dark:text-white"><span class="text-red-600">*</span>Las candidaturas «No Binarias» suman al género masculino.</p>
+				</div>
+            </form>
+            `;
+
+			const $targetElFemale = document.getElementById('_ci__female');
+			const $targetElMale = document.getElementById('_ci__male');
+
+			// optionally set the increment and decrement elements
+			const $incrementElFemale = document.getElementById('_ci__female_increment_button');
+			const $incrementElMale = document.getElementById('_ci__male_increment_button');
+
+			// optionally set the increment and decrement elements
+			const $decrementElFemale = document.getElementById('ci__female_decrement_button');
+			const $decrementElMale = document.getElementById('ci__male_decrement_button');
+
+			// optional options with default values and callback functions
+			const options = {
+				minValue: 0,
+				maxValue: 15, // infinite
+			};
+
+
+
+			const counterInputFemale = new InputCounter($targetElFemale, $incrementElFemale, $decrementElFemale, options);
+			const counterInputMale = new InputCounter($targetElMale, $incrementElMale, $decrementElMale, options);
+        } else {
+			 let _dynamic__settings_obj = document.querySelector('._settings__content');
+            _dynamic__settings_obj.innerHTML = `
+				<div class="mb-3">
+						<p class="text-sm dark:text-white">Ninguna configuración adicional para el Partido Político Seleccionado.</p>
+				</div>
+            `
+		}
 
         _e__blocks.innerHTML = "";
         _e__blocks_rp.innerHTML = "";
@@ -628,6 +707,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let x = _.concat(pp[Object.keys(pp)[Object.keys(pp).length - 1]], pp[Object.keys(pp)[Object.keys(pp).length - 2]]);
 
+		if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
+			x.forEach((e) => {
+				e.disabled = true;
+			})
+		}
 
         _.some(x, function (e) {
             return e.checked
@@ -673,7 +757,7 @@ document.addEventListener('DOMContentLoaded', () => {
             _e__females = Array.from(document.querySelectorAll('input[value="female"]')).filter(j => j.checked),
             _e__nums_positions = (parseInt(Blocks[(partySelectorEl.value - 1)].number_districts));
 
-        console.error("_e__nums_positions: ", _e__nums_positions)
+        // console.error("_e__nums_positions: ", _e__nums_positions)
 
         /**
          * CONTEO DE FÓRMULAS.
@@ -699,7 +783,7 @@ document.addEventListener('DOMContentLoaded', () => {
             (_e__genderqueer_formulas[key].length > 1) ? _e__genderqueer_formulas_array.push(1) : _e__genderqueer_formulas_array.push(0)
         });
 
-        console.log("_e__males_formulas_array: ", _.sum(_e__males_formulas_array))
+        // console.log("_e__males_formulas_array: ", _.sum(_e__males_formulas_array))
 
         /**
          * MUJERES
@@ -716,19 +800,16 @@ document.addEventListener('DOMContentLoaded', () => {
             (_e__females_formulas[key].length > 1) ? _e__females_formulas_array.push(1) : _e__females_formulas_array.push(0)
         });
 
-        console.log("_e__females_formulas_array: ", _.sum(_e__females_formulas_array))
-
-        document.querySelector('._e__male_counter').innerHTML = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length) / _e__nums_positions) * 100, 2) + '%)P' + '<br>' + (_.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array)) + ' (' + _.round(((_.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array)) / _e__nums_positions) * 100, 2) + '%)F'
-        document.querySelector('._e__female_counter').innerHTML = _e__females.filter(f => f.dataset.position === 'p').length + ' (' + _.round((_e__females.filter(f => f.dataset.position === 'p').length / _e__nums_positions) * 100, 2) + '%)P' + '<br>' + _.sum(_e__females_formulas_array) + ' (' + _.round((_.sum(_e__females_formulas_array) / _e__nums_positions) * 100, 2) + '%)F'
-
+        // console.log("_e__females_formulas_array: ", _.sum(_e__females_formulas_array))
 
         /**
          *  CONTEO DE PROPIETARIOS.
          *  Se alternan géneros según selección en Mayoría Relativa.
          * */
-        let _e__male_p = Array.from(document.querySelectorAll('input[value="male"]:checked')).filter(f => f.dataset.position === 'p')
+        let _e__male_p = Array.from(document.querySelectorAll('input[value="male"]:checked')).filter(f => f.dataset.position === 'p'),
+			_e_ci_male = document.querySelector('#_ci__male')?.value ?? 0;
 
-        if ((_e__male_p.length + _e__genderqueer_checked.length) / _e__nums_positions > 0.5) {
+        if ((_e__male_p.length + _e__genderqueer_checked.length + parseInt(_e_ci_male)) / 15 > 0.5) {
             let _h = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
 
             Object.keys(_h).forEach((e) => {
@@ -737,9 +818,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-        let _e__female_p = Array.from(document.querySelectorAll('input[value="female"]:checked')).filter(f => f.dataset.position === 'p')
+        let _e__female_p = Array.from(document.querySelectorAll('input[value="female"]:checked')).filter(f => f.dataset.position === 'p'),
+			_e_ci_female = document.querySelector('#_ci__female')?.value ?? 0;
 
-        if (_e__female_p.length / _e__nums_positions > 0.5) {
+        if ((_e__female_p.length + parseInt(_e_ci_female)) / 15 > 0.5) {
             let _h = Array.from(document.querySelectorAll('input[value="male-rp"]')).filter(f => f.dataset.position === 'p')
 
             Object.keys(_h).forEach((e) => {
@@ -747,6 +829,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
             })
         }
+
+		let _c_female_p_selected = (_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) + ' (' + _.round(((_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) / 15) * 100, 2) + '%)',
+			_c_male_p_selected = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) / 15) * 100, 2) + '%)';
+
+		document.querySelector('._e__male_counter').innerHTML = _c_male_p_selected;
+		document.querySelector('._e__female_counter').innerHTML = _c_female_p_selected;
 
         /**
          * INTEGRACIÓN PARITARIA DE CADA BLOQUE
@@ -827,10 +915,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (_.sum(_xxx3m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx3f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx3m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx3f) === Math.ceil((_e__nums_positions / 3) / 2)) {
             _c__block_3_text.classList.replace('text-red-400', 'text-green-400')
             _e__block_par.push(1)
-        } else {
-            _c__block_3_text.classList.replace('text-green-400', 'text-red-400')
-            _e__block_par.push(0)
-        }
+		} else {
+			/* if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
+				_e__block_par.push(1)
+			} */
+			_c__block_3_text.classList.replace('text-green-400', 'text-red-400')
+			_e__block_par.push(0)
+		}
 
         /**
          * CHECK IF ALL BLOCKS ARE GREEN.
@@ -876,17 +967,18 @@ document.addEventListener('DOMContentLoaded', () => {
             _c__four.classList.replace('text-green-400', 'text-gray-400')
         }
 
-        console.log("_e__g4_array: ", _e__g4_array)
+        // console.log("_e__g4_array: ", _e__g4_array)
 
         /**
-         * PARIDAD EN LO GENERAL 8 MUJERES 7 HOMBRES O VICEVERSA.
+         * PARIDAD EN LO GENERAL 8 MUJERES 7 HOMBRES O VICEVERSA
+		 * @param _e__nums_positions trae el número de posiciones por partido. = 15
          * */
         let _c__general_males = _.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array),
             _c__general_females = _.sum(_e__females_formulas_array);
 
-        console.log("_c__general_males: ", _c__general_males, "_c__general_females: ", _c__general_females)
+        // console.log("_c__general_males: ", _c__general_males, "_c__general_females: ", _c__general_females)
 
-        if (_c__general_females === Math.ceil(_e__nums_positions / 2) && _c__general_males === Math.floor(_e__nums_positions / 2) || _c__general_males === Math.ceil(_e__nums_positions / 2) && _c__general_females === Math.floor(_e__nums_positions / 2)) {
+        if (parseInt(_c_female_p_selected) === Math.ceil(15 / 2) && parseInt(_c_male_p_selected) === Math.floor(15 / 2) || parseInt(_c_male_p_selected) === Math.ceil(15 / 2) && parseInt(_c_female_p_selected) === Math.floor(15 / 2)) {
             document.querySelector('._c__general').classList.replace('text-green-400', 'text-gray-400')
             document.querySelector('._c__general').classList.replace('text-gray-400', 'text-green-400')
         } else {
@@ -1151,5 +1243,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     })
 });
+
 
 

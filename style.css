@@ -199,9 +199,21 @@
         background-position: 119px 91px;
     }
 }
+
 div._e__fixed {
     transition: all 0.5s ease 0s;
 }
+
 div.nav--fixed {
     @apply sticky top-0 z-50 rounded top-[8em];
+}
+
+div._settings svg {
+    -webkit-transition: 0.9s ease-out;
+    -moz-transition: 0.9s ease-out;
+    transition: 0.9s ease-out;
+}
+
+div._settings:hover svg {
+    transform: rotateZ(360deg);
 }

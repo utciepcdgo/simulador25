@@ -37,7 +37,8 @@
     </div>
 </nav>
 
-<div class="_settings fixed bg-blue-600 z-10 top-1/3 right-0 rounded-l-full p-3 hover:cursor-pointer" onclick="openNav()">
+<div class="_settings fixed bg-blue-600 z-10 top-1/3 right-0 rounded-l-full p-3 hover:cursor-pointer"
+     onclick="openNav()">
     <svg xmlns="http://www.w3.org/2000/svg" class="text-white" width="24" height="24" viewBox="0 0 24 24"
          stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -48,12 +49,16 @@
 
 <div id="sideBar" class="fixed top-0 right-0 bg-transparent w-0 h-full overflow-x-hidden duration-500 z-20">
     <!--navigation menu contents-->
-    <div id="sideNav" class="fixed top-0 right-0 bg-gray-300 dark:bg-gray-800 drop-shadow-2xl w-0 h-full flex flex-row-reverse overflow-x-hidden duration-500 z-50">
+    <div id="sideNav"
+         class="fixed top-0 right-0 bg-gray-300 dark:bg-gray-800 drop-shadow-2xl w-0 h-full flex flex-row-reverse overflow-x-hidden duration-500 z-50">
         <!--exit icon, will close navbar when clicked-->
-        <a href="javascript:void(0)" onclick="exitNav()" class="text-3xl absolute top-0 right-0 mr-3 mt-2 dark:text-white">&times;</a>
+        <a href="javascript:void(0)" onclick="exitNav()"
+           class="text-3xl absolute top-0 right-0 mr-3 mt-2 dark:text-white">&times;</a>
         <!--menu links-->
         <div class="_settings__content w-full p-3 pt-12">
-
+            <div class="mb-3">
+                <p class="text-sm dark:text-white">Selecciona una opción para comenzar.</p>
+            </div>
         </div>
     </div>
 </div>

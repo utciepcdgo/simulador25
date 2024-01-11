@@ -279,7 +279,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			 let _dynamic__settings_obj = document.querySelector('._settings__content');
             _dynamic__settings_obj.innerHTML = `
 				<div class="mb-3">
-						<p class="text-sm dark:text-white">Ninguna configuración adicional para el Partido Político Seleccionado.</p>
+						<p class="text-sm dark:text-white">Ninguna configuración adicional para el Partido Político o Coalición Seleccionado.</p>
 				</div>
             `
 		}

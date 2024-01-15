@@ -126,6 +126,7 @@ document.querySelector('#app').innerHTML = `
 
 let partySelectorEl = document.querySelector('#parties'),
     rows_grouped = [],
+    rows_grouped_rp_array = [],
     rows_grouped_rp = [],
     _c__check_array = [],
     _c_result;
@@ -143,6 +144,7 @@ stickybits("selector");
 
 PartySelector(partySelectorEl)
 
+
 // Check if the user is on a mobile device
 window.mobileCheck = function() {
   let check = false;
@@ -151,6 +153,8 @@ window.mobileCheck = function() {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+
+	let _s__party_name = "";
 
     // Show disclaimer
     new Modal({
@@ -204,6 +208,8 @@ document.addEventListener('DOMContentLoaded', () => {
         _e__pride; // All pride
 
     partySelectorEl.addEventListener('change', (e) => {
+
+		_s__party_name = e.target.options[e.target.selectedIndex].text;
 
         _p__emblema.innerHTML = `
             <img src="` + Parties[(e.target.value - 1)].logo + `" alt="${e.target.value}" class="w-40 h-40 mx-auto">
@@ -812,6 +818,10 @@ document.addEventListener('DOMContentLoaded', () => {
          *  CONTEO DE PROPIETARIOS.
          *  Se alternan géneros según selección en Mayoría Relativa.
          * */
+
+        /**
+          * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON HOMBRES
+          * */
         let _e__male_p = Array.from(document.querySelectorAll('input[value="male"]:checked')).filter(f => f.dataset.position === 'p'),
 			_e_ci_male = document.querySelector('#_ci__male')?.value ?? 0;
 
@@ -824,18 +834,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
+         /**
+          * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON MUJERES
+          * */
         let _e__female_p = Array.from(document.querySelectorAll('input[value="female"]:checked')).filter(f => f.dataset.position === 'p'),
 			_e_ci_female = document.querySelector('#_ci__female')?.value ?? 0;
 
         if ((_e__female_p.length + parseInt(_e_ci_female)) / 15 > 0.5) {
-            let _h = Array.from(document.querySelectorAll('input[value="male-rp"]')).filter(f => f.dataset.position === 'p')
+            let _f = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
 
-            Object.keys(_h).forEach((e) => {
-                // (_h[e].dataset.level % 2 === 0) ? document.querySelector('#female-rp'+ _h[e].dataset.level +'-p-rp').disabled = true : (_h[e].checked = false)
-                (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
+            Object.keys(_f).forEach((e) => {
+                (_f[e].dataset.level % 2 === 0) ? (_f[e].checked = false) : undefined
+            })
+
+            Object.keys(_f).forEach((e) => {
+                (_f[e].dataset.level % 2 === 1) ? (_f[e].checked = true) : (_f[e].checked = false)
             })
         }
 
+        /**
+         * CONTEO DE PROPIETARIOS POR GÉNERO
+         * Recuadros de conteo de género ubicados al lado izquierdo de la pantalla.
+         * */
 		let _c_female_p_selected = (_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) + ' (' + _.round(((_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) / 15) * 100, 2) + '%)',
 			_c_male_p_selected = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) / 15) * 100, 2) + '%)';
 
@@ -1108,6 +1128,9 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         })
 
+        rows_grouped_rp_array = [];
+        Object.keys(rows_grouped_rp).forEach((e) => rows_grouped_rp_array.push(rows_grouped_rp[e][0]))
+
 
         // console.log("rows_grouped_rp: ", rows_grouped_rp)
         // rows = [];
@@ -1123,7 +1146,11 @@ document.addEventListener('DOMContentLoaded', () => {
         let col = ["Distrito", "Cabecera", "Género Prop.", "Grupo Prop.", "Género Supl.", "Grupo Supl."],
             col_rp = ["Fórmula", "Género Prop.", "Grupo Prop.", "Género Supl.", "Grupo Supl."],
             rows = rows_grouped,
-            rows_rp = rows_grouped_rp;
+            rows_rp = rows_grouped_rp_array;
+
+        console.log("rows_grouped_rp_array: ", rows_grouped_rp_array)
+        console.log("rows_grouped_rp_array: ", typeof rows_grouped_rp_array)
+        console.log("Party: ", _s__party_name)
 
         doc.setFont('helvetica', 'bold')
         doc.setFontSize(8)
@@ -1131,6 +1158,14 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.addImage('https://i.imgur.com/9TJfat5.png', 'PNG', 20, 20, 150, 67);
 
         doc.text('INSTITUTO ELECTORAL Y DE PARTICIPACIÓN CIUDADANA DEL ESTADO DE DURANGO.', 300, 40, {
+            align: 'center', maxWidth: 200,
+        })
+
+        doc.text("Partido Político/Coalición:", 490, 55, {
+            align: 'center', maxWidth: 200,
+        })
+
+		doc.text(_s__party_name, 490, 65, {
             align: 'center', maxWidth: 200,
         })
 
@@ -1208,6 +1243,14 @@ document.addEventListener('DOMContentLoaded', () => {
         doc.addImage('https://i.imgur.com/9TJfat5.png', 'PNG', 20, 20, 150, 67);
 
         doc.text('INSTITUTO ELECTORAL Y DE PARTICIPACIÓN CIUDADANA DEL ESTADO DE DURANGO.', 300, 40, {
+            align: 'center', maxWidth: 200,
+        })
+
+		doc.text("Partido Político/Coalición:", 490, 55, {
+            align: 'center', maxWidth: 200,
+        })
+
+		doc.text(_s__party_name, 490, 65, {
             align: 'center', maxWidth: 200,
         })
 

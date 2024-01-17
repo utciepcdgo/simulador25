@@ -215,9 +215,16 @@ document.addEventListener('DOMContentLoaded', () => {
             <img src="` + Parties[(e.target.value - 1)].logo + `" alt="${e.target.value}" class="w-40 h-40 mx-auto">
         `;
         // Ocultar regla de validación de RP ya las Coaliciones no tienen. (única excepción)
-/*        if (e.target.value === '2') {
-            document.querySelector('._c__four').parentElement.remove()
-        }*/
+        let _c__four = document.querySelector('._c__four');
+        if (e.target.value === '2') {
+            _c__four.classList.remove('_c__check')
+            _c__four.parentElement.classList.add('hidden');
+        } else {
+            if (!_c__four.classList.contains('_c__check')) {
+                _c__four.classList.add('_c__check')
+                _c__four.parentElement.classList.remove('hidden');
+            }
+        }
 
         if (e.target.value === '6' || e.target.value === '3') {
 

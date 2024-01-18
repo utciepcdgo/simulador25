@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
             _dynamic__settings_obj.innerHTML = `
             <form class="flex flex-col w-full">
 				<div class="mb-3">
-					<p class="text-sm dark:text-white">Seleccione el número de candidaturas mujeres y hombres que forman parte de la coalición «Sigamos Haciendo Historia en Durango».</p>
+					<p class="text-sm dark:text-white">Seleccione el número de candidaturas mujeres y hombres que forman parte `+ ((e.target.value === '2') ? ("del Partido Político que corresponda (PVEM o MORENA).") : ("de la Coalición Sigamos Haciendo Historia en Durango")) +`</p>
 				</div>
 				<div class="flex justify-center space-x-3">
 					<div>

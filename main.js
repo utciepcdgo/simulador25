@@ -1157,6 +1157,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     document.querySelector('._c__button_pdf').addEventListener('click', () => {
+        let _all_radio_buttons = document.querySelectorAll('input[type="radio"]');
+        console.log("AllRadio: ", _all_radio_buttons.length, Array.from(_all_radio_buttons).filter(f => f.checked).length)
+
+        if (Array.from(_all_radio_buttons).filter(f => f.checked).length !== (_all_radio_buttons.length / 3)) {
+            Modal.alert("Primero debes seleccionar todas las opciones antes de generar tu archivo de configuración.")
+            return false;
+        }
+
         let col = ["Distrito", "Cabecera", "Género Prop.", "Grupo Prop.", "Género Supl.", "Grupo Supl."],
             col_rp = ["Fórmula", "Género Prop.", "Grupo Prop.", "Género Supl.", "Grupo Supl."],
             rows = rows_grouped,
@@ -1199,7 +1207,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         autoTable(doc, {
             head: [col],
-            body: [...rows['1'].map(el => [el.district_roman, el.district_capital, el.genre_p, el.group_p, el.genre_s, el.group_s])],
+            body: [...rows['1']?.map(el => [el.district_roman, el.district_capital, el.genre_p, el.group_p, el.genre_s, el.group_s])],
             startY: 150,
             theme: 'striped',
             headStyles: {

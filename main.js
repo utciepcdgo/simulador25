@@ -146,15 +146,17 @@ PartySelector(partySelectorEl)
 
 
 // Check if the user is on a mobile device
-window.mobileCheck = function() {
-  let check = false;
-  (function(a){if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a)||/1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0,4))) check = true;})(navigator.userAgent||navigator.vendor||window.opera);
-  return check;
+window.mobileCheck = function () {
+    let check = false;
+    (function (a) {
+        if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|kindle|lge |maemo|midp|mmp|mobile.+firefox|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows ce|xda|xiino/i.test(a) || /1207|6310|6590|3gso|4thp|50[1-6]i|770s|802s|a wa|abac|ac(er|oo|s\-)|ai(ko|rn)|al(av|ca|co)|amoi|an(ex|ny|yw)|aptu|ar(ch|go)|as(te|us)|attw|au(di|\-m|r |s )|avan|be(ck|ll|nq)|bi(lb|rd)|bl(ac|az)|br(e|v)w|bumb|bw\-(n|u)|c55\/|capi|ccwa|cdm\-|cell|chtm|cldc|cmd\-|co(mp|nd)|craw|da(it|ll|ng)|dbte|dc\-s|devi|dica|dmob|do(c|p)o|ds(12|\-d)|el(49|ai)|em(l2|ul)|er(ic|k0)|esl8|ez([4-7]0|os|wa|ze)|fetc|fly(\-|_)|g1 u|g560|gene|gf\-5|g\-mo|go(\.w|od)|gr(ad|un)|haie|hcit|hd\-(m|p|t)|hei\-|hi(pt|ta)|hp( i|ip)|hs\-c|ht(c(\-| |_|a|g|p|s|t)|tp)|hu(aw|tc)|i\-(20|go|ma)|i230|iac( |\-|\/)|ibro|idea|ig01|ikom|im1k|inno|ipaq|iris|ja(t|v)a|jbro|jemu|jigs|kddi|keji|kgt( |\/)|klon|kpt |kwc\-|kyo(c|k)|le(no|xi)|lg( g|\/(k|l|u)|50|54|\-[a-w])|libw|lynx|m1\-w|m3ga|m50\/|ma(te|ui|xo)|mc(01|21|ca)|m\-cr|me(rc|ri)|mi(o8|oa|ts)|mmef|mo(01|02|bi|de|do|t(\-| |o|v)|zz)|mt(50|p1|v )|mwbp|mywa|n10[0-2]|n20[2-3]|n30(0|2)|n50(0|2|5)|n7(0(0|1)|10)|ne((c|m)\-|on|tf|wf|wg|wt)|nok(6|i)|nzph|o2im|op(ti|wv)|oran|owg1|p800|pan(a|d|t)|pdxg|pg(13|\-([1-8]|c))|phil|pire|pl(ay|uc)|pn\-2|po(ck|rt|se)|prox|psio|pt\-g|qa\-a|qc(07|12|21|32|60|\-[2-7]|i\-)|qtek|r380|r600|raks|rim9|ro(ve|zo)|s55\/|sa(ge|ma|mm|ms|ny|va)|sc(01|h\-|oo|p\-)|sdk\/|se(c(\-|0|1)|47|mc|nd|ri)|sgh\-|shar|sie(\-|m)|sk\-0|sl(45|id)|sm(al|ar|b3|it|t5)|so(ft|ny)|sp(01|h\-|v\-|v )|sy(01|mb)|t2(18|50)|t6(00|10|18)|ta(gt|lk)|tcl\-|tdg\-|tel(i|m)|tim\-|t\-mo|to(pl|sh)|ts(70|m\-|m3|m5)|tx\-9|up(\.b|g1|si)|utst|v400|v750|veri|vi(rg|te)|vk(40|5[0-3]|\-v)|vm40|voda|vulc|vx(52|53|60|61|70|80|81|83|85|98)|w3c(\-| )|webc|whit|wi(g |nc|nw)|wmlb|wonu|x700|yas\-|your|zeto|zte\-/i.test(a.substr(0, 4))) check = true;
+    })(navigator.userAgent || navigator.vendor || window.opera);
+    return check;
 };
 
 document.addEventListener('DOMContentLoaded', () => {
 
-	let _s__party_name = "";
+    let _s__party_name = "";
 
     // Show disclaimer
     new Modal({
@@ -209,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     partySelectorEl.addEventListener('change', (e) => {
 
-		_s__party_name = e.target.options[e.target.selectedIndex].text;
+        _s__party_name = e.target.options[e.target.selectedIndex].text;
 
         _p__emblema.innerHTML = `
             <img src="` + Parties[(e.target.value - 1)].logo + `" alt="${e.target.value}" class="w-40 h-40 mx-auto">
@@ -228,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (e.target.value === '6' || e.target.value === '3' || e.target.value === '2') {
 
-			Modal.alert(((e.target.value === '2') ? ("La Coalición seleccionada es parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias que forman parte del Partido Político que corresponda. ") : ("El Partido Político seleccionado forma parte de una Coalición Parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias que forman parte de la misma.")) + " Esto, con el fin de realizar los cálculos aritméticos necesarios para definir el género que encabezará y alternará en el listado de Representación Proporcional. Haga clic en el botón azul <div class='bg-blue-600 rounded-l-full p-1 align-bottom hover:cursor-pointer inline-block'> <svg xmlns='http://www.w3.org/2000/svg' class='text-white' width='16' height='16' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'> <path stroke='none' d='M0 0h24v24H0z' fill='none'/> <path d='M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z'/> <path d='M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0'/></svg></div> situado al lado derecho de su pantalla y seleccione el número de candidaturas por género.")
+            Modal.alert(((e.target.value === '2') ? ("La Coalición seleccionada es parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias que forman parte del Partido Político que corresponda. ") : ("El Partido Político seleccionado forma parte de una Coalición Parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias que forman parte de la misma.")) + " Esto, con el fin de realizar los cálculos aritméticos necesarios para definir el género que encabezará y alternará en el listado de Representación Proporcional. Haga clic en el botón azul <div class='bg-blue-600 rounded-l-full p-1 align-bottom hover:cursor-pointer inline-block'> <svg xmlns='http://www.w3.org/2000/svg' class='text-white' width='16' height='16' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'> <path stroke='none' d='M0 0h24v24H0z' fill='none'/> <path d='M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z'/> <path d='M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0'/></svg></div> situado al lado derecho de su pantalla y seleccione el número de candidaturas por género.")
 
             let _dynamic__settings_obj = document.querySelector('._settings__content');
 
@@ -271,41 +273,54 @@ document.addEventListener('DOMContentLoaded', () => {
 						</div>
 					</div>
 				</div>
-				<div class="mt-3">
+				<div class="my-3">
 					<p class="text-xs dark:text-white"><span class="text-red-600">*</span>Las candidaturas «No Binarias» suman al género masculino.</p>
-				</div>
+				</div>`
+            if (e.target.value === '3' || e.target.value === '6') {
+                _dynamic__settings_obj.innerHTML += `   
+                <div class="flex">
+                    <div class="flex items-center h-5">
+                        <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                    </div>
+                    <div class="ms-2 text-sm">
+                        <label for="helper-checkbox" class="font-medium text-gray-900 dark:text-gray-300">He cumplido con fórmula de Jóvenes.</label>
+                        <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Marque la casilla si el Partido Político en cuestión, ya cumple con la fórmula en la Coalición, esto, en cumplimiento del acuerdo IEPC/CG18/2024</p>
+                    </div>
+                </div>
+                `
+            }
+            _dynamic__settings_obj.innerHTML += `
             </form>
             `;
 
-			const $targetElFemale = document.getElementById('_ci__female');
-			const $targetElMale = document.getElementById('_ci__male');
+            const $targetElFemale = document.getElementById('_ci__female');
+            const $targetElMale = document.getElementById('_ci__male');
 
-			// optionally set the increment and decrement elements
-			const $incrementElFemale = document.getElementById('_ci__female_increment_button');
-			const $incrementElMale = document.getElementById('_ci__male_increment_button');
+            // optionally set the increment and decrement elements
+            const $incrementElFemale = document.getElementById('_ci__female_increment_button');
+            const $incrementElMale = document.getElementById('_ci__male_increment_button');
 
-			// optionally set the increment and decrement elements
-			const $decrementElFemale = document.getElementById('ci__female_decrement_button');
-			const $decrementElMale = document.getElementById('ci__male_decrement_button');
+            // optionally set the increment and decrement elements
+            const $decrementElFemale = document.getElementById('ci__female_decrement_button');
+            const $decrementElMale = document.getElementById('ci__male_decrement_button');
 
-			// optional options with default values and callback functions
-			const options = {
-				minValue: 0,
-				maxValue: 15, // infinite
-			};
+            // optional options with default values and callback functions
+            const options = {
+                minValue: 0,
+                maxValue: 15, // infinite
+            };
 
 
-
-			const counterInputFemale = new InputCounter($targetElFemale, $incrementElFemale, $decrementElFemale, options);
-			const counterInputMale = new InputCounter($targetElMale, $incrementElMale, $decrementElMale, options);
+            const counterInputFemale = new InputCounter($targetElFemale, $incrementElFemale, $decrementElFemale, options);
+            const counterInputMale = new InputCounter($targetElMale, $incrementElMale, $decrementElMale, options);
         } else {
-			 let _dynamic__settings_obj = document.querySelector('._settings__content');
+            let _dynamic__settings_obj = document.querySelector('._settings__content');
             _dynamic__settings_obj.innerHTML = `
 				<div class="mb-3">
 						<p class="text-sm dark:text-white">Ninguna configuración adicional para el Partido Político o Coalición Seleccionado.</p>
 				</div>
             `
-		}
+        }
 
         _e__blocks.innerHTML = "";
         _e__blocks_rp.innerHTML = "";
@@ -731,13 +746,13 @@ document.addEventListener('DOMContentLoaded', () => {
             return e.dataset.uuid
         })
 
-        let x = _.concat(pp[Object.keys(pp)[Object.keys(pp).length - 1]], pp[Object.keys(pp)[Object.keys(pp).length - 2]]);
+        let x = _.concat(pp[Object.keys(pp)[Object.keys(pp).length - 1]]);
 
-		if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
-			x.forEach((e) => {
-				e.disabled = true;
-			})
-		}
+        if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
+            x.forEach((e) => {
+                e.disabled = true;
+            })
+        }
 
         _.some(x, function (e) {
             return e.checked
@@ -834,10 +849,10 @@ document.addEventListener('DOMContentLoaded', () => {
          * */
 
         /**
-          * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON HOMBRES
-          * */
+         * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON HOMBRES
+         * */
         let _e__male_p = Array.from(document.querySelectorAll('input[value="male"]:checked')).filter(f => f.dataset.position === 'p'),
-			_e_ci_male = document.querySelector('#_ci__male')?.value ?? 0;
+            _e_ci_male = document.querySelector('#_ci__male')?.value ?? 0;
 
         if ((_e__male_p.length + _e__genderqueer_checked.length + parseInt(_e_ci_male)) / 15 > 0.5) {
             let _h = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
@@ -848,11 +863,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
         }
 
-         /**
-          * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON MUJERES
-          * */
+        /**
+         * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON MUJERES
+         * */
         let _e__female_p = Array.from(document.querySelectorAll('input[value="female"]:checked')).filter(f => f.dataset.position === 'p'),
-			_e_ci_female = document.querySelector('#_ci__female')?.value ?? 0;
+            _e_ci_female = document.querySelector('#_ci__female')?.value ?? 0;
 
         if ((_e__female_p.length + parseInt(_e_ci_female)) / 15 > 0.5) {
             let _f = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
@@ -870,11 +885,11 @@ document.addEventListener('DOMContentLoaded', () => {
          * CONTEO DE PROPIETARIOS POR GÉNERO
          * Recuadros de conteo de género ubicados al lado izquierdo de la pantalla.
          * */
-		let _c_female_p_selected = (_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) + ' (' + _.round(((_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) / 15) * 100, 2) + '%)',
-			_c_male_p_selected = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) / 15) * 100, 2) + '%)';
+        let _c_female_p_selected = (_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) + ' (' + _.round(((_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) / 15) * 100, 2) + '%)',
+            _c_male_p_selected = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) / 15) * 100, 2) + '%)';
 
-		document.querySelector('._e__male_counter').innerHTML = _c_male_p_selected;
-		document.querySelector('._e__female_counter').innerHTML = _c_female_p_selected;
+        document.querySelector('._e__male_counter').innerHTML = _c_male_p_selected;
+        document.querySelector('._e__female_counter').innerHTML = _c_female_p_selected;
 
         /**
          * INTEGRACIÓN PARITARIA DE CADA BLOQUE
@@ -956,13 +971,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (_.sum(_xxx3m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx3f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx3m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx3f) === Math.ceil((_e__nums_positions / 3) / 2)) {
             _c__block_3_text.classList.replace('text-red-400', 'text-green-400')
             _e__block_par.push(1)
-		} else {
-			/* if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
-				_e__block_par.push(1)
-			} */
-			_c__block_3_text.classList.replace('text-green-400', 'text-red-400')
-			_e__block_par.push(0)
-		}
+        } else {
+            /* if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
+                _e__block_par.push(1)
+            } */
+            _c__block_3_text.classList.replace('text-green-400', 'text-red-400')
+            _e__block_par.push(0)
+        }
 
         /**
          * CHECK IF ALL BLOCKS ARE GREEN.
@@ -1012,7 +1027,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         /**
          * PARIDAD EN LO GENERAL 8 MUJERES 7 HOMBRES O VICEVERSA
-		 * @param _e__nums_positions trae el número de posiciones por partido. = 15
+         * @param _e__nums_positions trae el número de posiciones por partido. = 15
          * */
         let _c__general_males = _.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array),
             _c__general_females = _.sum(_e__females_formulas_array);
@@ -1033,16 +1048,16 @@ document.addEventListener('DOMContentLoaded', () => {
             return e.dataset.level
         })
 
-		Object.keys(_e__female_formula_rp).forEach((e) => {
-			 if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "male-rp" || _e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "genderqueer-rp") {
-				 Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
-                 document.querySelector('label[for="'+ _e__female_formula_rp[e][1].id +'"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
-			 }
+        Object.keys(_e__female_formula_rp).forEach((e) => {
+            if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "male-rp" || _e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "genderqueer-rp") {
+                Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
+                document.querySelector('label[for="' + _e__female_formula_rp[e][1].id + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
+            }
 
-             if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "female-rp") {
-                 document.querySelector('label[for="'+ _e__female_formula_rp[e][1].id +'"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
-			 }
-		})
+            if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "female-rp") {
+                document.querySelector('label[for="' + _e__female_formula_rp[e][1].id + '"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
+            }
+        })
 
         /**
          * BOTÓN VERIFICAR
@@ -1114,7 +1129,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 formula: e.dataset.formula,
                 position: (e.dataset.position === "p") ? "Propietario(a)" : "Suplente",
                 genre: (e.value === "female-rp") ? "Mujer" : ((e.value === "male-rp") ? "Hombre" : "No binario"),
-                group: ((_c__group === 'g5') ? "G4" :  "Ninguno"),
+                group: ((_c__group === 'g5') ? "G4" : "Ninguno"),
             })
         })
         // console.log("rows_rp: ", rows_rp)
@@ -1123,7 +1138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         })
 
         // COMBINE DATASET.POSITION P AND S AT ONCE ROW WITH ALL PROPERTIES.
-        let rows_grouped_p_rp = _.groupBy(rows_rp.filter(f => f.position === "Propietario(a)") , function (e) {
+        let rows_grouped_p_rp = _.groupBy(rows_rp.filter(f => f.position === "Propietario(a)"), function (e) {
                 return e.formula
             }),
             rows_grouped_s_rp = _.groupBy(rows_rp.filter(f => f.position === "Suplente"), function (e) {
@@ -1179,11 +1194,16 @@ document.addEventListener('DOMContentLoaded', () => {
             align: 'center', maxWidth: 200,
         })
 
-		doc.text(_s__party_name, 490, 65, {
+        doc.text(_s__party_name, 490, 65, {
             align: 'center', maxWidth: 200,
         })
 
-        doc.text(new Date().toLocaleDateString('es-mx', { weekday:"long", year:"numeric", month:"long", day: "numeric"}), 490, 80, {
+        doc.text(new Date().toLocaleDateString('es-mx', {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }), 490, 80, {
             align: 'center', maxWidth: 200,
         })
 
@@ -1260,15 +1280,20 @@ document.addEventListener('DOMContentLoaded', () => {
             align: 'center', maxWidth: 200,
         })
 
-		doc.text("Partido Político/Coalición:", 490, 55, {
+        doc.text("Partido Político/Coalición:", 490, 55, {
             align: 'center', maxWidth: 200,
         })
 
-		doc.text(_s__party_name, 490, 65, {
+        doc.text(_s__party_name, 490, 65, {
             align: 'center', maxWidth: 200,
         })
 
-        doc.text(new Date().toLocaleDateString('es-mx', { weekday:"long", year:"numeric", month:"long", day: "numeric"}), 490, 80, {
+        doc.text(new Date().toLocaleDateString('es-mx', {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric"
+        }), 490, 80, {
             align: 'center', maxWidth: 200,
         })
 

@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
                <li class="text-justify">La información que el usuario ingrese en el Simulador no se almacena por ningún motivo, tenga a bien guardar su archivo de configuración si así lo desea.</li>
                <li class="text-justify">Este sistema es una herramienta didáctica que <b><u>NO</u></b> sustituye la revisión que se hará al momento del registro de candidaturas.</li>
                <li class="text-justify">Las personas que se auto adscriban como no binarias, serán consideradas para ocupar los lugares que le correspondan al género masculino, por ser este el sector que no ha sido históricamente discriminado. (Art. 13 numeral 1, fracción 1, inciso c de los Lineamientos para el registro de Candidaturas, integración de listas de representación proporcional e integración paritaria del Congreso del Estado de Durango para el Proceso Electoral Local 2023 – 2024).</li>
+               <li class="text-justify"><b>Se da cumplimiento al acuerdo IEPC/CG18/2024</b> por el que se da respuesta a la consulta formulada por el Representante Propietario del Partido Político Morena, relacionada con la postulación de una Candidatura de Mayoría Relativa como Medida Compensatoria para Jóvenes y Paridad de Género.</li>
            </ol>`,
         onOpen: function () {
             console.log('modal open');
@@ -237,7 +238,7 @@ document.addEventListener('DOMContentLoaded', () => {
             _dynamic__settings_obj.innerHTML = `
             <form class="flex flex-col w-full">
 				<div class="mb-3">
-					<p class="text-sm dark:text-white">Seleccione el número de candidaturas mujeres y hombres que forman parte `+ ((e.target.value === '2') ? ("del Partido Político que corresponda (PVEM o MORENA).") : ("de la Coalición Sigamos Haciendo Historia en Durango")) +`</p>
+					<p class="text-sm dark:text-white">Seleccione el número de candidaturas mujeres y hombres que forman parte ` + ((e.target.value === '2') ? ("del Partido Político que corresponda (PVEM o MORENA).") : ("de la Coalición Sigamos Haciendo Historia en Durango")) + `</p>
 				</div>
 				<div class="flex justify-center space-x-3">
 					<div>
@@ -280,10 +281,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 _dynamic__settings_obj.innerHTML += `   
                 <div class="flex">
                     <div class="flex items-center h-5">
-                        <input id="helper-checkbox" aria-describedby="helper-checkbox-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
+                        <input id="chkfyouth" aria-describedby="chkfyouth-text" type="checkbox" value="" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
                     </div>
                     <div class="ms-2 text-sm">
-                        <label for="helper-checkbox" class="font-medium text-gray-900 dark:text-gray-300">He cumplido con fórmula de Jóvenes.</label>
+                        <label for="chkfyouth" class="font-medium text-gray-900 dark:text-gray-300">He cumplido con fórmula de Jóvenes.</label>
                         <p id="helper-checkbox-text" class="text-xs font-normal text-gray-500 dark:text-gray-300">Marque la casilla si el Partido Político en cuestión, ya cumple con la fórmula en la Coalición, esto, en cumplimiento del acuerdo IEPC/CG18/2024</p>
                     </div>
                 </div>
@@ -714,6 +715,7 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     window.addEventListener('change', (El) => {
+
         // Primera palomita.
         let _c__one = document.querySelector('._c__one')
         // Segunda palomita.
@@ -773,6 +775,15 @@ document.addEventListener('DOMContentLoaded', () => {
         _.some(_e_youth_array, function (e) {
             return e === 1
         }) ? (_c__30y.classList.replace('text-gray-400', 'text-green-400')) : (_c__30y.classList.replace('text-green-400', 'text-gray-400'))
+
+        // Cumplimiento al acuerdo IEPC/CG18/2024.
+        if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
+            // Mark Young rule as green if checked
+            if (document.querySelector('input#chkfyouth').checked) {
+                document.querySelectorAll('input[value="youth"]').forEach(e => e.remove());
+                _c__30y.classList.replace('text-gray-400', 'text-green-400');
+            }
+        }
 
         /**
          * FORMULA DE INDÍGENAS

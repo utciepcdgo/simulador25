@@ -780,8 +780,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
             // Mark Young rule as green if checked
             if (document.querySelector('input#chkfyouth').checked) {
-                document.querySelectorAll('input[value="youth"]').forEach(e => e.remove());
+                document.querySelectorAll('input[value="youth"]').forEach(e => e.parentElement.parentElement.style.display = 'none');
                 _c__30y.classList.replace('text-gray-400', 'text-green-400');
+            } else {
+                document.querySelectorAll('input[value="youth"]').forEach(e => e.parentElement.parentElement.style.display = 'flex');
             }
         }
 

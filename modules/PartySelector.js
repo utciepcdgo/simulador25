@@ -24,7 +24,7 @@ export async function PartySelector(selectorEl)
 	let p = [];
 
 	for (let party of Parties) {
-		p.push(party.name)
+		p.push(party)
 	}
 
 	/**
@@ -40,7 +40,10 @@ export async function PartySelector(selectorEl)
 		selectorEl.options.add(new Option("Seleccione un Partido Político o Coalición", '0', false, false));
 
 		// Add the parties
-		party.forEach((p, i) => { selectorEl.options.add(new Option(p, (i + 1), false, false)) });
+		party.forEach((p, i) => {
+			console.log("Partido en selector: ", p)
+			selectorEl.options.add(new Option(p.name, p.id, false, false))
+		});
 	}
 
 	setupSelector(p)

@@ -1,146 +1,529 @@
 [
   {
-    "id": "1",
-    "number_districts": "15",
     "party": {
-      "name": "Fuerza y Corazón por Durango",
-      "acronym": "FyCxDGO"
+      "id": 2,
+      "name": "Partido Acción Nacional",
+      "acronym": "PAN",
+      "logo": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/emblemas/PAN.svg"
     },
     "blocks": [
       {
         "1": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "4",
-              "district_roman": "IV",
-              "votes_percentage": 54.85,
-              "votes_textual": "Cincuenta y cuatro punto ochenta y cinco",
-              "district_capital": "Durango",
-              "uuid": "e7808984"
+              "id": 79,
+              "uuid": "9bdd72a9-f9c8-4632-85a1-80fdec73278c",
+              "votes_obtained": "11,647",
+              "valid_vote_issued": "19,369",
+              "rentability": 60.13,
+              "municipality": {
+                "id": 32,
+                "name": "Santiago Papasquiaro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SGO.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "7",
-              "district_roman": "VII",
-              "votes_percentage": 54.16,
-              "votes_textual": "Cincuenta y cuatro punto dieciséis",
-              "district_capital": "Santiago Papasquiaro",
-              "uuid": "e05aa206"
+              "id": 80,
+              "uuid": "8fc9192e-cc7a-422a-ae47-7ed64ce23887",
+              "votes_obtained": "1,069",
+              "valid_vote_issued": "2,333",
+              "rentability": 45.82,
+              "municipality": {
+                "id": 11,
+                "name": "Indé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/IND.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "6",
-              "district_roman": "VI",
-              "votes_percentage": 53.36,
-              "votes_textual": "Cincuenta y tres punto treinta y seis",
-              "district_capital": "Durango",
-              "uuid": "f0704dcd"
+              "id": 81,
+              "uuid": "e17164d9-23d1-453a-aa98-6e645fb57cca",
+              "votes_obtained": "994",
+              "valid_vote_issued": "2,761",
+              "rentability": 36,
+              "municipality": {
+                "id": 19,
+                "name": "Otáez",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OTA.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "1",
-              "district_roman": "I",
-              "votes_percentage": 51.28,
-              "votes_textual": "Cincuenta y uno punto veintiocho",
-              "district_capital": "Durango",
-              "uuid": "c6099fb4"
+              "id": 82,
+              "uuid": "cd15f721-9991-453b-b148-bdbee310de96",
+              "votes_obtained": "3,383",
+              "valid_vote_issued": "9,836",
+              "rentability": 34.39,
+              "municipality": {
+                "id": 38,
+                "name": "Vicente Guerrero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/VGO.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "5",
-              "district_roman": "V",
-              "votes_percentage": 49.51,
-              "votes_textual": "Cuarenta y nueve punto cincuenta y uno",
-              "district_capital": "Durango",
-              "uuid": "adcafed2"
+              "id": 83,
+              "uuid": "bf1b3801-760f-4971-8205-aaef89b23d40",
+              "votes_obtained": "337",
+              "valid_vote_issued": "997",
+              "rentability": 33.8,
+              "municipality": {
+                "id": 30,
+                "name": "San Pedro del Gallo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SPG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 84,
+              "uuid": "7635f0d2-d7ee-45ec-9e89-3f416d9efa13",
+              "votes_obtained": "2,14",
+              "valid_vote_issued": "6,359",
+              "rentability": 33.65,
+              "municipality": {
+                "id": 15,
+                "name": "Nazas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NAZ.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 85,
+              "uuid": "7ab7ad35-03c7-40a1-96bd-7124db3079bb",
+              "votes_obtained": "4,718",
+              "valid_vote_issued": "14,759",
+              "rentability": 31.97,
+              "municipality": {
+                "id": 1,
+                "name": "Canatlán",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CAN.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 86,
+              "uuid": "17a043e4-3a96-4d35-b07c-f7f198fa6da0",
+              "votes_obtained": "638",
+              "valid_vote_issued": "2,037",
+              "rentability": 31.32,
+              "municipality": {
+                "id": 2,
+                "name": "Canelas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CNS.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 87,
+              "uuid": "5e5dd7d4-6df5-44f4-933b-14aec6fbdd2b",
+              "votes_obtained": "955",
+              "valid_vote_issued": "3,139",
+              "rentability": 30.42,
+              "municipality": {
+                "id": 37,
+                "name": "Topia",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TOP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 88,
+              "uuid": "0db76af6-6778-412a-a74c-54859696d22b",
+              "votes_obtained": "1,439",
+              "valid_vote_issued": "5,179",
+              "rentability": 27.79,
+              "municipality": {
+                "id": 6,
+                "name": "General Simón Bolívar",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SIM.png",
+                "councils": 1
+              }
+            },
+            {
+              "id": 89,
+              "uuid": "99893da1-6a7b-473a-b764-3d6d46275651",
+              "votes_obtained": "2,789",
+              "valid_vote_issued": "10,365",
+              "rentability": 26.91,
+              "municipality": {
+                "id": 39,
+                "name": "Nuevo Ideal",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NVO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 90,
+              "uuid": "9ddc6bb4-18ff-4b7b-8915-76ffcf0b9b88",
+              "votes_obtained": "831",
+              "valid_vote_issued": "3,196",
+              "rentability": 26,
+              "municipality": {
+                "id": 17,
+                "name": "Ocampo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OCA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 91,
+              "uuid": "7af8bfc2-85a7-4318-8909-72cd2dbc27f1",
+              "votes_obtained": "2,829",
+              "valid_vote_issued": "10,899",
+              "rentability": 25.96,
+              "municipality": {
+                "id": 22,
+                "name": "Poanas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/POA.png",
+                "councils": 9
+              }
             }
           ]
-        }
-      },
-      {
+        },
         "2": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "8",
-              "district_roman": "VIII",
-              "votes_percentage": 46.35,
-              "votes_textual": "Cuarenta y seis punto treinta y cinco",
-              "district_capital": "Guadalupe Victoria",
-              "uuid": "b054eb3f"
+              "id": 92,
+              "uuid": "47c5e70a-cec1-420f-a213-0b625d96dd66",
+              "votes_obtained": "2,047",
+              "valid_vote_issued": "8,024",
+              "rentability": 25.51,
+              "municipality": {
+                "id": 26,
+                "name": "San Dimas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SDI.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "15",
-              "district_roman": "XV",
-              "votes_percentage": 45.74,
-              "votes_textual": "Cuarenta y cinco punto setenta y cuatro",
-              "district_capital": "Pueblo Nuevo",
-              "uuid": "b320500b"
+              "id": 93,
+              "uuid": "96d8b033-3269-4ad4-ab21-26c783d36026",
+              "votes_obtained": "4,508",
+              "valid_vote_issued": "18,029",
+              "rentability": 25,
+              "municipality": {
+                "id": 23,
+                "name": "Pueblo Nuevo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PNO.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "3",
-              "district_roman": "III",
-              "votes_percentage": 45.61,
-              "votes_textual": "Cuarenta y cinco punto sesenta y uno",
-              "district_capital": "Durango",
-              "uuid": "cfe6fe8f"
+              "id": 94,
+              "uuid": "393fc894-fc1f-4c71-b029-63269348a03d",
+              "votes_obtained": "2,25",
+              "valid_vote_issued": "9,192",
+              "rentability": 24.48,
+              "municipality": {
+                "id": 36,
+                "name": "Tlahualilo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TLO.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "13",
-              "district_roman": "XIII",
-              "votes_percentage": 45.07,
-              "votes_textual": "Cuarenta y cinco punto cero siete",
-              "district_capital": "Lerdo",
-              "uuid": "d97951c6"
+              "id": 95,
+              "uuid": "a5b004a4-5e15-4acf-85e2-975d7f58317c",
+              "votes_obtained": "51,945",
+              "valid_vote_issued": "224,19",
+              "rentability": 23.17,
+              "municipality": {
+                "id": 5,
+                "name": "Durango",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/DGO.png",
+                "councils": 17
+              }
             },
             {
-              "district_decimal": "9",
-              "district_roman": "IX",
-              "votes_percentage": 43.04,
-              "votes_textual": "Cuarenta y tres punto cero cuatro",
-              "district_capital": "Mapimí",
-              "uuid": "ea431f04"
+              "id": 96,
+              "uuid": "40e07b24-92f0-4608-909b-02f59090f4ae",
+              "votes_obtained": "1,085",
+              "valid_vote_issued": "4,933",
+              "rentability": 21.99,
+              "municipality": {
+                "id": 21,
+                "name": "Peñón Blanco",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 97,
+              "uuid": "86af6a4e-db0f-440a-a723-e57aea26b9cc",
+              "votes_obtained": "239",
+              "valid_vote_issued": "1,247",
+              "rentability": 19.17,
+              "municipality": {
+                "id": 29,
+                "name": "San Luis de Cordero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SLC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 98,
+              "uuid": "959f6019-fa47-41a8-8bfe-bf242002feb4",
+              "votes_obtained": "589",
+              "valid_vote_issued": "3,524",
+              "rentability": 16.71,
+              "municipality": {
+                "id": 33,
+                "name": "Súchil",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SUC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 99,
+              "uuid": "98077973-41db-49f9-98af-9d6975f8abe1",
+              "votes_obtained": "754",
+              "valid_vote_issued": "4,597",
+              "rentability": 16.4,
+              "municipality": {
+                "id": 18,
+                "name": "El Oro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/ORO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 100,
+              "uuid": "123c1b1e-b75b-41e9-9d43-820382d97c0c",
+              "votes_obtained": "1,892",
+              "valid_vote_issued": "17,146",
+              "rentability": 11.03,
+              "municipality": {
+                "id": 8,
+                "name": "Guadalupe Victoria",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVC.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 101,
+              "uuid": "913e2ecd-2ee3-4b4a-8102-cf383e086210",
+              "votes_obtained": "880",
+              "valid_vote_issued": "8,06",
+              "rentability": 10.92,
+              "municipality": {
+                "id": 16,
+                "name": "Nombre de Dios",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NOM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 102,
+              "uuid": "65c008e7-5ce9-431a-8756-e72205f32d25",
+              "votes_obtained": "646",
+              "valid_vote_issued": "6,159",
+              "rentability": 10.49,
+              "municipality": {
+                "id": 20,
+                "name": "Pánuco de Coronado",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PCO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 103,
+              "uuid": "dabc3547-b580-4552-96d5-0baef56971d4",
+              "votes_obtained": "545",
+              "valid_vote_issued": "5,621",
+              "rentability": 9.7,
+              "municipality": {
+                "id": 24,
+                "name": "Rodeo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/RDO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 104,
+              "uuid": "11536686-785a-4e6c-af12-eabb80087aab",
+              "votes_obtained": "198",
+              "valid_vote_issued": "2,234",
+              "rentability": 8.86,
+              "municipality": {
+                "id": 3,
+                "name": "Coneto de Comonfort",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/COC.png",
+                "councils": 7
+              }
             }
           ]
-        }
-      },
-      {
+        },
         "3": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "11",
-              "district_roman": "XI",
-              "votes_percentage": 39.96,
-              "votes_textual": "Treinta y nueve punto noventa y seis",
-              "district_capital": "Gómez Palacio",
-              "uuid": "f4133653"
+              "id": 105,
+              "uuid": "6b714546-ea44-40d8-aa76-019dd641b72d",
+              "votes_obtained": "4,261",
+              "valid_vote_issued": "56,362",
+              "rentability": 7.56,
+              "municipality": {
+                "id": 12,
+                "name": "Lerdo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/LDO.png",
+                "councils": 15
+              }
             },
             {
-              "district_decimal": "2",
-              "district_roman": "II",
-              "votes_percentage": 38.67,
-              "votes_textual": "Treinta y ocho punto sesenta y siete",
-              "district_capital": "Durango",
-              "uuid": "a7f83f71"
+              "id": 106,
+              "uuid": "a5bfcb82-f400-4b11-9707-8d2e0278e37b",
+              "votes_obtained": "403",
+              "valid_vote_issued": "5,511",
+              "rentability": 7.31,
+              "municipality": {
+                "id": 35,
+                "name": "Tepehuanes",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TEP.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "12",
-              "district_roman": "XII",
-              "votes_percentage": 36.65,
-              "votes_textual": "Cuarenta y tres punto cero cuatro",
-              "district_capital": "Gómez Palacio",
-              "uuid": "a84b3a5"
+              "id": 107,
+              "uuid": "ac33edb4-db15-47f9-b5aa-e1017c490015",
+              "votes_obtained": "455",
+              "valid_vote_issued": "6,433",
+              "rentability": 7.07,
+              "municipality": {
+                "id": 28,
+                "name": "San Juan del Río",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJR.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "14",
-              "district_roman": "XIV",
-              "votes_percentage": 36.45,
-              "votes_textual": "Treinta y seis punto cuarenta y cinco",
-              "district_capital": "Cuencamé",
-              "uuid": "bcd7983"
+              "id": 108,
+              "uuid": "783de772-c3bb-4404-8160-06725634cc05",
+              "votes_obtained": "8,293",
+              "valid_vote_issued": "117,988",
+              "rentability": 7.03,
+              "municipality": {
+                "id": 7,
+                "name": "Gómez Palacio",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GZP.png",
+                "councils": 15
+              }
             },
             {
-              "district_decimal": "10",
-              "district_roman": "X",
-              "votes_percentage": 30.64,
-              "votes_textual": "Treinta y cero punto sesenta y cuatro",
-              "district_capital": "Gómez Palacio",
-              "uuid": "d62a965d"
+              "id": 109,
+              "uuid": "89a4a5cc-d8cf-423f-a02c-ff11f70d8378",
+              "votes_obtained": "314",
+              "valid_vote_issued": "4,673",
+              "rentability": 6.72,
+              "municipality": {
+                "id": 9,
+                "name": "Guanaceví",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVI.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 110,
+              "uuid": "36e96a15-8f2b-45cb-8a29-cc7f1d6c0117",
+              "votes_obtained": "804",
+              "valid_vote_issued": "13,071",
+              "rentability": 6.15,
+              "municipality": {
+                "id": 4,
+                "name": "Cuencamé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CME.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 111,
+              "uuid": "4ba5e8e6-1064-41d4-a934-31fd152b995d",
+              "votes_obtained": "609",
+              "valid_vote_issued": "10,444",
+              "rentability": 5.83,
+              "municipality": {
+                "id": 13,
+                "name": "Mapimí",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MPI.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 112,
+              "uuid": "046ab711-ed36-4b60-b3f6-3797d96e28b3",
+              "votes_obtained": "197",
+              "valid_vote_issued": "3,566",
+              "rentability": 5.52,
+              "municipality": {
+                "id": 31,
+                "name": "Santa Clara",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SCL.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 113,
+              "uuid": "f3bc6d2f-f887-4672-8d17-04fe9b5039b0",
+              "votes_obtained": "412",
+              "valid_vote_issued": "12,357",
+              "rentability": 3.33,
+              "municipality": {
+                "id": 34,
+                "name": "Tamazula",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TAM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 114,
+              "uuid": "99c135d3-17d7-489f-ba09-72c6a73a0b46",
+              "votes_obtained": "223",
+              "valid_vote_issued": "15,621",
+              "rentability": 1.43,
+              "municipality": {
+                "id": 14,
+                "name": "Mezquital",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MEZ.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 115,
+              "uuid": "afc58416-7680-4f30-97f2-c1116d8b5d49",
+              "votes_obtained": "21",
+              "valid_vote_issued": "1,539",
+              "rentability": 1.36,
+              "municipality": {
+                "id": 25,
+                "name": "San Bernardo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 116,
+              "uuid": "dd44cd5a-668a-4b49-8376-cae0be5dbdd9",
+              "votes_obtained": "20",
+              "valid_vote_issued": "3,033",
+              "rentability": 0.66,
+              "municipality": {
+                "id": 27,
+                "name": "San Juan de Guadalupe",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 117,
+              "uuid": "85c2ff27-cb60-4502-8fce-203c2c741d5f",
+              "votes_obtained": "11",
+              "valid_vote_issued": "2,125",
+              "rentability": 0.52,
+              "municipality": {
+                "id": 10,
+                "name": "Hidalgo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/HGO.png",
+                "councils": 7
+              }
             }
           ]
         }
@@ -148,99 +531,530 @@
     ]
   },
   {
-    "id": "2",
-    "number_districts": "9",
     "party": {
-      "name": "Sigamos Haciendo Historia en Durango",
-      "acronym": "SHHDGO"
+      "id": 3,
+      "name": "Partido Revolucionario Institucional",
+      "acronym": "PRI",
+      "logo": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/emblemas/PRI.svg"
     },
     "blocks": [
       {
         "1": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "10",
-              "district_roman": "X",
-              "votes_percentage": 63.01,
-              "votes_textual": "Sesenta y tres punto cero uno",
-              "district_capital": "Gómez Palacio",
-              "uuid": "a4bf6e91"
+              "id": 147,
+              "uuid": "5a38078a-9749-483b-9dc7-ee0aba7ae7b2",
+              "votes_obtained": "1,678",
+              "valid_vote_issued": "14,759",
+              "rentability": 11.37,
+              "municipality": {
+                "id": 1,
+                "name": "Canatlán",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CAN.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "12",
-              "district_roman": "XII",
-              "votes_percentage": 55.3,
-              "votes_textual": "Cincuenta y cinco punto treinta",
-              "district_capital": "Gómez Palacio",
-              "uuid": "bb995907"
+              "id": 146,
+              "uuid": "02e90f77-6b53-40a7-984f-dfd6acd7e993",
+              "votes_obtained": "290",
+              "valid_vote_issued": "2,037",
+              "rentability": 14.24,
+              "municipality": {
+                "id": 2,
+                "name": "Canelas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CNS.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "14",
-              "district_roman": "XIV",
-              "votes_percentage": 51.34,
-              "votes_textual": "Cincuenta y uno punto treinta y cuatro",
-              "district_capital": "Cuencamé",
-              "uuid": "c373a89c"
+              "id": 141,
+              "uuid": "ca62358e-0acc-4396-b5a7-ae8f82d4d269",
+              "votes_obtained": "468",
+              "valid_vote_issued": "2,234",
+              "rentability": 20.95,
+              "municipality": {
+                "id": 3,
+                "name": "Coneto de Comonfort",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/COC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 133,
+              "uuid": "e8fe0295-9b03-4ce5-a1db-b24fb50ecf46",
+              "votes_obtained": "4,262",
+              "valid_vote_issued": "13,071",
+              "rentability": 32.61,
+              "municipality": {
+                "id": 4,
+                "name": "Cuencamé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CME.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 139,
+              "uuid": "c2a94dec-2f3a-439d-9d66-763e618c30e6",
+              "votes_obtained": "58,547",
+              "valid_vote_issued": "224,19",
+              "rentability": 26.11,
+              "municipality": {
+                "id": 5,
+                "name": "Durango",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/DGO.png",
+                "councils": 17
+              }
+            },
+            {
+              "id": 123,
+              "uuid": "b961fa0e-4a88-49d5-a5ff-d365711388bc",
+              "votes_obtained": "2,267",
+              "valid_vote_issued": "5,179",
+              "rentability": 43.77,
+              "municipality": {
+                "id": 6,
+                "name": "General Simón Bolívar",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SIM.png",
+                "councils": 1
+              }
+            },
+            {
+              "id": 122,
+              "uuid": "e69f65c7-fe07-493f-a95f-61aef06ff903",
+              "votes_obtained": "56,843",
+              "valid_vote_issued": "117,988",
+              "rentability": 48.18,
+              "municipality": {
+                "id": 7,
+                "name": "Gómez Palacio",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GZP.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 142,
+              "uuid": "69696d59-d782-4bc4-8190-67142f263be2",
+              "votes_obtained": "3,165",
+              "valid_vote_issued": "17,146",
+              "rentability": 18.46,
+              "municipality": {
+                "id": 8,
+                "name": "Guadalupe Victoria",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVC.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 118,
+              "uuid": "2a3efc23-8436-4b84-8255-7158b3f7bf4a",
+              "votes_obtained": "3,496",
+              "valid_vote_issued": "4,673",
+              "rentability": 74.81,
+              "municipality": {
+                "id": 9,
+                "name": "Guanaceví",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVI.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 129,
+              "uuid": "e9474de5-1269-48b7-8454-bf90b9ed73dd",
+              "votes_obtained": "795",
+              "valid_vote_issued": "2,125",
+              "rentability": 37.41,
+              "municipality": {
+                "id": 10,
+                "name": "Hidalgo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/HGO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 136,
+              "uuid": "37d0f16d-e0f6-4ef0-a717-b83b7c5256e8",
+              "votes_obtained": "682",
+              "valid_vote_issued": "2,333",
+              "rentability": 29.23,
+              "municipality": {
+                "id": 11,
+                "name": "Indé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/IND.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 125,
+              "uuid": "fa301be7-3819-4e5b-9736-cfb5643b1ece",
+              "votes_obtained": "23,828",
+              "valid_vote_issued": "56,362",
+              "rentability": 42.28,
+              "municipality": {
+                "id": 12,
+                "name": "Lerdo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/LDO.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 131,
+              "uuid": "d83b55b9-85f4-4f94-8800-cfcd2ab2c030",
+              "votes_obtained": "3,576",
+              "valid_vote_issued": "10,444",
+              "rentability": 34.24,
+              "municipality": {
+                "id": 13,
+                "name": "Mapimí",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MPI.png",
+                "councils": 9
+              }
             }
           ]
-        }
-      },
-      {
+        },
         "2": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "11",
-              "district_roman": "XI",
-              "votes_percentage": 51.05,
-              "votes_textual": "Cincuenta y uno punto cero cinco",
-              "district_capital": "Gómez Palacio",
-              "uuid": "b16f870d"
+              "id": 119,
+              "uuid": "bcd91ec0-70b0-43d6-9b4c-5ea76082fbbe",
+              "votes_obtained": "9,35",
+              "valid_vote_issued": "15,621",
+              "rentability": 59.86,
+              "municipality": {
+                "id": 14,
+                "name": "Mezquital",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MEZ.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "13",
-              "district_roman": "XIII",
-              "votes_percentage": 44.11,
-              "votes_textual": "Cuarenta y cuatro punto once",
-              "district_capital": "Lerdo",
-              "uuid": "d4ae5fa7"
+              "id": 148,
+              "uuid": "8d6eaa98-a99d-4cd0-a483-f274efdd614d",
+              "votes_obtained": "719",
+              "valid_vote_issued": "6,359",
+              "rentability": 11.31,
+              "municipality": {
+                "id": 15,
+                "name": "Nazas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NAZ.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "9",
-              "district_roman": "IX",
-              "votes_percentage": 43.88,
-              "votes_textual": "Cuarenta y tres punto ochenta y ocho",
-              "district_capital": "Mapimí",
-              "uuid": "f3e7529e"
+              "id": 151,
+              "uuid": "3a0cfa43-9cdc-4cdd-8e4b-49ecd5f4ca98",
+              "votes_obtained": "742",
+              "valid_vote_issued": "8,06",
+              "rentability": 9.21,
+              "municipality": {
+                "id": 16,
+                "name": "Nombre de Dios",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NOM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 128,
+              "uuid": "15c980bf-aa4b-4548-b5a5-1452f6aff1e9",
+              "votes_obtained": "1,205",
+              "valid_vote_issued": "3,196",
+              "rentability": 37.7,
+              "municipality": {
+                "id": 17,
+                "name": "Ocampo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OCA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 130,
+              "uuid": "7d348cad-c77d-49ca-9d7a-86817bbc8e55",
+              "votes_obtained": "1,613",
+              "valid_vote_issued": "4,597",
+              "rentability": 35.09,
+              "municipality": {
+                "id": 18,
+                "name": "El Oro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/ORO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 156,
+              "uuid": "5a6aa65c-23d2-46a5-ae06-fe8aaa2c1d0f",
+              "votes_obtained": "38",
+              "valid_vote_issued": "2,761",
+              "rentability": 1.38,
+              "municipality": {
+                "id": 19,
+                "name": "Otáez",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OTA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 134,
+              "uuid": "967283cf-ab06-4817-ae20-5e80d3dca261",
+              "votes_obtained": "1,936",
+              "valid_vote_issued": "6,159",
+              "rentability": 31.43,
+              "municipality": {
+                "id": 20,
+                "name": "Pánuco de Coronado",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PCO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 140,
+              "uuid": "b94d2ee0-e934-4343-a741-a927e5a0bd8d",
+              "votes_obtained": "1,049",
+              "valid_vote_issued": "4,933",
+              "rentability": 21.26,
+              "municipality": {
+                "id": 21,
+                "name": "Peñón Blanco",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 144,
+              "uuid": "d18d51c1-6f42-4dd4-b15e-5b4593a66a3c",
+              "votes_obtained": "1,648",
+              "valid_vote_issued": "10,899",
+              "rentability": 15.12,
+              "municipality": {
+                "id": 22,
+                "name": "Poanas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/POA.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 127,
+              "uuid": "857b6920-2d11-4322-ba0b-738eeb84331d",
+              "votes_obtained": "6,832",
+              "valid_vote_issued": "18,029",
+              "rentability": 37.89,
+              "municipality": {
+                "id": 23,
+                "name": "Pueblo Nuevo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PNO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 150,
+              "uuid": "264ff55b-f040-4eae-bb30-10152dff94e7",
+              "votes_obtained": "580",
+              "valid_vote_issued": "5,621",
+              "rentability": 10.32,
+              "municipality": {
+                "id": 24,
+                "name": "Rodeo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/RDO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 154,
+              "uuid": "6bbf1e5c-2044-4514-8825-076e8b12661c",
+              "votes_obtained": "48",
+              "valid_vote_issued": "1,539",
+              "rentability": 3.12,
+              "municipality": {
+                "id": 25,
+                "name": "San Bernardo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 152,
+              "uuid": "fbc5ea10-f759-4a22-bc7a-8f2753a03653",
+              "votes_obtained": "572",
+              "valid_vote_issued": "8,024",
+              "rentability": 7.13,
+              "municipality": {
+                "id": 26,
+                "name": "San Dimas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SDI.png",
+                "councils": 9
+              }
             }
           ]
-        }
-      },
-      {
+        },
         "3": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "8",
-              "district_roman": "VIII",
-              "votes_percentage": 40.67,
-              "votes_textual": "Cuarenta y cero punto sesenta y siete",
-              "district_capital": "Guadalupe Victoria",
-              "uuid": "a6638006"
+              "id": 135,
+              "uuid": "d6f8021c-2d2c-4c5a-ba16-3ffc0aa8c349",
+              "votes_obtained": "953",
+              "valid_vote_issued": "3,033",
+              "rentability": 31.42,
+              "municipality": {
+                "id": 27,
+                "name": "San Juan de Guadalupe",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJG.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "7",
-              "district_roman": "VII",
-              "votes_percentage": 38.76,
-              "votes_textual": "Treinta y ocho punto setenta y seis",
-              "district_capital": "Santiago Papasquiaro",
-              "uuid": "b0a23637"
+              "id": 121,
+              "uuid": "638cda80-3c4d-44e7-8799-6b68098e437e",
+              "votes_obtained": "3,24",
+              "valid_vote_issued": "6,433",
+              "rentability": 50.37,
+              "municipality": {
+                "id": 28,
+                "name": "San Juan del Río",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJR.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "2",
-              "district_roman": "II",
-              "votes_percentage": 25.36,
-              "votes_textual": "Veinticinco punto treinta y seis",
-              "district_capital": "Durango",
-              "uuid": "c51fed5a"
+              "id": 126,
+              "uuid": "4fa23a01-e7a8-4d22-87b7-7901d389084d",
+              "votes_obtained": "476",
+              "valid_vote_issued": "1,247",
+              "rentability": 38.17,
+              "municipality": {
+                "id": 29,
+                "name": "San Luis de Cordero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SLC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 155,
+              "uuid": "dc65dcea-b8b4-49a3-ad72-86ea0617c68a",
+              "votes_obtained": "31",
+              "valid_vote_issued": "997",
+              "rentability": 3.11,
+              "municipality": {
+                "id": 30,
+                "name": "San Pedro del Gallo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SPG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 138,
+              "uuid": "b1e6bd9f-cfec-4b66-824f-70215b8d169c",
+              "votes_obtained": "946",
+              "valid_vote_issued": "3,566",
+              "rentability": 26.53,
+              "municipality": {
+                "id": 31,
+                "name": "Santa Clara",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SCL.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 145,
+              "uuid": "b1448b77-e17a-48f8-9f51-91f8b9943ff4",
+              "votes_obtained": "2,768",
+              "valid_vote_issued": "19,369",
+              "rentability": 14.29,
+              "municipality": {
+                "id": 32,
+                "name": "Santiago Papasquiaro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 143,
+              "uuid": "6996d054-1c63-445d-8939-637762cb2b11",
+              "votes_obtained": "557",
+              "valid_vote_issued": "3,524",
+              "rentability": 15.81,
+              "municipality": {
+                "id": 33,
+                "name": "Súchil",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SUC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 124,
+              "uuid": "0f19eab0-0667-4ffe-8f54-9bbcf65f5b7d",
+              "votes_obtained": "5,332",
+              "valid_vote_issued": "12,357",
+              "rentability": 43.15,
+              "municipality": {
+                "id": 34,
+                "name": "Tamazula",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TAM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 120,
+              "uuid": "936b553a-ee47-4cba-824d-c56b3d99b6c3",
+              "votes_obtained": "3,201",
+              "valid_vote_issued": "5,511",
+              "rentability": 58.08,
+              "municipality": {
+                "id": 35,
+                "name": "Tepehuanes",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TEP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 137,
+              "uuid": "f194fba4-e3e6-4554-a74b-8502fb6c4762",
+              "votes_obtained": "2,557",
+              "valid_vote_issued": "9,192",
+              "rentability": 27.82,
+              "municipality": {
+                "id": 36,
+                "name": "Tlahualilo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TLO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 153,
+              "uuid": "6db0a540-d714-4077-8b9f-623579764bfc",
+              "votes_obtained": "192",
+              "valid_vote_issued": "3,139",
+              "rentability": 6.12,
+              "municipality": {
+                "id": 37,
+                "name": "Topia",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TOP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 149,
+              "uuid": "9cacb483-871b-460a-bcd7-6235d6026bf0",
+              "votes_obtained": "1,09",
+              "valid_vote_issued": "9,836",
+              "rentability": 11.08,
+              "municipality": {
+                "id": 38,
+                "name": "Vicente Guerrero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/VGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 132,
+              "uuid": "c08ef379-7ac6-423b-9651-b87873723270",
+              "votes_obtained": "3,495",
+              "valid_vote_issued": "10,365",
+              "rentability": 33.72,
+              "municipality": {
+                "id": 39,
+                "name": "Nuevo Ideal",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NVO.png",
+                "councils": 9
+              }
             }
           ]
         }
@@ -248,75 +1062,45 @@
     ]
   },
   {
-    "id": "3",
-    "number_districts": "6",
     "party": {
+      "id": 4,
       "name": "Partido Verde Ecologista de México",
-      "acronym": "PVEM"
+      "acronym": "PVEM",
+      "logo": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/emblemas/PVEM.svg"
     },
     "blocks": [
       {
         "1": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "15",
-              "district_roman": "XV",
-              "votes_percentage": 18.90,
-              "votes_textual": "Dieciocho punto noventa",
-              "district_capital": "Pueblo Nuevo",
-              "uuid": "a07d9078"
-            },
-            {
-              "district_decimal": "5",
-              "district_roman": "V",
-              "votes_percentage": 2.23,
-              "votes_textual": "Dos punto veintitrés",
-              "district_capital": "Durango",
-              "uuid": "b51818db"
+              "id": 217,
+              "uuid": "a4730085-6cd1-4c6b-bf3a-b27b4fee434c",
+              "votes_obtained": "24",
+              "valid_vote_issued": "2,761",
+              "rentability": 0.87,
+              "municipality": {
+                "id": 19,
+                "name": "Otáez",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OTA.png",
+                "councils": 7
+              }
             }
           ]
-        }
-      },
-      {
+        },
         "2": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "3",
-              "district_roman": "III",
-              "votes_percentage": 2.11,
-              "votes_textual": "Dos punto once",
-              "district_capital": "Durango",
-              "uuid": "ne72c3fa"
-            },
-            {
-              "district_decimal": "4",
-              "district_roman": "IV",
-              "votes_percentage": 2.00,
-              "votes_textual": "Dos punto cero",
-              "district_capital": "Durango",
-              "uuid": "ka55cb51"
-            }
-          ]
-        }
-      },
-      {
-        "3": {
-          "districts": [
-            {
-              "district_decimal": "1",
-              "district_roman": "I",
-              "votes_percentage": 1.74,
-              "votes_textual": "Uno punto setenta y cuatro",
-              "district_capital": "Durango",
-              "uuid": "g0b01ec4"
-            },
-            {
-              "district_decimal": "6",
-              "district_roman": "VI",
-              "votes_percentage": 1.59,
-              "votes_textual": "Uno punto cincuenta y nueve",
-              "district_capital": "Durango",
-              "uuid": "f6d19685"
+              "id": 232,
+              "uuid": "ce598e38-435e-4fe9-b8dd-6df6cc3a4547",
+              "votes_obtained": "40",
+              "valid_vote_issued": "12,357",
+              "rentability": 0.32,
+              "municipality": {
+                "id": 34,
+                "name": "Tamazula",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TAM.png",
+                "councils": 9
+              }
             }
           ]
         }
@@ -324,147 +1108,45 @@
     ]
   },
   {
-    "id": "4",
-    "number_districts": "15",
     "party": {
+      "id": 5,
       "name": "Partido del Trabajo",
-      "acronym": "PT"
+      "acronym": "PT",
+      "logo": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/emblemas/PT.svg"
     },
     "blocks": [
       {
         "1": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "4",
-              "district_roman": "IV",
-              "votes_percentage": 5.77,
-              "votes_textual": "Cincuenta y cuatro punto ochenta y cinco",
-              "district_capital": "Durango",
-              "uuid": "e7808974"
-            },
-            {
-              "district_decimal": "14",
-              "district_roman": "XIV",
-              "votes_percentage": 5.17,
-              "votes_textual": "Cinco punto diecisiete",
-              "district_capital": "Cuencamé",
-              "uuid": "e05aa201"
-            },
-            {
-              "district_decimal": "2",
-              "district_roman": "II",
-              "votes_percentage": 4.82,
-              "votes_textual": "Cuatro punto ochenta y dos",
-              "district_capital": "Durango",
-              "uuid": "f0704dc7"
-            },
-            {
-              "district_decimal": "3",
-              "district_roman": "III",
-              "votes_percentage": 4.71,
-              "votes_textual": "Cuatro punto setenta y uno",
-              "district_capital": "Durango",
-              "uuid": "c6099fb3"
-            },
-            {
-              "district_decimal": "6",
-              "district_roman": "VI",
-              "votes_percentage": 4.61,
-              "votes_textual": "Cuatro punto sesenta y uno",
-              "district_capital": "Durango",
-              "uuid": "bdc3fed3"
+              "id": 178,
+              "uuid": "22cdffd8-f6a5-4d90-b0ec-4ee60995ecb8",
+              "votes_obtained": "39",
+              "valid_vote_issued": "2,761",
+              "rentability": 1.41,
+              "municipality": {
+                "id": 19,
+                "name": "Otáez",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OTA.png",
+                "councils": 7
+              }
             }
           ]
-        }
-      },
-      {
+        },
         "2": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "1",
-              "district_roman": "I",
-              "votes_percentage": 4.47,
-              "votes_textual": "Cuatro punto cuarenta y siete",
-              "district_capital": "Durango",
-              "uuid": "f054eb3b"
-            },
-            {
-              "district_decimal": "5",
-              "district_roman": "V",
-              "votes_percentage": 3.96,
-              "votes_textual": "Tres punto noventa y seis",
-              "district_capital": "Durango",
-              "uuid": "a320501b"
-            },
-            {
-              "district_decimal": "9",
-              "district_roman": "IX",
-              "votes_percentage": 3.88,
-              "votes_textual": "Tres punto ochenta y ocho",
-              "district_capital": "Mapimí",
-              "uuid": "df36fe8d"
-            },
-            {
-              "district_decimal": "15",
-              "district_roman": "XV",
-              "votes_percentage": 3.44,
-              "votes_textual": "Tres punto cuarenta y cuatro",
-              "district_capital": "Pueblo Nuevo",
-              "uuid": "b97951c4"
-            },
-            {
-              "district_decimal": "8",
-              "district_roman": "VIII",
-              "votes_percentage": 2.76,
-              "votes_textual": "Dos punto setenta y seis",
-              "district_capital": "Guadalupe Victoria",
-              "uuid": "fa431f3b"
-            }
-          ]
-        }
-      },
-      {
-        "3": {
-          "districts": [
-            {
-              "district_decimal": "7",
-              "district_roman": "VII",
-              "votes_percentage": 1.89,
-              "votes_textual": "Uno punto ochenta y nueve",
-              "district_capital": "Santiago Papasquiaro",
-              "uuid": "a4131673"
-            },
-            {
-              "district_decimal": "13",
-              "district_roman": "XIII",
-              "votes_percentage": 1.35,
-              "votes_textual": "Uno punto treinta y cinco",
-              "district_capital": "Lerdo",
-              "uuid": "c7d85f7a"
-            },
-            {
-              "district_decimal": "10",
-              "district_roman": "X",
-              "votes_percentage": 1.27,
-              "votes_textual": "Uno punto veintisiete",
-              "district_capital": "Gómez Palacio",
-              "uuid": "b04b3a7"
-            },
-            {
-              "district_decimal": "12",
-              "district_roman": "XII",
-              "votes_percentage": 1.23,
-              "votes_textual": "Uno punto veintitrés",
-              "district_capital": "Gómez Palacio",
-              "uuid": "4ca7a84"
-            },
-            {
-              "district_decimal": "11",
-              "district_roman": "XI",
-              "votes_percentage": 1.02,
-              "votes_textual": "Uno punto cero dos",
-              "district_capital": "Gómez Palacio",
-              "uuid": "d62b9a5f"
+              "id": 194,
+              "uuid": "0cd0d488-3e8e-4214-a91c-2c616cd3a5fb",
+              "votes_obtained": "80",
+              "valid_vote_issued": "12,357",
+              "rentability": 0.65,
+              "municipality": {
+                "id": 34,
+                "name": "Tamazula",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TAM.png",
+                "councils": 9
+              }
             }
           ]
         }
@@ -472,147 +1154,530 @@
     ]
   },
   {
-    "id": "5",
-    "number_districts": "15",
     "party": {
+      "id": 6,
       "name": "Movimiento Ciudadano",
-      "acronym": "MC"
+      "acronym": "MC",
+      "logo": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/emblemas/MC.svg"
     },
     "blocks": [
       {
         "1": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "5",
-              "district_roman": "V",
-              "votes_percentage": 9.01,
-              "votes_textual": "Nueve punto cero uno",
-              "district_capital": "Durango",
-              "uuid": "57408984h"
+              "id": 13,
+              "uuid": "a5d02db6-fe55-427d-aa2d-4b15cb682eb9",
+              "votes_obtained": "587",
+              "valid_vote_issued": "14,759",
+              "rentability": 3.98,
+              "municipality": {
+                "id": 1,
+                "name": "Canatlán",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CAN.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "3",
-              "district_roman": "III",
-              "votes_percentage": 7.45,
-              "votes_textual": "Siete punto cuarenta y cinco",
-              "district_capital": "Durango",
-              "uuid": "a05aa104"
+              "id": 23,
+              "uuid": "3d355f22-bf26-453d-a667-ebbbff6c0cc1",
+              "votes_obtained": "0",
+              "valid_vote_issued": "2,037",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 2,
+                "name": "Canelas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CNS.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "2",
-              "district_roman": "II",
-              "votes_percentage": 7.36,
-              "votes_textual": "Siete punto treinta y seis",
-              "district_capital": "Durango",
-              "uuid": "dd704d3d"
+              "id": 24,
+              "uuid": "025868d0-9cdd-400e-9db1-fabbf9ed38c9",
+              "votes_obtained": "0",
+              "valid_vote_issued": "2,234",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 3,
+                "name": "Coneto de Comonfort",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/COC.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "6",
-              "district_roman": "VI",
-              "votes_percentage": 6.64,
-              "votes_textual": "Seis punto sesenta y cuatro",
-              "district_capital": "Durango",
-              "uuid": "e7890fd4"
+              "id": 25,
+              "uuid": "4f8ee58f-f3a9-4311-9150-d2dcd1cb3eaf",
+              "votes_obtained": "0",
+              "valid_vote_issued": "13,071",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 4,
+                "name": "Cuencamé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CME.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "1",
-              "district_roman": "I",
-              "votes_percentage": 5.74,
-              "votes_textual": "Cinco punto setenta y cuatro",
-              "district_capital": "Durango",
-              "uuid": "da4af7d5"
+              "id": 4,
+              "uuid": "311af5dd-d5ca-4f55-9dae-fa217cc28e98",
+              "votes_obtained": "35,913",
+              "valid_vote_issued": "224,19",
+              "rentability": 16.02,
+              "municipality": {
+                "id": 5,
+                "name": "Durango",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/DGO.png",
+                "councils": 17
+              }
+            },
+            {
+              "id": 27,
+              "uuid": "136c0028-27a2-474b-b9bb-6ff73f75138e",
+              "votes_obtained": "0",
+              "valid_vote_issued": "5,179",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 6,
+                "name": "General Simón Bolívar",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SIM.png",
+                "councils": 1
+              }
+            },
+            {
+              "id": 14,
+              "uuid": "b59f1918-0770-45e4-b969-0507ddc58232",
+              "votes_obtained": "3,429",
+              "valid_vote_issued": "117,988",
+              "rentability": 2.91,
+              "municipality": {
+                "id": 7,
+                "name": "Gómez Palacio",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GZP.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 10,
+              "uuid": "bfecf94e-9f1c-4d91-ad5c-9a969dea12f4",
+              "votes_obtained": "864",
+              "valid_vote_issued": "17,146",
+              "rentability": 5.04,
+              "municipality": {
+                "id": 8,
+                "name": "Guadalupe Victoria",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVC.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 28,
+              "uuid": "ba462e3d-2060-49d1-9dc6-c7fbcf7e6b0e",
+              "votes_obtained": "0",
+              "valid_vote_issued": "4,673",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 9,
+                "name": "Guanaceví",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVI.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 9,
+              "uuid": "2950b09d-5b3e-4239-bd0e-17ae470e4e2c",
+              "votes_obtained": "121",
+              "valid_vote_issued": "2,125",
+              "rentability": 5.69,
+              "municipality": {
+                "id": 10,
+                "name": "Hidalgo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/HGO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 29,
+              "uuid": "b09e3fb6-3dd8-456d-bb31-51bb413ce98b",
+              "votes_obtained": "0",
+              "valid_vote_issued": "2,333",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 11,
+                "name": "Indé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/IND.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 11,
+              "uuid": "66e9f27b-8e34-42f3-8d79-16b111f77b27",
+              "votes_obtained": "2,669",
+              "valid_vote_issued": "56,362",
+              "rentability": 4.74,
+              "municipality": {
+                "id": 12,
+                "name": "Lerdo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/LDO.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 8,
+              "uuid": "eeed51ae-7e8d-42d1-bfb0-05582883074c",
+              "votes_obtained": "852",
+              "valid_vote_issued": "10,444",
+              "rentability": 8.16,
+              "municipality": {
+                "id": 13,
+                "name": "Mapimí",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MPI.png",
+                "councils": 9
+              }
             }
           ]
-        }
-      },
-      {
+        },
         "2": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "4",
-              "district_roman": "IV",
-              "votes_percentage": 5.61,
-              "votes_textual": "Cinco punto sesenta y uno",
-              "district_capital": "Durango",
-              "uuid": "b154eb4a"
+              "id": 21,
+              "uuid": "71239dcd-cc56-4316-8f72-c974096eac1b",
+              "votes_obtained": "87",
+              "valid_vote_issued": "15,621",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 14,
+                "name": "Mezquital",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MEZ.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "9",
-              "district_roman": "IX",
-              "votes_percentage": 4.88,
-              "votes_textual": "Cuatro punto ochenta y ocho",
-              "district_capital": "Mapimí",
-              "uuid": "c51150b8"
+              "id": 30,
+              "uuid": "376e34c0-675e-4675-97fa-6f9c822c9015",
+              "votes_obtained": "0",
+              "valid_vote_issued": "6,359",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 15,
+                "name": "Nazas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NAZ.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "13",
-              "district_roman": "XIII",
-              "votes_percentage": 4.88,
-              "votes_textual": "Cuatro punto ochenta y ocho",
-              "district_capital": "Lerdo",
-              "uuid": "daf6fe8a"
+              "id": 12,
+              "uuid": "30a7daf2-dfcb-4e58-b1e0-6aa87cbdba67",
+              "votes_obtained": "364",
+              "valid_vote_issued": "8,06",
+              "rentability": 4.52,
+              "municipality": {
+                "id": 16,
+                "name": "Nombre de Dios",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NOM.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "8",
-              "district_roman": "VIII",
-              "votes_percentage": 3.64,
-              "votes_textual": "Tres punto sesenta y cuatro",
-              "district_capital": "Guadalupe Victoria",
-              "uuid": "e08951c7"
+              "id": 18,
+              "uuid": "8e284869-e0b7-4745-b836-9750bd4ced18",
+              "votes_obtained": "55",
+              "valid_vote_issued": "3,196",
+              "rentability": 1.72,
+              "municipality": {
+                "id": 17,
+                "name": "Ocampo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OCA.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "12",
-              "district_roman": "XII",
-              "votes_percentage": 2.70,
-              "votes_textual": "Dos punto setenta",
-              "district_capital": "Gómez Palacio",
-              "uuid": "fb431f55"
+              "id": 26,
+              "uuid": "4b3a4dbf-02c1-4a50-a6a0-0f0ebd9e2581",
+              "votes_obtained": "0",
+              "valid_vote_issued": "4,597",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 18,
+                "name": "El Oro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/ORO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 31,
+              "uuid": "8492e7cd-14b9-4f56-aa92-ac0402c69994",
+              "votes_obtained": "0",
+              "valid_vote_issued": "2,761",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 19,
+                "name": "Otáez",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OTA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 17,
+              "uuid": "195e25c6-1e12-4806-9e0f-15de0e65cab4",
+              "votes_obtained": "106",
+              "valid_vote_issued": "6,159",
+              "rentability": 1.72,
+              "municipality": {
+                "id": 20,
+                "name": "Pánuco de Coronado",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PCO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 6,
+              "uuid": "a26fa620-0f05-4f1c-a10d-f5187c4ed399",
+              "votes_obtained": "522",
+              "valid_vote_issued": "4,933",
+              "rentability": 10.58,
+              "municipality": {
+                "id": 21,
+                "name": "Peñón Blanco",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 5,
+              "uuid": "6c92083c-fcd0-42f3-8b13-cfeade4be47f",
+              "votes_obtained": "1,424",
+              "valid_vote_issued": "10,899",
+              "rentability": 13.07,
+              "municipality": {
+                "id": 22,
+                "name": "Poanas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/POA.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 20,
+              "uuid": "38ed6087-76b9-4575-9179-ddf6ba695c5e",
+              "votes_obtained": "275",
+              "valid_vote_issued": "18,029",
+              "rentability": 1.53,
+              "municipality": {
+                "id": 23,
+                "name": "Pueblo Nuevo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PNO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 2,
+              "uuid": "48a68f60-6ce5-4612-a51b-40a1ccf4d9e5",
+              "votes_obtained": "1,606",
+              "valid_vote_issued": "5,621",
+              "rentability": 28.57,
+              "municipality": {
+                "id": 24,
+                "name": "Rodeo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/RDO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 32,
+              "uuid": "e229c5bc-8a75-4228-b465-73ec0f13928e",
+              "votes_obtained": "0",
+              "valid_vote_issued": "1,539",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 25,
+                "name": "San Bernardo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 3,
+              "uuid": "cfa6141a-1b61-4815-a93b-c801fe28313e",
+              "votes_obtained": "1,374",
+              "valid_vote_issued": "8,024",
+              "rentability": 17.12,
+              "municipality": {
+                "id": 26,
+                "name": "San Dimas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SDI.png",
+                "councils": 9
+              }
             }
           ]
-        }
-      },
-      {
+        },
         "3": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "11",
-              "district_roman": "XI",
-              "votes_percentage": 2.65,
-              "votes_textual": "Dos punto sesenta y cinco",
-              "district_capital": "Gómez Palacio",
-              "uuid": "a5233654"
+              "id": 7,
+              "uuid": "d7c60eca-a28a-4367-a930-2ea92e8c625a",
+              "votes_obtained": "297",
+              "valid_vote_issued": "3,033",
+              "rentability": 9.79,
+              "municipality": {
+                "id": 27,
+                "name": "San Juan de Guadalupe",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJG.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "14",
-              "district_roman": "XIV",
-              "votes_percentage": 2.44,
-              "votes_textual": "Dos punto cuarenta y cuatro",
-              "district_capital": "Cuencamé",
-              "uuid": "b8f83f72"
+              "id": 33,
+              "uuid": "72242c63-7e4a-4797-83a8-372a7fa4751d",
+              "votes_obtained": "0",
+              "valid_vote_issued": "6,433",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 28,
+                "name": "San Juan del Río",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJR.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "7",
-              "district_roman": "VII",
-              "votes_percentage": 1.67,
-              "votes_textual": "Uno punto sesenta y siete",
-              "district_capital": "Santiago Papasquiaro",
-              "uuid": "b94b3a6"
+              "id": 34,
+              "uuid": "aee8f047-4189-4c42-b15a-86ef819c7d1b",
+              "votes_obtained": "0",
+              "valid_vote_issued": "1,247",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 29,
+                "name": "San Luis de Cordero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SLC.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "15",
-              "district_roman": "XV",
-              "votes_percentage": 1.65,
-              "votes_textual": "Uno punto sesenta y cinco",
-              "district_capital": "Pueblo Nuevo",
-              "uuid": "cde7982"
+              "id": 1,
+              "uuid": "da3148d2-7758-4d01-8e1d-059d2e74870e",
+              "votes_obtained": "416",
+              "valid_vote_issued": "997",
+              "rentability": 41.73,
+              "municipality": {
+                "id": 30,
+                "name": "San Pedro del Gallo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SPG.png",
+                "councils": 7
+              }
             },
             {
-              "district_decimal": "10",
-              "district_roman": "X",
-              "votes_percentage": 1.50,
-              "votes_textual": "Uno punto cincuenta",
-              "district_capital": "Gómez Palacio",
-              "uuid": "e73a965c"
+              "id": 35,
+              "uuid": "6dcb937e-842d-4a2a-bd8b-f222b352d4e5",
+              "votes_obtained": "0",
+              "valid_vote_issued": "3,566",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 31,
+                "name": "Santa Clara",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SCL.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 19,
+              "uuid": "b4fb0abf-2068-45e9-80ab-025f69753c2e",
+              "votes_obtained": "318",
+              "valid_vote_issued": "19,369",
+              "rentability": 1.64,
+              "municipality": {
+                "id": 32,
+                "name": "Santiago Papasquiaro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 36,
+              "uuid": "28396b68-7ed3-47cc-8e13-a66242ddf575",
+              "votes_obtained": "0",
+              "valid_vote_issued": "3,524",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 33,
+                "name": "Súchil",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SUC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 22,
+              "uuid": "b64e26ea-e80c-429c-8ea3-c08a5a717018",
+              "votes_obtained": "16",
+              "valid_vote_issued": "12,357",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 34,
+                "name": "Tamazula",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TAM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 37,
+              "uuid": "f59ea619-aa7e-4e87-a215-65afdcfa8511",
+              "votes_obtained": "0",
+              "valid_vote_issued": "5,511",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 35,
+                "name": "Tepehuanes",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TEP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 38,
+              "uuid": "7a666dd3-db05-4b0a-b1d9-dea0e3bf96e1",
+              "votes_obtained": "0",
+              "valid_vote_issued": "9,192",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 36,
+                "name": "Tlahualilo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TLO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 39,
+              "uuid": "f9b69836-74de-4813-847d-9b133795b604",
+              "votes_obtained": "0",
+              "valid_vote_issued": "3,139",
+              "rentability": 0.0,
+              "municipality": {
+                "id": 37,
+                "name": "Topia",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TOP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 16,
+              "uuid": "a0d59433-2c3e-49b5-a54a-c5dece1aa31c",
+              "votes_obtained": "192",
+              "valid_vote_issued": "9,836",
+              "rentability": 1.95,
+              "municipality": {
+                "id": 38,
+                "name": "Vicente Guerrero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/VGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 15,
+              "uuid": "c8b21be5-a0e5-4cf9-85fb-455a19ecfd4a",
+              "votes_obtained": "217",
+              "valid_vote_issued": "10,365",
+              "rentability": 2.09,
+              "municipality": {
+                "id": 39,
+                "name": "Nuevo Ideal",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NVO.png",
+                "councils": 9
+              }
             }
           ]
         }
@@ -620,75 +1685,2143 @@
     ]
   },
   {
-    "id": "6",
-    "number_districts": "6",
     "party": {
-      "name": "MORENA",
-      "acronym": "MORENA"
+      "id": 7,
+      "name": "Morena",
+      "acronym": "MORENA",
+      "logo": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/emblemas/MORENA.svg"
     },
     "blocks": [
       {
         "1": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "15",
-              "district_roman": "XV",
-              "votes_percentage": 26.50,
-              "votes_textual": "Veintiséis punto cincuenta",
-              "district_capital": "Pueblo Nuevo",
-              "uuid": "a17d9078"
-            },
-            {
-              "district_decimal": "5",
-              "district_roman": "V",
-              "votes_percentage": 25.69,
-              "votes_textual": "Veinticinco punto sesenta y nueve",
-              "district_capital": "Durango",
-              "uuid": "b61818db"
+              "id": 42,
+              "uuid": "95f4ab9d-ddcd-462f-ae10-1b354e0255bb",
+              "votes_obtained": "6,063",
+              "valid_vote_issued": "12,357",
+              "rentability": 49.07,
+              "municipality": {
+                "id": 34,
+                "name": "Tamazula",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TAM.png",
+                "councils": 9
+              }
             }
           ]
-        }
-      },
-      {
+        },
         "2": {
-          "districts": [
+          "municipalities": [
             {
-              "district_decimal": "3",
-              "district_roman": "III",
-              "votes_percentage": 24.42,
-              "votes_textual": "Veinticuatro punto cuarenta y dos",
-              "district_capital": "Durango",
-              "uuid": "nf72c3fa"
-            },
-            {
-              "district_decimal": "6",
-              "district_roman": "VI",
-              "votes_percentage": 24.04,
-              "votes_textual": "Veinticuatro punto cero cuatro",
-              "district_capital": "Durango",
-              "uuid": "kb55cb51"
+              "id": 41,
+              "uuid": "8c9598d6-3e44-4311-9ef4-9723bf9c563e",
+              "votes_obtained": "1,412",
+              "valid_vote_issued": "2,761",
+              "rentability": 51.14,
+              "municipality": {
+                "id": 19,
+                "name": "Otáez",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OTA.png",
+                "councils": 7
+              }
             }
           ]
         }
-      },
+      }
+    ]
+  },
+  {
+    "party": {
+      "id": 8,
+      "name": "Partido Encuentro Solidario",
+      "acronym": "PES",
+      "logo": "pes.png"
+    },
+    "blocks": [
       {
-        "3": {
-          "districts": [
+        "1": {
+          "municipalities": [
             {
-              "district_decimal": "4",
-              "district_roman": "IV",
-              "votes_percentage": 23.92,
-              "votes_textual": "Veintitrés punto noventa y dos",
-              "district_capital": "Durango",
-              "uuid": "g1b01ec4"
+              "id": 1,
+              "uuid": "e9248b1f-637d-43f0-8937-4b3bd624ba07",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 1,
+                "name": "Canatlán",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CAN.png",
+                "councils": 9
+              }
             },
             {
-              "district_decimal": "1",
-              "district_roman": "I",
-              "votes_percentage": 23.61,
-              "votes_textual": "Veintitrés punto sesenta y uno",
-              "district_capital": "Durango",
-              "uuid": "f7d19685"
+              "id": 2,
+              "uuid": "463aaa41-a911-44db-9b6c-f62469aa7fde",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 2,
+                "name": "Canelas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CNS.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 3,
+              "uuid": "10f793ef-389b-4839-ab8e-6857a64e2c08",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 3,
+                "name": "Coneto de Comonfort",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/COC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 4,
+              "uuid": "8504d0a1-06be-4649-9ae5-6f640db85c10",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 4,
+                "name": "Cuencamé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CME.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 5,
+              "uuid": "3ce0f26e-79b5-45ee-a806-c494dc2683e0",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 5,
+                "name": "Durango",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/DGO.png",
+                "councils": 17
+              }
+            },
+            {
+              "id": 6,
+              "uuid": "23948b36-9692-496b-9e92-58a46bf0590a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 6,
+                "name": "General Simón Bolívar",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SIM.png",
+                "councils": 1
+              }
+            },
+            {
+              "id": 7,
+              "uuid": "81328bf9-7227-4c49-b6d8-d221d5346b32",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 7,
+                "name": "Gómez Palacio",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GZP.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 8,
+              "uuid": "f0677fb2-9622-4772-97fd-f1ee94322445",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 8,
+                "name": "Guadalupe Victoria",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVC.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 9,
+              "uuid": "a1a2dfa9-644a-461e-a634-922f33dd8084",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 9,
+                "name": "Guanaceví",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVI.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 10,
+              "uuid": "8c7682fc-47a3-48e8-8a7e-70f35c4a370b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 10,
+                "name": "Hidalgo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/HGO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 11,
+              "uuid": "e7093ec8-1217-41a2-b9a9-c3e0d215026a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 11,
+                "name": "Indé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/IND.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 12,
+              "uuid": "b4066d38-1ba6-44b4-aa64-8ccfffc5e877",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 12,
+                "name": "Lerdo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/LDO.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 13,
+              "uuid": "52441651-10a9-423e-ae91-57b920175d7f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 13,
+                "name": "Mapimí",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MPI.png",
+                "councils": 9
+              }
+            }
+          ]
+        },
+        "2": {
+          "municipalities": [
+            {
+              "id": 14,
+              "uuid": "fb0def3c-1a84-4171-8cea-eff3b293ffc5",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 14,
+                "name": "Mezquital",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MEZ.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 15,
+              "uuid": "510da7d2-1389-4d45-8901-08397ba4cd61",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 15,
+                "name": "Nazas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NAZ.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 16,
+              "uuid": "3e1543f6-4440-4791-bc70-8513ebd239e9",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 16,
+                "name": "Nombre de Dios",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NOM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 17,
+              "uuid": "169c8aee-a972-42fd-99d8-fdb74e28665a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 17,
+                "name": "Ocampo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OCA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 18,
+              "uuid": "94cbb555-a595-4c9b-b130-827e8cc1664d",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 18,
+                "name": "El Oro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/ORO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 19,
+              "uuid": "43fa864e-14de-4f69-8f74-452f3551774a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 19,
+                "name": "Otáez",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OTA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 20,
+              "uuid": "6b9b7a00-4ce5-42ea-b819-141054e3497e",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 20,
+                "name": "Pánuco de Coronado",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PCO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 21,
+              "uuid": "1225b46a-edcc-45ac-b216-2dcac735141d",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 21,
+                "name": "Peñón Blanco",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 22,
+              "uuid": "2a721f23-164d-463c-b963-a742e39e771a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 22,
+                "name": "Poanas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/POA.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 23,
+              "uuid": "7fbec5f4-a3f4-46fb-88ea-d326bb2ea6ad",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 23,
+                "name": "Pueblo Nuevo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PNO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 24,
+              "uuid": "fc47932a-10ce-40c0-bd99-5aed4bced2c6",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 24,
+                "name": "Rodeo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/RDO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 25,
+              "uuid": "fe74545a-09b9-4e0d-90f2-74be73d1029f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 25,
+                "name": "San Bernardo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 26,
+              "uuid": "12e1aedc-5c56-42bb-ab73-b8b0262405af",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 26,
+                "name": "San Dimas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SDI.png",
+                "councils": 9
+              }
+            }
+          ]
+        },
+        "3": {
+          "municipalities": [
+            {
+              "id": 27,
+              "uuid": "f2c57e72-11d0-486d-abbd-746adfeaba0b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 27,
+                "name": "San Juan de Guadalupe",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 28,
+              "uuid": "7ade11fe-9794-4000-99cb-702e83ca464b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 28,
+                "name": "San Juan del Río",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJR.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 29,
+              "uuid": "6760742f-c367-4b9b-95fd-6fc327f1bd49",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 29,
+                "name": "San Luis de Cordero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SLC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 30,
+              "uuid": "bd140e39-65e8-4810-8f81-e776db7e5f3f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 30,
+                "name": "San Pedro del Gallo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SPG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 31,
+              "uuid": "a1e32f03-1f91-4dac-af78-1880ad9f6aa2",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 31,
+                "name": "Santa Clara",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SCL.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 32,
+              "uuid": "90038eda-0540-4dd4-a9bc-d8ca650a30f3",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 32,
+                "name": "Santiago Papasquiaro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 33,
+              "uuid": "b883b5cd-1127-4987-937d-6f96fa4e0590",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 33,
+                "name": "Súchil",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SUC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 34,
+              "uuid": "c7229f85-0375-4f74-958f-b518d966607b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 34,
+                "name": "Tamazula",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TAM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 35,
+              "uuid": "0871790e-618a-46d4-92fa-f8b11d774eb5",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 35,
+                "name": "Tepehuanes",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TEP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 36,
+              "uuid": "95e4515a-9a07-4d89-9565-24435c5eda5a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 36,
+                "name": "Tlahualilo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TLO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 37,
+              "uuid": "86652349-9379-4264-b72c-77df3a3007a8",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 37,
+                "name": "Topia",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TOP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 38,
+              "uuid": "d6cbd649-9d06-4e8f-b9e8-9f15d2d90f9f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 38,
+                "name": "Vicente Guerrero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/VGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 39,
+              "uuid": "d5dfa361-13f4-4577-a516-692a0d10f780",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 39,
+                "name": "Nuevo Ideal",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NVO.png",
+                "councils": 9
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "party": {
+      "id": 9,
+      "name": "Partido Villista",
+      "acronym": "PV",
+      "logo": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/emblemas/PV.svg"
+    },
+    "blocks": [
+      {
+        "1": {
+          "municipalities": [
+            {
+              "id": 1,
+              "uuid": "294cea26-ee19-4464-b76a-d69e4afef0f5",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 1,
+                "name": "Canatlán",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CAN.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 2,
+              "uuid": "30d11fb7-2894-43fa-b606-ba4833309d74",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 2,
+                "name": "Canelas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CNS.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 3,
+              "uuid": "76b64249-230a-4225-8d5e-592adf162cc5",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 3,
+                "name": "Coneto de Comonfort",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/COC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 4,
+              "uuid": "a0e90965-cd5c-416c-8a7e-b49854d7a62b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 4,
+                "name": "Cuencamé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CME.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 5,
+              "uuid": "98c2bd10-e4b9-4580-83aa-aad991f21f4d",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 5,
+                "name": "Durango",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/DGO.png",
+                "councils": 17
+              }
+            },
+            {
+              "id": 6,
+              "uuid": "db403bad-2c1a-4323-ae9f-98c08e98cb13",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 6,
+                "name": "General Simón Bolívar",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SIM.png",
+                "councils": 1
+              }
+            },
+            {
+              "id": 7,
+              "uuid": "06f1c7db-bc65-4011-8f5b-b2ea5d327384",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 7,
+                "name": "Gómez Palacio",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GZP.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 8,
+              "uuid": "75835bed-20fc-4827-a669-724fa2692061",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 8,
+                "name": "Guadalupe Victoria",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVC.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 9,
+              "uuid": "022bffda-80a2-4888-a6ce-d5a36be45b4f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 9,
+                "name": "Guanaceví",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVI.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 10,
+              "uuid": "ef4530f6-db2f-4849-8112-d185bea15c2f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 10,
+                "name": "Hidalgo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/HGO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 11,
+              "uuid": "8d41726d-343f-4db5-9a99-6bdfeaf9c85e",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 11,
+                "name": "Indé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/IND.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 12,
+              "uuid": "e0fe379d-3d3b-4dc7-b9c0-aa7d93f708fa",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 12,
+                "name": "Lerdo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/LDO.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 13,
+              "uuid": "c0dc4b43-0f99-4f81-9327-d01c3cf42f50",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 13,
+                "name": "Mapimí",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MPI.png",
+                "councils": 9
+              }
+            }
+          ]
+        },
+        "2": {
+          "municipalities": [
+            {
+              "id": 14,
+              "uuid": "642d0621-ba62-4264-98f5-e4d49794eb27",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 14,
+                "name": "Mezquital",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MEZ.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 15,
+              "uuid": "fa10fc8b-6da5-4c2d-812c-edb405ea7ec8",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 15,
+                "name": "Nazas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NAZ.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 16,
+              "uuid": "24e7cdec-d195-4f0d-9328-40fe48d0dad0",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 16,
+                "name": "Nombre de Dios",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NOM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 17,
+              "uuid": "562c6478-6754-45a6-862d-b827bb4841b5",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 17,
+                "name": "Ocampo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OCA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 18,
+              "uuid": "34a8f003-077f-4bfa-a1a0-8cfff0517f60",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 18,
+                "name": "El Oro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/ORO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 19,
+              "uuid": "d8b302de-0c91-46eb-aa17-312e1686d5b3",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 19,
+                "name": "Otáez",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OTA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 20,
+              "uuid": "e0b5798b-0ddc-4358-a658-aa405c68a077",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 20,
+                "name": "Pánuco de Coronado",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PCO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 21,
+              "uuid": "468e76ea-5e41-4bbb-9026-970925e0630a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 21,
+                "name": "Peñón Blanco",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 22,
+              "uuid": "4d0d767d-64ae-4ac2-a39e-1f3436b9f5ca",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 22,
+                "name": "Poanas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/POA.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 23,
+              "uuid": "e6261265-64f3-45ff-b20e-303ee99adb98",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 23,
+                "name": "Pueblo Nuevo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PNO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 24,
+              "uuid": "6917a963-5a57-44d3-8302-49008a7c8d1e",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 24,
+                "name": "Rodeo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/RDO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 25,
+              "uuid": "170130db-bb69-4d62-942e-6466d8de0db8",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 25,
+                "name": "San Bernardo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 26,
+              "uuid": "9589a975-fa12-4d03-843e-58d64ac9307c",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 26,
+                "name": "San Dimas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SDI.png",
+                "councils": 9
+              }
+            }
+          ]
+        },
+        "3": {
+          "municipalities": [
+            {
+              "id": 27,
+              "uuid": "f5a0ef2c-5cfa-44f0-bba1-538eb1d1d778",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 27,
+                "name": "San Juan de Guadalupe",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 28,
+              "uuid": "3298ec3e-bde2-4f7f-aafb-2cfc44374b25",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 28,
+                "name": "San Juan del Río",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJR.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 29,
+              "uuid": "322e9d82-11c5-4dca-8f6a-3387de1dc737",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 29,
+                "name": "San Luis de Cordero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SLC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 30,
+              "uuid": "72e2a71f-0247-45af-a6f6-a669a9b63822",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 30,
+                "name": "San Pedro del Gallo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SPG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 31,
+              "uuid": "7398e375-34cc-4cbf-a48d-50b2e7baa198",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 31,
+                "name": "Santa Clara",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SCL.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 32,
+              "uuid": "380f9454-6947-43a5-80a2-d3cc2582208d",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 32,
+                "name": "Santiago Papasquiaro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 33,
+              "uuid": "b1ead503-8bb9-4c1d-a9ca-043f5405a7e6",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 33,
+                "name": "Súchil",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SUC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 34,
+              "uuid": "9bbb13ae-31c9-4734-a056-e463095db96a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 34,
+                "name": "Tamazula",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TAM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 35,
+              "uuid": "93c3f54c-c9cd-4c13-9357-50c94851fa99",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 35,
+                "name": "Tepehuanes",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TEP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 36,
+              "uuid": "b9319953-ac44-4b46-9918-ad8d146b0f20",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 36,
+                "name": "Tlahualilo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TLO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 37,
+              "uuid": "b9d9b3ad-1f35-4c86-a21d-f7fca5ae66b8",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 37,
+                "name": "Topia",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TOP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 38,
+              "uuid": "00661671-e88e-4096-9e1d-90bfff9439b6",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 38,
+                "name": "Vicente Guerrero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/VGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 39,
+              "uuid": "a5e3f6ca-76fe-4c3e-b960-9c2bd5bf397b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 39,
+                "name": "Nuevo Ideal",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NVO.png",
+                "councils": 9
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "party": {
+      "id": 10,
+      "name": "Partido Estatal Renovación",
+      "acronym": "RENOVACIÓN",
+      "logo": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/emblemas/RENOVACION.svg"
+    },
+    "blocks": [
+      {
+        "1": {
+          "municipalities": [
+            {
+              "id": 1,
+              "uuid": "c0b38716-ec5f-4505-9b0c-39dfe8ce4c3f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 1,
+                "name": "Canatlán",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CAN.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 2,
+              "uuid": "0640735f-dd6b-4b95-afea-eab0cfa6ce0d",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 2,
+                "name": "Canelas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CNS.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 3,
+              "uuid": "a8b91012-d3bc-46b3-9d5c-a1f0a263d6f3",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 3,
+                "name": "Coneto de Comonfort",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/COC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 4,
+              "uuid": "c8aa8ab4-a9d2-4688-a987-ea1ebade645b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 4,
+                "name": "Cuencamé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CME.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 5,
+              "uuid": "d8181d93-8f24-43c4-93f9-ee3a576bd16c",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 5,
+                "name": "Durango",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/DGO.png",
+                "councils": 17
+              }
+            },
+            {
+              "id": 6,
+              "uuid": "802ab3e7-524a-4a99-b845-d7ecc1cd34ab",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 6,
+                "name": "General Simón Bolívar",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SIM.png",
+                "councils": 1
+              }
+            },
+            {
+              "id": 7,
+              "uuid": "2f8cdc80-0b9c-4526-a884-f90c46811144",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 7,
+                "name": "Gómez Palacio",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GZP.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 8,
+              "uuid": "5742e88e-9099-4141-a851-971e35afe052",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 8,
+                "name": "Guadalupe Victoria",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVC.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 9,
+              "uuid": "45372629-f12b-487e-9d2a-fd5f860becdf",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 9,
+                "name": "Guanaceví",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVI.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 10,
+              "uuid": "4c7baeb8-9c24-4890-9a76-52a013fecd8b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 10,
+                "name": "Hidalgo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/HGO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 11,
+              "uuid": "ca8074f2-3ce7-43d7-b2c4-26c20aed01ac",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 11,
+                "name": "Indé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/IND.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 12,
+              "uuid": "d505d8f1-6786-41cb-aee9-b89dd8e5f5a0",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 12,
+                "name": "Lerdo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/LDO.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 13,
+              "uuid": "9d36e0c7-7d45-414d-8dfe-fcf46874c2d9",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 13,
+                "name": "Mapimí",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MPI.png",
+                "councils": 9
+              }
+            }
+          ]
+        },
+        "2": {
+          "municipalities": [
+            {
+              "id": 14,
+              "uuid": "457c25f0-68a7-4794-8e30-4a4afee22e3c",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 14,
+                "name": "Mezquital",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MEZ.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 15,
+              "uuid": "99b34179-986e-49ce-a43d-0f170f07c6e4",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 15,
+                "name": "Nazas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NAZ.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 16,
+              "uuid": "1f6270a1-183c-44e0-987b-dbf90573cedb",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 16,
+                "name": "Nombre de Dios",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NOM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 17,
+              "uuid": "afc8bb14-e638-4404-98de-c550a2b5718f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 17,
+                "name": "Ocampo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OCA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 18,
+              "uuid": "b9d56122-500a-4ae3-a3e5-2b857ab050fd",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 18,
+                "name": "El Oro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/ORO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 19,
+              "uuid": "96884844-8833-477a-b6d0-9561ec47f0c4",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 19,
+                "name": "Otáez",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OTA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 20,
+              "uuid": "06cc029b-87c8-4cc5-9a93-149b6d95d268",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 20,
+                "name": "Pánuco de Coronado",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PCO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 21,
+              "uuid": "da21042f-623b-4a21-9603-13fd7045e304",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 21,
+                "name": "Peñón Blanco",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 22,
+              "uuid": "d16bfd36-67c6-499f-9053-d86740c9ee9a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 22,
+                "name": "Poanas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/POA.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 23,
+              "uuid": "1732e328-0f76-4bc7-9837-c256f53ffb46",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 23,
+                "name": "Pueblo Nuevo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PNO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 24,
+              "uuid": "9c601186-28b7-484e-91a3-2469ec50f252",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 24,
+                "name": "Rodeo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/RDO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 25,
+              "uuid": "867fb823-dd6f-4631-a01b-9c5b0a25d3fc",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 25,
+                "name": "San Bernardo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 26,
+              "uuid": "72ecc598-6099-4e78-94f2-7bf2ea7f0abd",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 26,
+                "name": "San Dimas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SDI.png",
+                "councils": 9
+              }
+            }
+          ]
+        },
+        "3": {
+          "municipalities": [
+            {
+              "id": 27,
+              "uuid": "82dc622b-1808-4e04-91ef-59e7bb8fd861",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 27,
+                "name": "San Juan de Guadalupe",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 28,
+              "uuid": "7f95dcf9-dfa9-499d-90f2-efb9f0ddf916",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 28,
+                "name": "San Juan del Río",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJR.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 29,
+              "uuid": "f36937bc-feac-4b48-b10c-cea65a1e333c",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 29,
+                "name": "San Luis de Cordero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SLC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 30,
+              "uuid": "02a0a9b8-3a20-4460-824c-49ada6545b00",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 30,
+                "name": "San Pedro del Gallo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SPG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 31,
+              "uuid": "debcd2cc-280f-4ced-ba12-516cabc18aec",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 31,
+                "name": "Santa Clara",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SCL.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 32,
+              "uuid": "751d713b-4b54-40f6-b365-8e80aa41587c",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 32,
+                "name": "Santiago Papasquiaro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 33,
+              "uuid": "00f77600-793b-4d3c-a6b7-68a9a85c21dc",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 33,
+                "name": "Súchil",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SUC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 34,
+              "uuid": "da0b0e5a-1065-487f-95a5-77d67e2b1c85",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 34,
+                "name": "Tamazula",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TAM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 35,
+              "uuid": "94063f0b-01a7-45aa-bbc3-974f586ac27b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 35,
+                "name": "Tepehuanes",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TEP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 36,
+              "uuid": "0d82c873-d824-46a4-90c5-b48a0453d1c8",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 36,
+                "name": "Tlahualilo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TLO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 37,
+              "uuid": "3213a0c2-dcd9-4560-bb20-e3617bdfd635",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 37,
+                "name": "Topia",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TOP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 38,
+              "uuid": "c0545555-3874-42ad-8332-3cc4c2a10f55",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 38,
+                "name": "Vicente Guerrero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/VGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 39,
+              "uuid": "b64347fe-e20a-45d9-97b5-5d80b07de86a",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 0,
+              "municipality": {
+                "id": 39,
+                "name": "Nuevo Ideal",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NVO.png",
+                "councils": 9
+              }
+            }
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "party": {
+      "id": 11,
+      "name": "Sigamos Haciendo Historia en Durango",
+      "acronym": "SHHD",
+      "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PVEM-MORENA.svg"
+    },
+    "blocks": [
+      {
+        "1": {
+          "municipalities": [
+            {
+              "id": 1,
+              "uuid": "b6a86616-0e22-4fc3-94b9-5749def80c90",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 59.56,
+              "municipality": {
+                "id": 33,
+                "name": "Súchil",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SUC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 2,
+              "uuid": "9bda323a-634b-4bea-afc3-ee2fd85b0e3b",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 58.33,
+              "municipality": {
+                "id": 31,
+                "name": "Santa Clara",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SCL.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 3,
+              "uuid": "35ab4908-0d01-4a8a-8b84-47d84b591c5e",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 57.57,
+              "municipality": {
+                "id": 37,
+                "name": "Topia",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TOP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 4,
+              "uuid": "74d5e741-f123-4831-b868-b52189b601a5",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 53.22,
+              "municipality": {
+                "id": 4,
+                "name": "Cuencamé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CME.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 5,
+              "uuid": "b8bdb34b-9dea-4c6c-a484-d191ca4eb6e4",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 51.64,
+              "municipality": {
+                "id": 15,
+                "name": "Nazas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NAZ.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 6,
+              "uuid": "d383133a-1f36-4206-b67e-42b2501e4309",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 50.28,
+              "municipality": {
+                "id": 20,
+                "name": "Pánuco de Coronado",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PCO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 7,
+              "uuid": "07cc9ef6-7400-44a4-a8a3-e933f2027869",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 49.8,
+              "municipality": {
+                "id": 1,
+                "name": "Canatlán",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CAN.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 8,
+              "uuid": "b0379b9c-9bf1-4699-9a76-8f4fb3971523",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 48.36,
+              "municipality": {
+                "id": 2,
+                "name": "Canelas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/CNS.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 9,
+              "uuid": "24ed0359-bb49-4133-a178-e0b28470dd04",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 48.22,
+              "municipality": {
+                "id": 38,
+                "name": "Vicente Guerrero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/VGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 10,
+              "uuid": "82b71585-a53e-45c8-99ed-bb8fb455e986",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 47.07,
+              "municipality": {
+                "id": 13,
+                "name": "Mapimí",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MPI.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 11,
+              "uuid": "a406789d-42ee-4ca3-a736-049c39b080a2",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 46.37,
+              "municipality": {
+                "id": 26,
+                "name": "San Dimas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SDI.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 12,
+              "uuid": "a8593ba4-bdf7-46c7-a0a1-97b853e9e4d7",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 45.74,
+              "municipality": {
+                "id": 25,
+                "name": "San Bernardo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 13,
+              "uuid": "040e9e9e-7694-44e3-a638-31e915ea5dcc",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 44.34,
+              "municipality": {
+                "id": 8,
+                "name": "Guadalupe Victoria",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVC.png",
+                "councils": 9
+              }
+            }
+          ]
+        },
+        "2": {
+          "municipalities": [
+            {
+              "id": 14,
+              "uuid": "80337bb6-4a18-4de1-bc98-9e5fc1112cdf",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 44.18,
+              "municipality": {
+                "id": 36,
+                "name": "Tlahualilo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TLO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 15,
+              "uuid": "9a813b91-bb09-4016-ae2b-05a9f93fa083",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 43.03,
+              "municipality": {
+                "id": 18,
+                "name": "El Oro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/ORO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 16,
+              "uuid": "c7423445-0f2c-4812-baff-d75d4f2cdaba",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 42.97,
+              "municipality": {
+                "id": 16,
+                "name": "Nombre de Dios",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NOM.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 17,
+              "uuid": "3254b719-738e-446e-b0fe-becfdc098737",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 42.4,
+              "municipality": {
+                "id": 12,
+                "name": "Lerdo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/LDO.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 18,
+              "uuid": "0e39bf0a-a0bd-40f0-a20b-4e092cbc458e",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 41.13,
+              "municipality": {
+                "id": 22,
+                "name": "Poanas",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/POA.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 19,
+              "uuid": "66ff84bf-174c-4583-93fd-6a3985c4e6ae",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 40.9,
+              "municipality": {
+                "id": 29,
+                "name": "San Luis de Cordero",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SLC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 20,
+              "uuid": "11d2865a-2dd1-4ba2-b0d9-8ad131e23a28",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 40.36,
+              "municipality": {
+                "id": 21,
+                "name": "Peñón Blanco",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PBO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 21,
+              "uuid": "3ee7226f-6a9b-4e05-bbce-c8e0aafd90c8",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 39.7,
+              "municipality": {
+                "id": 3,
+                "name": "Coneto de Comonfort",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/COC.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 22,
+              "uuid": "2e67e789-543b-4edc-9b4e-6a81ef038596",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 38.86,
+              "municipality": {
+                "id": 7,
+                "name": "Gómez Palacio",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GZP.png",
+                "councils": 15
+              }
+            },
+            {
+              "id": 23,
+              "uuid": "3bb989f5-e97f-4560-b342-b72ec6e5de87",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 38.8,
+              "municipality": {
+                "id": 28,
+                "name": "San Juan del Río",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJR.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 24,
+              "uuid": "83b782e2-6b00-442e-895d-4f4475844a17",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 36.43,
+              "municipality": {
+                "id": 14,
+                "name": "Mezquital",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/MEZ.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 25,
+              "uuid": "41424a89-bd71-463c-8e89-e3a91e3ed611",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 33.97,
+              "municipality": {
+                "id": 39,
+                "name": "Nuevo Ideal",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/NVO.png",
+                "councils": 9
+              }
+            }
+          ]
+        },
+        "3": {
+          "municipalities": [
+            {
+              "id": 26,
+              "uuid": "ab6c6560-2ad8-4964-9ec0-3c9d8bb7d34f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 31.36,
+              "municipality": {
+                "id": 35,
+                "name": "Tepehuanes",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/TEP.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 27,
+              "uuid": "70fc152a-dd9c-4ab4-8bd6-10b38f686580",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 30.57,
+              "municipality": {
+                "id": 5,
+                "name": "Durango",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/DGO.png",
+                "councils": 17
+              }
+            },
+            {
+              "id": 28,
+              "uuid": "6230c8b3-55f0-4687-a70d-770634f33a1f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 30.1,
+              "municipality": {
+                "id": 24,
+                "name": "Rodeo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/RDO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 29,
+              "uuid": "32e8df22-f677-4d81-a5dc-8f4f6084f683",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 29.94,
+              "municipality": {
+                "id": 17,
+                "name": "Ocampo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/OCA.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 30,
+              "uuid": "8a216a89-2bf2-468b-a30c-d8500b9ab45c",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 29.87,
+              "municipality": {
+                "id": 23,
+                "name": "Pueblo Nuevo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/PNO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 31,
+              "uuid": "9117aadf-b8cc-42c9-b20c-e6afb3fc459d",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 29.24,
+              "municipality": {
+                "id": 27,
+                "name": "San Juan de Guadalupe",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SJG.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 32,
+              "uuid": "fa9628f3-9937-49bd-87b6-ed69063928c5",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 25.78,
+              "municipality": {
+                "id": 6,
+                "name": "General Simón Bolívar",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SIM.png",
+                "councils": 1
+              }
+            },
+            {
+              "id": 33,
+              "uuid": "3d0a5d10-1e9e-4e94-b90b-12f81b437f87",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 21.77,
+              "municipality": {
+                "id": 11,
+                "name": "Indé",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/IND.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 34,
+              "uuid": "e76e6ce6-b367-4add-acf4-75f00fd1a16f",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 19.52,
+              "municipality": {
+                "id": 32,
+                "name": "Santiago Papasquiaro",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SGO.png",
+                "councils": 9
+              }
+            },
+            {
+              "id": 35,
+              "uuid": "39769fd9-38ff-461d-a743-d8b713c5aa36",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 18.47,
+              "municipality": {
+                "id": 9,
+                "name": "Guanaceví",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/GVI.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 36,
+              "uuid": "07e97936-7e6b-4b9f-a521-dcf0fc1661ea",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 17.36,
+              "municipality": {
+                "id": 10,
+                "name": "Hidalgo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/HGO.png",
+                "councils": 7
+              }
+            },
+            {
+              "id": 37,
+              "uuid": "cee63ed3-691d-4e11-8041-af193e65de80",
+              "votes_obtained": "No medido",
+              "valid_vote_issued": "No medido",
+              "rentability": 15.65,
+              "municipality": {
+                "id": 30,
+                "name": "San Pedro del Gallo",
+                "shield": "https://s3.us-east-1.amazonaws.com/static.appsiepcdurango.mx/escudos/SPG.png",
+                "councils": 7
+              }
             }
           ]
         }

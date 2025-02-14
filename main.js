@@ -2,7 +2,6 @@ import 'animate.css';
 import {InputCounter} from 'flowbite';
 import {jsPDF} from "jspdf";
 import autoTable from 'jspdf-autotable'
-import _ from 'lodash';
 import stickybits from 'stickybits'
 import Modal from './components/Modal.js';
 import {PartySelector} from './modules/PartySelector.js';
@@ -215,11 +214,11 @@ document.addEventListener('DOMContentLoaded', () => {
         _s__party_name = e.target.options[e.target.selectedIndex].text;
 
         _p__emblema.innerHTML = `
-            <img src="` + Parties[(e.target.value - 1)].logo + `" alt="${e.target.value}" class="w-40 h-40 mx-auto">
+           <img src="` + (Parties.find(party => party.id === e.target.value)?.logo || 'default-logo.png') + `" alt="${e.target.value}" class="w-40 h-40 mx-auto">
         `;
-        // Ocultar regla de validación de RP ya las Coaliciones no tienen. (única excepción)
+        // Ocultar regla de validación de RP, ya que las Coaliciones no tienen. (única excepción)
         let _c__four = document.querySelector('._c__four');
-        if (e.target.value === '2') {
+        if (e.target.value === '11') {
             _c__four.classList.remove('_c__check')
             _c__four.parentElement.classList.add('hidden');
         } else {
@@ -229,16 +228,16 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        if (e.target.value === '6' || e.target.value === '3' || e.target.value === '2') {
+        if (e.target.value === '4' || e.target.value === '5' || e.target.value === '7' || e.target.value === '11') {
 
-            Modal.alert(((e.target.value === '2') ? ("La Coalición seleccionada es parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias que forman parte del Partido Político que corresponda. ") : ("El Partido Político seleccionado forma parte de una Coalición Parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias que forman parte de la misma.")) + " Esto, con el fin de realizar los cálculos aritméticos necesarios para definir el género que encabezará y alternará en el listado de Representación Proporcional. Haga clic en el botón azul <div class='bg-blue-600 rounded-l-full p-1 align-bottom hover:cursor-pointer inline-block'> <svg xmlns='http://www.w3.org/2000/svg' class='text-white' width='16' height='16' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'> <path stroke='none' d='M0 0h24v24H0z' fill='none'/> <path d='M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z'/> <path d='M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0'/></svg></div> situado al lado derecho de su pantalla y seleccione el número de candidaturas por género.")
+            Modal.alert(((e.target.value === '11') ? ("La Coalición seleccionada es parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias que forman parte del Partido Político que corresponda. ") : ("El Partido Político seleccionado forma parte de una Coalición Parcial, por lo que es necesario que ingrese el número de candidaturas mujeres y hombres propietarias que forman parte de la misma.")) + " Esto, con el fin de realizar los cálculos aritméticos necesarios para definir el género que encabezará y alternará en el listado de Representación Proporcional. Haga clic en el botón azul <div class='bg-blue-600 rounded-l-full p-1 align-bottom hover:cursor-pointer inline-block'> <svg xmlns='http://www.w3.org/2000/svg' class='text-white' width='16' height='16' viewBox='0 0 24 24' stroke-width='2' stroke='currentColor' fill='none' stroke-linecap='round' stroke-linejoin='round'> <path stroke='none' d='M0 0h24v24H0z' fill='none'/> <path d='M10.325 4.317c.426 -1.756 2.924 -1.756 3.35 0a1.724 1.724 0 0 0 2.573 1.066c1.543 -.94 3.31 .826 2.37 2.37a1.724 1.724 0 0 0 1.065 2.572c1.756 .426 1.756 2.924 0 3.35a1.724 1.724 0 0 0 -1.066 2.573c.94 1.543 -.826 3.31 -2.37 2.37a1.724 1.724 0 0 0 -2.572 1.065c-.426 1.756 -2.924 1.756 -3.35 0a1.724 1.724 0 0 0 -2.573 -1.066c-1.543 .94 -3.31 -.826 -2.37 -2.37a1.724 1.724 0 0 0 -1.065 -2.572c-1.756 -.426 -1.756 -2.924 0 -3.35a1.724 1.724 0 0 0 1.066 -2.573c-.94 -1.543 .826 -3.31 2.37 -2.37c1 .608 2.296 .07 2.572 -1.065z'/> <path d='M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0'/></svg></div> situado al lado derecho de su pantalla y seleccione el número de candidaturas por género.")
 
             let _dynamic__settings_obj = document.querySelector('._settings__content');
 
             _dynamic__settings_obj.innerHTML = `
             <form class="flex flex-col w-full">
 				<div class="mb-3">
-					<p class="text-sm dark:text-white">Seleccione el número de candidaturas mujeres y hombres que forman parte ` + ((e.target.value === '2') ? ("del Partido Político que corresponda (PVEM o MORENA).") : ("de la Coalición Sigamos Haciendo Historia en Durango")) + `</p>
+					<p class="text-sm dark:text-white">Seleccione el número de candidaturas mujeres y hombres que forman parte ` + ((e.target.value !== '11') ? ("del Partido Político que corresponda (PVEM, PT o MORENA).") : ("de la Coalición Sigamos Haciendo Historia en Durango")) + `</p>
 				</div>
 				<div class="flex justify-center space-x-3">
 					<div>
@@ -277,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
 				<div class="my-3">
 					<p class="text-xs dark:text-white"><span class="text-red-600">*</span>Las candidaturas «No Binarias» suman al género masculino.</p>
 				</div>`
-            if (e.target.value === '3' || e.target.value === '6') {
+            if (e.target.value === '4' || e.target.value === '5' || e.target.value === '7') {
                 _dynamic__settings_obj.innerHTML += `   
                 <div class="flex">
                     <div class="flex items-center h-5">
@@ -327,202 +326,33 @@ document.addEventListener('DOMContentLoaded', () => {
         _e__blocks_rp.innerHTML = "";
         let _HTML__content = '';
 
-        for (let party of Blocks) {
-            if (party.id === e.target.value) {
-                for (let block of party.blocks) {
+        for (let entity of Blocks) {
+            console.log("entity.party.id: ", e.target.value)
+            if (entity.party.id.toString() === e.target.value.toString()) {
+                for (let block of entity.blocks) {
+                    console.log("block: ", block)
                     for (let key in block) {
                         // Prints the block number
                         _HTML__content += '<div class="animate__animated animate__faster animate__zoomIn bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md" data-block="' + key + '" data-blocktype="electoral_block">'
                             + '<h1 class="text-2xl font-sans font-semibold py-3 text-red-400 _c__block_' + key + '_text">Bloque ' + key + '</h1>'
-                            + '<div id="accordion-collapse" data-accordion="collapse">'
-                        for (const [index, district] of block[key].districts.entries()) {
-                            // Prints the district capital inside n block
-                            _HTML__content += '<div class="bg-gray-100 dark:bg-gray-900 mb-5 p-5">'
-                                + '     <h2 class="mb-2.5">'
-                                + '       <button type="button" class="flex items-center justify-between w-full bg-white dark:bg-gray-900 p-3 rounded dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 gap-3 shadow-2xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 border border-gray-200 dark:border-gray-700" data-accordion-target="#accordion-collapse-body-' + district.uuid + '" aria-expanded="true" aria-controls="accordion-collapse-body-' + district.uuid + '">'
-                                + '           <span class="font-bold">' + district.district_roman + '. ' + district.district_capital + '</span>'
-                                + '           <span class="font-bold">' + district.votes_percentage + '%</span>'
-                                + '       </button>'
-                                + '     </h2>'
-                                + '        <div class="rounded flex divide-x divide-gray-600">'
-                                + '        <div class="mr-2.5">'
-                                + '			   <h1 class="font-sans font-semibold py-3">Propietario(a)</h1>'
-                                + '            <ul class="grid w-full gap-3 md:grid-cols-3">'
-                                + '                <li>'
-                                + '                   <input type="radio" id="female-' + district.uuid + '-p" name="' + district.uuid + '-p" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="female" class="hidden peer" required>'
-                                + '                   <label for="female-' + district.uuid + '-p" class="transition-all ease-linear inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                + '                        <div class="block">'
-                                + '                            <div class="font-semibold">Mujer</div>'
-                                + '                        </div>'
-                                + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '                            <path d="M10 16v5"/>'
-                                + '                            <path d="M14 16v5"/>'
-                                + '                            <path d="M8 16h8l-2 -7h-4z"/>'
-                                + '                            <path d="M5 11c1.667 -1.333 3.333 -2 5 -2"/>'
-                                + '                            <path d="M19 11c-1.667 -1.333 -3.333 -2 -5 -2"/>'
-                                + '                            <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>'
-                                + '                        </svg>'
-                                + '                    </label>'
-                                + '                </li>'
-                                + '                <li>'
-                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-p" name="' + district.uuid + '-p" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="genderqueer" class="hidden peer" required>'
-                                + '                   <label for="genderqueer-' + district.uuid + '-p" class="transition-all ease-linear inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                + '                        <div class="block">'
-                                + '                            <div class="font-semibold">No Binario</div>'
-                                + '                        </div>'
-                                + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '                         <path d="M12 11a5 5 0 1 1 0 10a5 5 0 0 1 0 -10z" />'
-                                + '                         <path d="M12 11v-8" />'
-                                + '                         <path d="M14.5 4.5l-5 3" />'
-                                + '                         <path d="M9.5 4.5l5 3" />'
-                                + '                          </svg>'
-                                + '                    </label>'
-                                + '                </li>'
-                                + '                <li>'
-                                + '                   <input type="radio" id="male-' + district.uuid + '-p" name="' + district.uuid + '-p" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-position="p" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="male" class="hidden peer">'
-                                + '                   <label for="male-' + district.uuid + '-p" class="transition-all ease-linear inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                + '                        <div class="block">'
-                                + '                            <div class="font-semibold">Hombre</div>'
-                                + '                        </div>'
-                                + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '                            <path d="M10 16v5"/>'
-                                + '                            <path d="M14 16v5"/>'
-                                + '                            <path d="M9 9h6l-1 7h-4z"/>'
-                                + '                            <path d="M5 11c1.333 -1.333 2.667 -2 4 -2"/>'
-                                + '                            <path d="M19 11c-1.333 -1.333 -2.667 -2 -4 -2"/>'
-                                + '                            <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>'
-                                + '                        </svg>'
-                                + '                    </label>'
-                                + '                </li>'
-                            if (district.district_decimal !== "15") {
-                                _HTML__content += '<li class="flex items-center col-span-2">'
-                                    + '                    <div class="flex items-center">'
-                                    + '                         <input type="checkbox" data-uuid="' + district.uuid + '" data-position="p" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-block="' + key + '" id="' + district.uuid + '-p" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
-                                    + '                         <label for="' + district.uuid + '-p" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                    + '						          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                    + '						          	  <path class="cls-2" d="m10,16v5"/>'
-                                    + '						          	  <path class="cls-2" d="m14,16v5"/>'
-                                    + '						          	  <path class="cls-2" d="m9,9h6l-1,7h-4l-1-7Z"/>'
-                                    + '						          	  <path class="cls-2" d="m5,5.08c0,4.01,2.67,3.92,4,3.92"/>'
-                                    + '						          	  <path class="cls-2" d="m19,5.08c0,4.92-2.67,3.92-4,3.92"/>'
-                                    + '						          	  <path class="cls-2" d="m10,4c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>'
-                                    + '						          </svg>'
-                                    + '                               <span class="font-semibold">Jóven</span>'
-                                    + '                         </label>'
-                                    + '                    </div>'
-                                    + '                </li>';
-                            } else {
-                                _HTML__content += '<li class="flex items-center col-span-2">'
-                                    + '                    <div class="flex items-center">'
-                                    + '                         <input id="' + district.uuid + '-p" type="checkbox" data-uuid="' + district.uuid + '" data-position="p" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
-                                    + '                         <label for="' + district.uuid + '-p" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                    + '						        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                    + '						        	  <path class="cls-1" d="m8,15v5"/>'
-                                    + '						        	  <path class="cls-1" d="m12,15v5"/>'
-                                    + '						        	  <path class="cls-1" d="m7,8h6l2.8,7H4.2l2.8-7Z"/>'
-                                    + '						        	  <path class="cls-1" d="m19,11c-3-3-4.67-3-6-3l-3,7-3-7c-1.33,0-3.5.5-6,3"/>'
-                                    + '						        	  <path class="cls-1" d="m8,3c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>'
-                                    + '						        </svg>'
-                                    + '                             <span>Indígena</span>'
-                                    + '                         </label>'
-                                    + '                    </div>'
-                                    + '                </li>';
-                            }
-                            _HTML__content += '</ul>'
-                                + '        </div>'
-                                + '        <div class="pl-2.5">'
-                                + '			  <h1 class="font-sans font-semibold py-3">Suplente</h1>'
-                                + '			  <ul class="grid w-full gap-3 md:grid-cols-3">'
-                                + '                <li>'
-                                + '                   <input type="radio" id="female-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="female" class="hidden peer" required>'
-                                + '                   <label for="female-' + district.uuid + '-s" class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                + '                        <div class="block">'
-                                + '                            <div class="font-semibold">Mujer</div>'
-                                + '                        </div>'
-                                + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '                            <path d="M10 16v5"/>'
-                                + '                            <path d="M14 16v5"/>'
-                                + '                            <path d="M8 16h8l-2 -7h-4z"/>'
-                                + '                            <path d="M5 11c1.667 -1.333 3.333 -2 5 -2"/>'
-                                + '                            <path d="M19 11c-1.667 -1.333 -3.333 -2 -5 -2"/>'
-                                + '                            <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>'
-                                + '                        </svg>'
-                                + '                    </label>'
-                                + '                </li>'
-                                + '                <li>'
-                                + '                   <input type="radio" id="genderqueer-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="genderqueer" class="hidden peer" required>'
-                                + '                   <label for="genderqueer-' + district.uuid + '-s" class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                + '                        <div class="block">'
-                                + '                            <div class="font-semibold">No Binario</div>'
-                                + '                        </div>'
-                                + '                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '                         <path d="M12 11a5 5 0 1 1 0 10a5 5 0 0 1 0 -10z" />'
-                                + '                         <path d="M12 11v-8" />'
-                                + '                         <path d="M14.5 4.5l-5 3" />'
-                                + '                         <path d="M9.5 4.5l5 3" />'
-                                + '                          </svg>'
-                                + '                    </label>'
-                                + '                </li>'
-                                + '                <li>'
-                                + '                   <input type="radio" id="male-' + district.uuid + '-s" name="' + district.uuid + '-s" data-position="s" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-block="' + key + '" data-level="' + (index + 1) + '" data-list="mr" data-uuid="' + district.uuid + '" value="male" class="hidden peer">'
-                                + '                   <label for="male-' + district.uuid + '-s" class="transition-all inline-flex items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                + '                        <div class="block">'
-                                + '                            <div class="font-semibold">Hombre</div>'
-                                + '                        </div>'
-                                + '                       <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-man" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                + '                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>'
-                                + '                            <path d="M10 16v5"/>'
-                                + '                            <path d="M14 16v5"/>'
-                                + '                            <path d="M9 9h6l-1 7h-4z"/>'
-                                + '                            <path d="M5 11c1.333 -1.333 2.667 -2 4 -2"/>'
-                                + '                            <path d="M19 11c-1.333 -1.333 -2.667 -2 -4 -2"/>'
-                                + '                            <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>'
-                                + '                        </svg>'
-                                + '                    </label>'
-                                + '                </li>'
-                            if (district.district_decimal !== "15") {
-                                _HTML__content += '<li class="flex items-center col-span-2">'
-                                    + '                    <div class="flex items-center">'
-                                    + '                         <input type="checkbox" data-uuid="' + district.uuid + '" data-position="s" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-block="' + key + '" id="' + district.uuid + '-s" value="youth" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
-                                    + '                         <label for="' + district.uuid + '-s" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                    + '						          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                    + '						          	  <path class="cls-2" d="m10,16v5"/>'
-                                    + '						          	  <path class="cls-2" d="m14,16v5"/>'
-                                    + '						          	  <path class="cls-2" d="m9,9h6l-1,7h-4l-1-7Z"/>'
-                                    + '						          	  <path class="cls-2" d="m5,5.08c0,4.01,2.67,3.92,4,3.92"/>'
-                                    + '						          	  <path class="cls-2" d="m19,5.08c0,4.92-2.67,3.92-4,3.92"/>'
-                                    + '						          	  <path class="cls-2" d="m10,4c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>'
-                                    + '						          </svg>'
-                                    + '                               <span>Jóven</span>'
-                                    + '                         </label>'
-                                    + '                    </div>'
-                                    + '                </li>';
-                            } else {
-                                _HTML__content += '<li class="flex items-center col-span-2">'
-                                    + '                    <div class="flex items-center">'
-                                    + '                         <input id="' + district.uuid + '-s" type="checkbox" data-uuid="' + district.uuid + '" data-position="s" data-district="' + district.district_capital + '" data-roman="' + district.district_roman + '" data-block="' + key + '" value="indigenous" class="hidden peer w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" >'
-                                    + '                         <label for="' + district.uuid + '-s" class="transition-all inline-flex overflow-hidden relative items-center justify-between w-full p-3 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">'
-                                    + '						        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 20 21" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">'
-                                    + '						        	  <path class="cls-1" d="m8,15v5"/>'
-                                    + '						        	  <path class="cls-1" d="m12,15v5"/>'
-                                    + '						        	  <path class="cls-1" d="m7,8h6l2.8,7H4.2l2.8-7Z"/>'
-                                    + '						        	  <path class="cls-1" d="m19,11c-3-3-4.67-3-6-3l-3,7-3-7c-1.33,0-3.5.5-6,3"/>'
-                                    + '						        	  <path class="cls-1" d="m8,3c0,1.1.9,2,2,2s2-.9,2-2-.9-2-2-2-2,.9-2,2"/>'
-                                    + '						        </svg>'
-                                    + '                             <span>Indígena</span>'
-                                    + '                         </label>'
-                                    + '                    </div>'
-                                    + '                </li>';
-                            }
-                            _HTML__content += '</ul>'
-                                + '        </div>'
-                                + '    </div>'
-                                + '</div>';
+
+                            + '<div class="grid w-full gap-6 md:grid-cols-6 sm:grid-cols-4 grid-cols-2 grid-flow-row-dense auto-cols-max">'
+                        for (const [index, municipality] of block[key].municipalities.entries()) {
+                            _HTML__content += `
+                                <button class="relative flex items-end py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700" role="button">
+                                    <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 0 1 1 1v4h1a1 1 0 0 1 0 2Z"/>
+                                    </svg>
+                                    <span class="sr-only">Estatus</span>
+                                    <div class="flex w-full">
+                                        <span class="font-medium self-start">` + municipality.municipality.name + `</span>
+                                    </div>
+                                    <div class="absolute inline-flex items-center justify-center h-6 px-1 text-xs text-white bg-green-500/50 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">
+                                    ` + municipality.rentability + `%
+                                    </div>
+                                </button>
+                            `
+                            // Prints the municipality capital inside n block
                         }
                         _HTML__content += '' +
                             '</div>' +
@@ -535,7 +365,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         let _HTML__content_rp = '';
 
-        if (e.target.value !== '2') {
+        if (e.target.value !== '11') {
             _HTML__content_rp += `<div class="bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md"><h1 class="font-sans font-semibold text-2xl py-3 my-4">Representación Proporcional</h1>`
             for (let i = 0; i < 5; i++) {
                 _HTML__content_rp += `
@@ -714,475 +544,475 @@ document.addEventListener('DOMContentLoaded', () => {
 
     })
 
-    window.addEventListener('change', (El) => {
+    /*    window.addEventListener('change', (El) => {
 
-        // Primera palomita.
-        let _c__one = document.querySelector('._c__one')
-        // Segunda palomita.
-        let _c__two = document.querySelector('._c__two'),
-            _c__three = document.querySelector('._c__three'),
-            _c__30y = document.querySelector('._c__30y'),
-            _c__indigenous = document.querySelector('._c__indigenous'),
-            _c__four = document.querySelector('._c__four');
+            // Primera palomita.
+            let _c__one = document.querySelector('._c__one')
+            // Segunda palomita.
+            let _c__two = document.querySelector('._c__two'),
+                _c__three = document.querySelector('._c__three'),
+                _c__30y = document.querySelector('._c__30y'),
+                _c__indigenous = document.querySelector('._c__indigenous'),
+                _c__four = document.querySelector('._c__four');
 
-        // Group by uuid or formula
-        let p = _.groupBy(Array.from(document.querySelectorAll('input[value="female"]')).filter(f => f.dataset.level === '1'), function (e) {
-            return e.dataset.uuid
-        })
-
-        // Comparing
-        let _p = [];
-        Object.keys(p).forEach(key => {
-            ((p[key][0].checked && p[key][1].checked) ? _p.push(1) : _p.push(0))
-            // ((p[key][0].checked && p[key][1].checked)) ? _c__one.classList.replace('text-gray-400', 'text-green-400') : _c__one.classList.replace('text-green-400', 'text-gray-400')
-        })
-
-        _.some(_p, function (e) {
-            return e === 1
-        }) ? (_c__one.classList.replace('text-gray-400', 'text-green-400')) : (_c__one.classList.replace('text-green-400', 'text-gray-400'))
-
-        // Últimos bloques de mujeres
-        let pp = _.groupBy(_.orderBy(Array.from(document.querySelectorAll('input[value="female"]')).filter(f => f.dataset.block === '3'), function (e) {
-            return e.dataset.level
-        }), function (e) {
-            return e.dataset.uuid
-        })
-
-        let x = _.concat(pp[Object.keys(pp)[Object.keys(pp).length - 1]]);
-
-        if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
-            x.forEach((e) => {
-                e.disabled = true;
+            // Group by uuid or formula
+            let p = _.groupBy(Array.from(document.querySelectorAll('input[value="female"]')).filter(f => f.dataset.level === '1'), function (e) {
+                return e.dataset.uuid
             })
-        }
 
-        _.some(x, function (e) {
-            return e.checked
-        }) ? (_c__two.classList.replace('text-green-400', 'text-gray-400')) : (_c__two.classList.replace('text-gray-400', 'text-green-400'))
+            // Comparing
+            let _p = [];
+            Object.keys(p).forEach(key => {
+                ((p[key][0].checked && p[key][1].checked) ? _p.push(1) : _p.push(0))
+                // ((p[key][0].checked && p[key][1].checked)) ? _c__one.classList.replace('text-gray-400', 'text-green-400') : _c__one.classList.replace('text-green-400', 'text-gray-400')
+            })
 
-        /**
-         * FORMULA DE JÓVENES
-         * */
+            _.some(_p, function (e) {
+                return e === 1
+            }) ? (_c__one.classList.replace('text-gray-400', 'text-green-400')) : (_c__one.classList.replace('text-green-400', 'text-gray-400'))
 
-        let _e__youth = _.groupBy(document.querySelectorAll('input[value="youth"]'), function (e) {
-            return e.dataset.uuid
-        }), _e_youth_array = [];
+            // Últimos bloques de mujeres
+            let pp = _.groupBy(_.orderBy(Array.from(document.querySelectorAll('input[value="female"]')).filter(f => f.dataset.block === '3'), function (e) {
+                return e.dataset.level
+            }), function (e) {
+                return e.dataset.uuid
+            })
 
-        Object.keys(_e__youth).forEach(key => {
-            ((_e__youth[key][0].checked && _e__youth[key][1].checked) ? _e_youth_array.push(1) : _e_youth_array.push(0))
-        })
+            let x = _.concat(pp[Object.keys(pp)[Object.keys(pp).length - 1]]);
 
-        _.some(_e_youth_array, function (e) {
-            return e === 1
-        }) ? (_c__30y.classList.replace('text-gray-400', 'text-green-400')) : (_c__30y.classList.replace('text-green-400', 'text-gray-400'))
-
-        // Cumplimiento al acuerdo IEPC/CG18/2024.
-        if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
-            // Mark Young rule as green if checked
-            if (document.querySelector('input#chkfyouth').checked) {
-                document.querySelectorAll('input[value="youth"]').forEach(e => e.parentElement.parentElement.style.display = 'none');
-                _c__30y.classList.replace('text-gray-400', 'text-green-400');
-            } else {
-                document.querySelectorAll('input[value="youth"]').forEach(e => e.parentElement.parentElement.style.display = 'flex');
+            if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
+                x.forEach((e) => {
+                    e.disabled = true;
+                })
             }
-        }
 
-        /**
-         * FORMULA DE INDÍGENAS
-         * */
+            _.some(x, function (e) {
+                return e.checked
+            }) ? (_c__two.classList.replace('text-green-400', 'text-gray-400')) : (_c__two.classList.replace('text-gray-400', 'text-green-400'))
 
-        let _e__indigenous = _.groupBy(document.querySelectorAll('input[value="indigenous"]'), function (e) {
-            return e.dataset.uuid
-        }), _e_indigenous_array = [];
+            /!**
+             * FORMULA DE JÓVENES
+             * *!/
 
-        Object.keys(_e__indigenous).forEach(key => {
-            ((_e__indigenous[key][0].checked && _e__indigenous[key][1].checked) ? _e_indigenous_array.push(1) : _e_indigenous_array.push(0))
-        })
-
-        _.some(_e_indigenous_array, function (e) {
-            return e === 1
-        }) ? (_c__indigenous.classList.replace('text-gray-400', 'text-green-400')) : (_c__indigenous.classList.replace('text-green-400', 'text-gray-400'))
-
-        /***
-         * CONTEO DE GÉNEROS
-         * */
-
-        let _e__males = Array.from(document.querySelectorAll('input[value="male"]')).filter(j => j.checked),
-            _e__females = Array.from(document.querySelectorAll('input[value="female"]')).filter(j => j.checked),
-            _e__nums_positions = (parseInt(Blocks[(partySelectorEl.value - 1)].number_districts));
-
-        // console.error("_e__nums_positions: ", _e__nums_positions)
-
-        /**
-         * CONTEO DE FÓRMULAS.
-         * HOMBRES
-         * */
-        let _e__males_checked = Array.from(document.querySelectorAll('input[value="male"][data-list="mr"]')).filter(j => j.checked),
-            _e__genderqueer_checked = Array.from(document.querySelectorAll('input[value="genderqueer"]')).filter(j => j.checked);
-
-        let _e__males_formulas = _.groupBy(_e__males_checked, function (e) {
+            let _e__youth = _.groupBy(document.querySelectorAll('input[value="youth"]'), function (e) {
                 return e.dataset.uuid
-            }),
-            _e__males_formulas_array = [],
-            _e__genderqueer_formulas = _.groupBy(_e__genderqueer_checked, function (e) {
-                return e.dataset.uuid
-            }),
-            _e__genderqueer_formulas_array = [];
+            }), _e_youth_array = [];
 
-        Object.keys(_e__males_formulas).forEach(key => {
-            (_e__males_formulas[key].length > 1) ? _e__males_formulas_array.push(1) : _e__males_formulas_array.push(0)
-        });
-
-        Object.keys(_e__genderqueer_formulas).forEach(key => {
-            (_e__genderqueer_formulas[key].length > 1) ? _e__genderqueer_formulas_array.push(1) : _e__genderqueer_formulas_array.push(0)
-        });
-
-        // console.log("_e__males_formulas_array: ", _.sum(_e__males_formulas_array))
-
-        /**
-         * MUJERES
-         * */
-
-        let _e__females_checked = Array.from(document.querySelectorAll('input[value="female"]')).filter(j => j.checked);
-
-        let _e__females_formulas = _.groupBy(_e__females_checked, function (e) {
-                return e.dataset.uuid
-            }),
-            _e__females_formulas_array = [];
-
-        Object.keys(_e__females_formulas).forEach(key => {
-            (_e__females_formulas[key].length > 1) ? _e__females_formulas_array.push(1) : _e__females_formulas_array.push(0)
-        });
-
-        // console.log("_e__females_formulas_array: ", _.sum(_e__females_formulas_array))
-
-        /**
-         *  CONTEO DE PROPIETARIOS.
-         *  Se alternan géneros según selección en Mayoría Relativa.
-         * */
-
-        /**
-         * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON HOMBRES
-         * */
-        let _e__male_p = Array.from(document.querySelectorAll('input[value="male"]:checked')).filter(f => f.dataset.position === 'p'),
-            _e_ci_male = document.querySelector('#_ci__male')?.value ?? 0;
-
-        if ((_e__male_p.length + _e__genderqueer_checked.length + parseInt(_e_ci_male)) / 15 > 0.5) {
-            let _h = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
-
-            Object.keys(_h).forEach((e) => {
-                (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
+            Object.keys(_e__youth).forEach(key => {
+                ((_e__youth[key][0].checked && _e__youth[key][1].checked) ? _e_youth_array.push(1) : _e_youth_array.push(0))
             })
 
-        }
+            _.some(_e_youth_array, function (e) {
+                return e === 1
+            }) ? (_c__30y.classList.replace('text-gray-400', 'text-green-400')) : (_c__30y.classList.replace('text-green-400', 'text-gray-400'))
 
-        /**
-         * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON MUJERES
-         * */
-        let _e__female_p = Array.from(document.querySelectorAll('input[value="female"]:checked')).filter(f => f.dataset.position === 'p'),
-            _e_ci_female = document.querySelector('#_ci__female')?.value ?? 0;
-
-        if ((_e__female_p.length + parseInt(_e_ci_female)) / 15 > 0.5) {
-            let _f = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
-
-            Object.keys(_f).forEach((e) => {
-                (_f[e].dataset.level % 2 === 0) ? (_f[e].checked = false) : undefined
-            })
-
-            Object.keys(_f).forEach((e) => {
-                (_f[e].dataset.level % 2 === 1) ? (_f[e].checked = true) : (_f[e].checked = false)
-            })
-        }
-
-        /**
-         * CONTEO DE PROPIETARIOS POR GÉNERO
-         * Recuadros de conteo de género ubicados al lado izquierdo de la pantalla.
-         * */
-        let _c_female_p_selected = (_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) + ' (' + _.round(((_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) / 15) * 100, 2) + '%)',
-            _c_male_p_selected = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) / 15) * 100, 2) + '%)';
-
-        document.querySelector('._e__male_counter').innerHTML = _c_male_p_selected;
-        document.querySelector('._e__female_counter').innerHTML = _c_female_p_selected;
-
-        /**
-         * INTEGRACIÓN PARITARIA DE CADA BLOQUE
-         * */
-        let _a__genderqueer = document.querySelectorAll('input[value="genderqueer"]'),
-            _a__male = document.querySelectorAll('input[value="male"]');
-
-        let _a__merged_genderqueer_males = Array.from(_a__male).concat(Array.from(_a__genderqueer));
-
-        // console.log("_a__merged_genderqueer_males ", _a__merged_genderqueer_males)
-
-        let _e__male_by_block = _.groupBy(_.orderBy(_a__merged_genderqueer_males, function (e) {
-                return e.dataset.level
-            }), function (f) {
-                return f.dataset.block
-            }),
-            _e__female_by_block = _.groupBy(_.orderBy(Array.from(document.querySelectorAll('input[value="female"]')), function (e) {
-                return e.dataset.level
-            }), function (f) {
-                return f.dataset.block
-            }),
-            _c__block_1_text = document.querySelector('._c__block_1_text'),
-            _c__block_2_text = document.querySelector('._c__block_2_text'),
-            _c__block_3_text = document.querySelector('._c__block_3_text'),
-            _e__block_par = [], _xxx1m = [], _xxx1f = [], _xxx2m = [], _xxx2f = [], _xxx3m = [], _xxx3f = [];
-
-        let _xx1m = _.groupBy(_e__male_by_block[1], function (e) {
-                return e.dataset.uuid
-            }),
-            _xx1f = _.groupBy(_e__female_by_block[1], function (e) {
-                return e.dataset.uuid
-            })
-
-        Object.keys(_xx1m).forEach((e) => _xx1m[e].filter(f => f.checked).length === 2 ? _xxx1m.push(1) : _xxx1m.push(0));
-        Object.keys(_xx1f).forEach((e) => _xx1f[e].filter(f => f.checked).length === 2 ? _xxx1f.push(1) : _xxx1f.push(0));
-
-        // console.log("_xxx1m: ", _.sum(_xxx1m), " _xxx1f: ", _.sum(_xxx1f))
-
-        if (_.sum(_xxx1m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx1f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx1m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx1f) === Math.ceil((_e__nums_positions / 3) / 2)) {
-            _c__block_1_text.classList.replace('text-red-400', 'text-green-400')
-            _e__block_par.push(1)
-        } else {
-            _c__block_1_text.classList.replace('text-green-400', 'text-red-400')
-            _e__block_par.push(0)
-        }
-
-        /***************************/
-        let _xx2m = _.groupBy(_e__male_by_block[2], function (e) {
-                return e.dataset.uuid
-            }),
-            _xx2f = _.groupBy(_e__female_by_block[2], function (e) {
-                return e.dataset.uuid
-            })
-
-        Object.keys(_xx2m).forEach((e) => _xx2m[e].filter(f => f.checked).length === 2 ? _xxx2m.push(1) : _xxx2m.push(0));
-        Object.keys(_xx2f).forEach((e) => _xx2f[e].filter(f => f.checked).length === 2 ? _xxx2f.push(1) : _xxx2f.push(0));
-
-        // console.log("_xxx2m: ", _.sum(_xxx2m), " _xxx2f: ", _.sum(_xxx2f))
-
-        if (_.sum(_xxx2m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx2f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx2m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx2f) === Math.ceil((_e__nums_positions / 3) / 2)) {
-            _c__block_2_text.classList.replace('text-red-400', 'text-green-400')
-            _e__block_par.push(1)
-        } else {
-            _c__block_2_text.classList.replace('text-green-400', 'text-red-400')
-            _e__block_par.push(0)
-        }
-
-        /***************************/
-        let _xx3m = _.groupBy(_e__male_by_block[3], function (e) {
-                return e.dataset.uuid
-            }),
-            _xx3f = _.groupBy(_e__female_by_block[3], function (e) {
-                return e.dataset.uuid
-            })
-
-        Object.keys(_xx3m).forEach((e) => _xx3m[e].filter(f => f.checked).length === 2 ? _xxx3m.push(1) : _xxx3m.push(0));
-        Object.keys(_xx3f).forEach((e) => _xx3f[e].filter(f => f.checked).length === 2 ? _xxx3f.push(1) : _xxx3f.push(0));
-
-        if (_.sum(_xxx3m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx3f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx3m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx3f) === Math.ceil((_e__nums_positions / 3) / 2)) {
-            _c__block_3_text.classList.replace('text-red-400', 'text-green-400')
-            _e__block_par.push(1)
-        } else {
-            /* if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
-                _e__block_par.push(1)
-            } */
-            _c__block_3_text.classList.replace('text-green-400', 'text-red-400')
-            _e__block_par.push(0)
-        }
-
-        /**
-         * CHECK IF ALL BLOCKS ARE GREEN.
-         * */
-        (_e__block_par[0] === 1 && _e__block_par[1] === 1 && _e__block_par[2] === 1) ? (_c__three.classList.replace('text-gray-400', 'text-green-400')) : (_c__three.classList.replace('text-green-400', 'text-gray-400'));
-
-        /**
-         * PARIDAD DE MUJERES
-         * */
-        let _e__female_formula = _.groupBy(Array.from(document.querySelectorAll('input[data-list="mr"]')).filter(f => f.checked), function (e) {
-            return e.dataset.uuid
-        })
-
-        Object.keys(_e__female_formula).forEach((e) => {
-            if (_e__female_formula[e].length > 1) {
-                if (_e__female_formula[e][0].value === "female" && _e__female_formula[e][1].value !== "female") {
-                    Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
-                    document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
+            // Cumplimiento al acuerdo IEPC/CG18/2024.
+            if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
+                // Mark Young rule as green if checked
+                if (document.querySelector('input#chkfyouth').checked) {
+                    document.querySelectorAll('input[value="youth"]').forEach(e => e.parentElement.parentElement.style.display = 'none');
+                    _c__30y.classList.replace('text-gray-400', 'text-green-400');
                 } else {
-                    document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
-                    document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-green-400')
-                    setTimeout(function () {
-                        document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-green-400', 'peer-checked:border-blue-600')
-                    }, 1000)
+                    document.querySelectorAll('input[value="youth"]').forEach(e => e.parentElement.parentElement.style.display = 'flex');
                 }
             }
-        })
 
-        /**
-         * PARIDAD DE GÉNERO G4 EN RP
-         * */
-        let _e__g4 = _.groupBy(Array.from(document.querySelectorAll('input[value="g5"]')), function (e) {
-            return e.dataset.level
-        }), _e__g4_array = [];
+            /!**
+             * FORMULA DE INDÍGENAS
+             * *!/
 
-        Object.keys(_e__g4).forEach(key => {
-            ((_e__g4[key][0].checked && _e__g4[key][1].checked) ? _e__g4_array.push(1) : _e__g4_array.push(0))
-        })
+            let _e__indigenous = _.groupBy(document.querySelectorAll('input[value="indigenous"]'), function (e) {
+                return e.dataset.uuid
+            }), _e_indigenous_array = [];
 
-        if (_e__g4_array[0] === 1 || _e__g4_array[1] === 1 || _e__g4_array[2] === 1) {
-            _c__four.classList.replace('text-gray-400', 'text-green-400')
-        } else {
-            _c__four.classList.replace('text-green-400', 'text-gray-400')
-        }
-
-        // console.log("_e__g4_array: ", _e__g4_array)
-
-        /**
-         * PARIDAD EN LO GENERAL 8 MUJERES 7 HOMBRES O VICEVERSA
-         * @param _e__nums_positions trae el número de posiciones por partido. = 15
-         * */
-        let _c__general_males = _.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array),
-            _c__general_females = _.sum(_e__females_formulas_array);
-
-        // console.log("_c__general_males: ", _c__general_males, "_c__general_females: ", _c__general_females)
-
-        if (parseInt(_c_female_p_selected) === Math.ceil(15 / 2) && parseInt(_c_male_p_selected) === Math.floor(15 / 2) || parseInt(_c_male_p_selected) === Math.ceil(15 / 2) && parseInt(_c_female_p_selected) === Math.floor(15 / 2)) {
-            document.querySelector('._c__general').classList.replace('text-green-400', 'text-gray-400')
-            document.querySelector('._c__general').classList.replace('text-gray-400', 'text-green-400')
-        } else {
-            document.querySelector('._c__general').classList.replace('text-green-400', 'text-gray-400')
-        }
-
-        /**
-         * PARIDAD DE MUJERES EN RP
-         * */
-        let _e__female_formula_rp = _.groupBy(Array.from(document.querySelectorAll('input[data-list="rp"]')).filter(f => f.checked), function (e) {
-            return e.dataset.level
-        })
-
-        Object.keys(_e__female_formula_rp).forEach((e) => {
-            if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "male-rp" || _e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "genderqueer-rp") {
-                Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
-                document.querySelector('label[for="' + _e__female_formula_rp[e][1].id + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
-            }
-
-            if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "female-rp") {
-                document.querySelector('label[for="' + _e__female_formula_rp[e][1].id + '"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
-            }
-        })
-
-        /**
-         * BOTÓN VERIFICAR
-         * */
-        Object.keys(_c__check).forEach((e) => {
-            _c__check[e].classList.contains('text-green-400') ? _c__check_array.push(1) : _c__check_array.push(0)
-        })
-
-        _c_result = _.some(_c__check_array, function (e) {
-            return e !== 1
-        })
-
-        // console.log("_c__check_array: ", _c__check_array)
-        // console.log("_c__check: ", _c__check)
-
-        _c__check_array = [];
-
-        let rows = [], rows_rp = [];
-
-        Array.from(document.querySelectorAll('input[type="radio"][data-list="mr"]:checked')).forEach((e) => {
-            let _c__action_temp = document.querySelector('input[type="checkbox"]#' + e.dataset.uuid + '-' + e.dataset.position + ''),
-                _c__group = _c__action_temp.checked ? _c__action_temp.value : "Ninguno";
-            // console.log("_c__group: ", e)
-            rows.push({
-                district_roman: e.dataset.roman,
-                district_capital: e.dataset.district,
-                position: (e.dataset.position === "p") ? "Propietario(a)" : "Suplente",
-                genre: (e.value === "female") ? "Mujer" : ((e.value === "male") ? "Hombre" : "No binario"),
-                group: (_c__group === 'youth') ? "Jóven" : ((_c__group === 'indigenous') ? "Indígena" : "Ninguno"),
-                block: e.dataset.block,
+            Object.keys(_e__indigenous).forEach(key => {
+                ((_e__indigenous[key][0].checked && _e__indigenous[key][1].checked) ? _e_indigenous_array.push(1) : _e_indigenous_array.push(0))
             })
-        })
-        // console.log("rows: ", rows)
-        rows_grouped = _.groupBy(rows, function (e) {
-            return e.block
-        })
 
-        // COMBINE DATASET.POSITION P AND S AT ONCE ROW WITH ALL PROPERTIES.
-        let rows_grouped_p = _.groupBy(rows.filter(f => f.position === "Propietario(a)"), function (e) {
-                return e.block
-            }),
-            rows_grouped_s = _.groupBy(rows.filter(f => f.position === "Suplente"), function (e) {
-                return e.block
+            _.some(_e_indigenous_array, function (e) {
+                return e === 1
+            }) ? (_c__indigenous.classList.replace('text-gray-400', 'text-green-400')) : (_c__indigenous.classList.replace('text-green-400', 'text-gray-400'))
+
+            /!***
+             * CONTEO DE GÉNEROS
+             * *!/
+
+            let _e__males = Array.from(document.querySelectorAll('input[value="male"]')).filter(j => j.checked),
+                _e__females = Array.from(document.querySelectorAll('input[value="female"]')).filter(j => j.checked),
+                _e__nums_positions = (parseInt(Blocks[(partySelectorEl.value - 1)].number_districts));
+
+            // console.error("_e__nums_positions: ", _e__nums_positions)
+
+            /!**
+             * CONTEO DE FÓRMULAS.
+             * HOMBRES
+             * *!/
+            let _e__males_checked = Array.from(document.querySelectorAll('input[value="male"][data-list="mr"]')).filter(j => j.checked),
+                _e__genderqueer_checked = Array.from(document.querySelectorAll('input[value="genderqueer"]')).filter(j => j.checked);
+
+            let _e__males_formulas = _.groupBy(_e__males_checked, function (e) {
+                    return e.dataset.uuid
+                }),
+                _e__males_formulas_array = [],
+                _e__genderqueer_formulas = _.groupBy(_e__genderqueer_checked, function (e) {
+                    return e.dataset.uuid
+                }),
+                _e__genderqueer_formulas_array = [];
+
+            Object.keys(_e__males_formulas).forEach(key => {
+                (_e__males_formulas[key].length > 1) ? _e__males_formulas_array.push(1) : _e__males_formulas_array.push(0)
             });
 
-        Object.keys(rows_grouped_p).forEach((e) => {
-            rows_grouped[e] = rows_grouped_p[e].map((f) => {
-                return {
-                    district_roman: f.district_roman,
-                    district_capital: f.district_capital,
-                    block: f.block,
-                    genre_p: f.genre,
-                    group_p: f.group,
-                    genre_s: rows_grouped_s[e].filter(g => g.district_roman === f.district_roman)[0].genre,
-                    group_s: rows_grouped_s[e].filter(g => g.district_roman === f.district_roman)[0].group,
-                }
+            Object.keys(_e__genderqueer_formulas).forEach(key => {
+                (_e__genderqueer_formulas[key].length > 1) ? _e__genderqueer_formulas_array.push(1) : _e__genderqueer_formulas_array.push(0)
             });
-        })
 
-        /**
-         * ROWS FOR RP
-         * Datos de RP extraídos de la selección.
-         * */
-        Array.from(document.querySelectorAll('input[type="radio"][data-list="rp"]:checked')).forEach((e) => {
-            let _c__action_temp = document.querySelector('input[type="checkbox"]#g5-' + e.dataset.level + '-' + e.dataset.position + ''),
-                _c__group = _c__action_temp.checked ? _c__action_temp.value : "Ninguno";
-            // console.log("_c__action_temp_rp: ", _c__action_temp)
-            rows_rp.push({
-                formula: e.dataset.formula,
-                position: (e.dataset.position === "p") ? "Propietario(a)" : "Suplente",
-                genre: (e.value === "female-rp") ? "Mujer" : ((e.value === "male-rp") ? "Hombre" : "No binario"),
-                group: ((_c__group === 'g5') ? "G4" : "Ninguno"),
+            // console.log("_e__males_formulas_array: ", _.sum(_e__males_formulas_array))
+
+            /!**
+             * MUJERES
+             * *!/
+
+            let _e__females_checked = Array.from(document.querySelectorAll('input[value="female"]')).filter(j => j.checked);
+
+            let _e__females_formulas = _.groupBy(_e__females_checked, function (e) {
+                    return e.dataset.uuid
+                }),
+                _e__females_formulas_array = [];
+
+            Object.keys(_e__females_formulas).forEach(key => {
+                (_e__females_formulas[key].length > 1) ? _e__females_formulas_array.push(1) : _e__females_formulas_array.push(0)
+            });
+
+            // console.log("_e__females_formulas_array: ", _.sum(_e__females_formulas_array))
+
+            /!**
+             *  CONTEO DE PROPIETARIOS.
+             *  Se alternan géneros según selección en Mayoría Relativa.
+             * *!/
+
+            /!**
+             * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON HOMBRES
+             * *!/
+            let _e__male_p = Array.from(document.querySelectorAll('input[value="male"]:checked')).filter(f => f.dataset.position === 'p'),
+                _e_ci_male = document.querySelector('#_ci__male')?.value ?? 0;
+
+            if ((_e__male_p.length + _e__genderqueer_checked.length + parseInt(_e_ci_male)) / 15 > 0.5) {
+                let _h = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
+
+                Object.keys(_h).forEach((e) => {
+                    (_h[e].dataset.level % 2 === 0) ? (_h[e].checked = true) : (_h[e].checked = false)
+                })
+
+            }
+
+            /!**
+             * ALTERNAR LISTA RP SI MÁS DEL 50% DE PROPIETARIOS EN MR SON MUJERES
+             * *!/
+            let _e__female_p = Array.from(document.querySelectorAll('input[value="female"]:checked')).filter(f => f.dataset.position === 'p'),
+                _e_ci_female = document.querySelector('#_ci__female')?.value ?? 0;
+
+            if ((_e__female_p.length + parseInt(_e_ci_female)) / 15 > 0.5) {
+                let _f = Array.from(document.querySelectorAll('input[value="female-rp"]')).filter(f => f.dataset.position === 'p')
+
+                Object.keys(_f).forEach((e) => {
+                    (_f[e].dataset.level % 2 === 0) ? (_f[e].checked = false) : undefined
+                })
+
+                Object.keys(_f).forEach((e) => {
+                    (_f[e].dataset.level % 2 === 1) ? (_f[e].checked = true) : (_f[e].checked = false)
+                })
+            }
+
+            /!**
+             * CONTEO DE PROPIETARIOS POR GÉNERO
+             * Recuadros de conteo de género ubicados al lado izquierdo de la pantalla.
+             * *!/
+            let _c_female_p_selected = (_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) + ' (' + _.round(((_e__females.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_female)) / 15) * 100, 2) + '%)',
+                _c_male_p_selected = (_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) + ' (' + _.round(((_e__males.filter(f => f.dataset.position === 'p').length + _e__genderqueer_checked.filter(f => f.dataset.position === 'p').length + parseInt(_e_ci_male)) / 15) * 100, 2) + '%)';
+
+            document.querySelector('._e__male_counter').innerHTML = _c_male_p_selected;
+            document.querySelector('._e__female_counter').innerHTML = _c_female_p_selected;
+
+            /!**
+             * INTEGRACIÓN PARITARIA DE CADA BLOQUE
+             * *!/
+            let _a__genderqueer = document.querySelectorAll('input[value="genderqueer"]'),
+                _a__male = document.querySelectorAll('input[value="male"]');
+
+            let _a__merged_genderqueer_males = Array.from(_a__male).concat(Array.from(_a__genderqueer));
+
+            // console.log("_a__merged_genderqueer_males ", _a__merged_genderqueer_males)
+
+            let _e__male_by_block = _.groupBy(_.orderBy(_a__merged_genderqueer_males, function (e) {
+                    return e.dataset.level
+                }), function (f) {
+                    return f.dataset.block
+                }),
+                _e__female_by_block = _.groupBy(_.orderBy(Array.from(document.querySelectorAll('input[value="female"]')), function (e) {
+                    return e.dataset.level
+                }), function (f) {
+                    return f.dataset.block
+                }),
+                _c__block_1_text = document.querySelector('._c__block_1_text'),
+                _c__block_2_text = document.querySelector('._c__block_2_text'),
+                _c__block_3_text = document.querySelector('._c__block_3_text'),
+                _e__block_par = [], _xxx1m = [], _xxx1f = [], _xxx2m = [], _xxx2f = [], _xxx3m = [], _xxx3f = [];
+
+            let _xx1m = _.groupBy(_e__male_by_block[1], function (e) {
+                    return e.dataset.uuid
+                }),
+                _xx1f = _.groupBy(_e__female_by_block[1], function (e) {
+                    return e.dataset.uuid
+                })
+
+            Object.keys(_xx1m).forEach((e) => _xx1m[e].filter(f => f.checked).length === 2 ? _xxx1m.push(1) : _xxx1m.push(0));
+            Object.keys(_xx1f).forEach((e) => _xx1f[e].filter(f => f.checked).length === 2 ? _xxx1f.push(1) : _xxx1f.push(0));
+
+            // console.log("_xxx1m: ", _.sum(_xxx1m), " _xxx1f: ", _.sum(_xxx1f))
+
+            if (_.sum(_xxx1m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx1f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx1m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx1f) === Math.ceil((_e__nums_positions / 3) / 2)) {
+                _c__block_1_text.classList.replace('text-red-400', 'text-green-400')
+                _e__block_par.push(1)
+            } else {
+                _c__block_1_text.classList.replace('text-green-400', 'text-red-400')
+                _e__block_par.push(0)
+            }
+
+            /!***************************!/
+            let _xx2m = _.groupBy(_e__male_by_block[2], function (e) {
+                    return e.dataset.uuid
+                }),
+                _xx2f = _.groupBy(_e__female_by_block[2], function (e) {
+                    return e.dataset.uuid
+                })
+
+            Object.keys(_xx2m).forEach((e) => _xx2m[e].filter(f => f.checked).length === 2 ? _xxx2m.push(1) : _xxx2m.push(0));
+            Object.keys(_xx2f).forEach((e) => _xx2f[e].filter(f => f.checked).length === 2 ? _xxx2f.push(1) : _xxx2f.push(0));
+
+            // console.log("_xxx2m: ", _.sum(_xxx2m), " _xxx2f: ", _.sum(_xxx2f))
+
+            if (_.sum(_xxx2m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx2f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx2m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx2f) === Math.ceil((_e__nums_positions / 3) / 2)) {
+                _c__block_2_text.classList.replace('text-red-400', 'text-green-400')
+                _e__block_par.push(1)
+            } else {
+                _c__block_2_text.classList.replace('text-green-400', 'text-red-400')
+                _e__block_par.push(0)
+            }
+
+            /!***************************!/
+            let _xx3m = _.groupBy(_e__male_by_block[3], function (e) {
+                    return e.dataset.uuid
+                }),
+                _xx3f = _.groupBy(_e__female_by_block[3], function (e) {
+                    return e.dataset.uuid
+                })
+
+            Object.keys(_xx3m).forEach((e) => _xx3m[e].filter(f => f.checked).length === 2 ? _xxx3m.push(1) : _xxx3m.push(0));
+            Object.keys(_xx3f).forEach((e) => _xx3f[e].filter(f => f.checked).length === 2 ? _xxx3f.push(1) : _xxx3f.push(0));
+
+            if (_.sum(_xxx3m) === Math.ceil((_e__nums_positions / 3) / 2) && _.sum(_xxx3f) === Math.floor((_e__nums_positions / 3) / 2) || _.sum(_xxx3m) === Math.floor((_e__nums_positions / 3) / 2) && _.sum(_xxx3f) === Math.ceil((_e__nums_positions / 3) / 2)) {
+                _c__block_3_text.classList.replace('text-red-400', 'text-green-400')
+                _e__block_par.push(1)
+            } else {
+                /!* if (partySelectorEl.value === "6" || partySelectorEl.value === "3") {
+                    _e__block_par.push(1)
+                } *!/
+                _c__block_3_text.classList.replace('text-green-400', 'text-red-400')
+                _e__block_par.push(0)
+            }
+
+            /!**
+             * CHECK IF ALL BLOCKS ARE GREEN.
+             * *!/
+            (_e__block_par[0] === 1 && _e__block_par[1] === 1 && _e__block_par[2] === 1) ? (_c__three.classList.replace('text-gray-400', 'text-green-400')) : (_c__three.classList.replace('text-green-400', 'text-gray-400'));
+
+            /!**
+             * PARIDAD DE MUJERES
+             * *!/
+            let _e__female_formula = _.groupBy(Array.from(document.querySelectorAll('input[data-list="mr"]')).filter(f => f.checked), function (e) {
+                return e.dataset.uuid
             })
-        })
-        // console.log("rows_rp: ", rows_rp)
-        rows_grouped_rp = _.groupBy(rows_rp, function (e) {
-            return e.formula
-        })
 
-        // COMBINE DATASET.POSITION P AND S AT ONCE ROW WITH ALL PROPERTIES.
-        let rows_grouped_p_rp = _.groupBy(rows_rp.filter(f => f.position === "Propietario(a)"), function (e) {
-                return e.formula
-            }),
-            rows_grouped_s_rp = _.groupBy(rows_rp.filter(f => f.position === "Suplente"), function (e) {
-                return e.formula
-            });
-
-        Object.keys(rows_grouped_p_rp).forEach((e) => {
-            rows_grouped_rp[e] = rows_grouped_p_rp[e].map((f) => {
-                return {
-                    formula: f.formula,
-                    genre_p: f.genre,
-                    group_p: f.group,
-                    genre_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].genre,
-                    group_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].group,
+            Object.keys(_e__female_formula).forEach((e) => {
+                if (_e__female_formula[e].length > 1) {
+                    if (_e__female_formula[e][0].value === "female" && _e__female_formula[e][1].value !== "female") {
+                        Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
+                        document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
+                    } else {
+                        document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
+                        document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-green-400')
+                        setTimeout(function () {
+                            document.querySelector('label[for="' + _e__female_formula[e][1].value + '-' + _e__female_formula[e][1].dataset.uuid + '-' + _e__female_formula[e][1].dataset.position + '"]').classList.replace('peer-checked:border-green-400', 'peer-checked:border-blue-600')
+                        }, 1000)
+                    }
                 }
-            });
-        })
+            })
 
-        rows_grouped_rp_array = [];
-        Object.keys(rows_grouped_rp).forEach((e) => rows_grouped_rp_array.push(rows_grouped_rp[e][0]))
+            /!**
+             * PARIDAD DE GÉNERO G4 EN RP
+             * *!/
+            let _e__g4 = _.groupBy(Array.from(document.querySelectorAll('input[value="g5"]')), function (e) {
+                return e.dataset.level
+            }), _e__g4_array = [];
+
+            Object.keys(_e__g4).forEach(key => {
+                ((_e__g4[key][0].checked && _e__g4[key][1].checked) ? _e__g4_array.push(1) : _e__g4_array.push(0))
+            })
+
+            if (_e__g4_array[0] === 1 || _e__g4_array[1] === 1 || _e__g4_array[2] === 1) {
+                _c__four.classList.replace('text-gray-400', 'text-green-400')
+            } else {
+                _c__four.classList.replace('text-green-400', 'text-gray-400')
+            }
+
+            // console.log("_e__g4_array: ", _e__g4_array)
+
+            /!**
+             * PARIDAD EN LO GENERAL 8 MUJERES 7 HOMBRES O VICEVERSA
+             * @param _e__nums_positions trae el número de posiciones por partido. = 15
+             * *!/
+            let _c__general_males = _.sum(_e__males_formulas_array) + _.sum(_e__genderqueer_formulas_array),
+                _c__general_females = _.sum(_e__females_formulas_array);
+
+            // console.log("_c__general_males: ", _c__general_males, "_c__general_females: ", _c__general_females)
+
+            if (parseInt(_c_female_p_selected) === Math.ceil(15 / 2) && parseInt(_c_male_p_selected) === Math.floor(15 / 2) || parseInt(_c_male_p_selected) === Math.ceil(15 / 2) && parseInt(_c_female_p_selected) === Math.floor(15 / 2)) {
+                document.querySelector('._c__general').classList.replace('text-green-400', 'text-gray-400')
+                document.querySelector('._c__general').classList.replace('text-gray-400', 'text-green-400')
+            } else {
+                document.querySelector('._c__general').classList.replace('text-green-400', 'text-gray-400')
+            }
+
+            /!**
+             * PARIDAD DE MUJERES EN RP
+             * *!/
+            let _e__female_formula_rp = _.groupBy(Array.from(document.querySelectorAll('input[data-list="rp"]')).filter(f => f.checked), function (e) {
+                return e.dataset.level
+            })
+
+            Object.keys(_e__female_formula_rp).forEach((e) => {
+                if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "male-rp" || _e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "genderqueer-rp") {
+                    Modal.alert("Si la candidatura propietaria es mujer, la suplencia también deberá ser mujer.")
+                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].id + '"]').classList.replace('peer-checked:border-blue-600', 'peer-checked:border-red-600')
+                }
+
+                if (_e__female_formula_rp[e][0].value === "female-rp" && _e__female_formula_rp[e][1].value === "female-rp") {
+                    document.querySelector('label[for="' + _e__female_formula_rp[e][1].id + '"]').classList.replace('peer-checked:border-red-600', 'peer-checked:border-blue-600')
+                }
+            })
+
+            /!**
+             * BOTÓN VERIFICAR
+             * *!/
+            Object.keys(_c__check).forEach((e) => {
+                _c__check[e].classList.contains('text-green-400') ? _c__check_array.push(1) : _c__check_array.push(0)
+            })
+
+            _c_result = _.some(_c__check_array, function (e) {
+                return e !== 1
+            })
+
+            // console.log("_c__check_array: ", _c__check_array)
+            // console.log("_c__check: ", _c__check)
+
+            _c__check_array = [];
+
+            let rows = [], rows_rp = [];
+
+            Array.from(document.querySelectorAll('input[type="radio"][data-list="mr"]:checked')).forEach((e) => {
+                let _c__action_temp = document.querySelector('input[type="checkbox"]#' + e.dataset.uuid + '-' + e.dataset.position + ''),
+                    _c__group = _c__action_temp.checked ? _c__action_temp.value : "Ninguno";
+                // console.log("_c__group: ", e)
+                rows.push({
+                    district_roman: e.dataset.roman,
+                    district_capital: e.dataset.district,
+                    position: (e.dataset.position === "p") ? "Propietario(a)" : "Suplente",
+                    genre: (e.value === "female") ? "Mujer" : ((e.value === "male") ? "Hombre" : "No binario"),
+                    group: (_c__group === 'youth') ? "Jóven" : ((_c__group === 'indigenous') ? "Indígena" : "Ninguno"),
+                    block: e.dataset.block,
+                })
+            })
+            // console.log("rows: ", rows)
+            rows_grouped = _.groupBy(rows, function (e) {
+                return e.block
+            })
+
+            // COMBINE DATASET.POSITION P AND S AT ONCE ROW WITH ALL PROPERTIES.
+            let rows_grouped_p = _.groupBy(rows.filter(f => f.position === "Propietario(a)"), function (e) {
+                    return e.block
+                }),
+                rows_grouped_s = _.groupBy(rows.filter(f => f.position === "Suplente"), function (e) {
+                    return e.block
+                });
+
+            Object.keys(rows_grouped_p).forEach((e) => {
+                rows_grouped[e] = rows_grouped_p[e].map((f) => {
+                    return {
+                        district_roman: f.district_roman,
+                        district_capital: f.district_capital,
+                        block: f.block,
+                        genre_p: f.genre,
+                        group_p: f.group,
+                        genre_s: rows_grouped_s[e].filter(g => g.district_roman === f.district_roman)[0].genre,
+                        group_s: rows_grouped_s[e].filter(g => g.district_roman === f.district_roman)[0].group,
+                    }
+                });
+            })
+
+            /!**
+             * ROWS FOR RP
+             * Datos de RP extraídos de la selección.
+             * *!/
+            Array.from(document.querySelectorAll('input[type="radio"][data-list="rp"]:checked')).forEach((e) => {
+                let _c__action_temp = document.querySelector('input[type="checkbox"]#g5-' + e.dataset.level + '-' + e.dataset.position + ''),
+                    _c__group = _c__action_temp.checked ? _c__action_temp.value : "Ninguno";
+                // console.log("_c__action_temp_rp: ", _c__action_temp)
+                rows_rp.push({
+                    formula: e.dataset.formula,
+                    position: (e.dataset.position === "p") ? "Propietario(a)" : "Suplente",
+                    genre: (e.value === "female-rp") ? "Mujer" : ((e.value === "male-rp") ? "Hombre" : "No binario"),
+                    group: ((_c__group === 'g5') ? "G4" : "Ninguno"),
+                })
+            })
+            // console.log("rows_rp: ", rows_rp)
+            rows_grouped_rp = _.groupBy(rows_rp, function (e) {
+                return e.formula
+            })
+
+            // COMBINE DATASET.POSITION P AND S AT ONCE ROW WITH ALL PROPERTIES.
+            let rows_grouped_p_rp = _.groupBy(rows_rp.filter(f => f.position === "Propietario(a)"), function (e) {
+                    return e.formula
+                }),
+                rows_grouped_s_rp = _.groupBy(rows_rp.filter(f => f.position === "Suplente"), function (e) {
+                    return e.formula
+                });
+
+            Object.keys(rows_grouped_p_rp).forEach((e) => {
+                rows_grouped_rp[e] = rows_grouped_p_rp[e].map((f) => {
+                    return {
+                        formula: f.formula,
+                        genre_p: f.genre,
+                        group_p: f.group,
+                        genre_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].genre,
+                        group_s: rows_grouped_s_rp[e].filter(g => g.formula === f.formula)[0].group,
+                    }
+                });
+            })
+
+            rows_grouped_rp_array = [];
+            Object.keys(rows_grouped_rp).forEach((e) => rows_grouped_rp_array.push(rows_grouped_rp[e][0]))
 
 
-        // console.log("rows_grouped_rp: ", rows_grouped_rp)
-        // rows = [];
+            // console.log("rows_grouped_rp: ", rows_grouped_rp)
+            // rows = [];
 
-        // document.querySelector('._c__button_pdf').disabled = !_.sum(_c__check_array, function (e) {
-        // 	return e >= 6
-        // });
+            // document.querySelector('._c__button_pdf').disabled = !_.sum(_c__check_array, function (e) {
+            // 	return e >= 6
+            // });
 
-        // rows_grouped = [];
-    })
+            // rows_grouped = [];
+        })*/
 
     document.querySelector('._c__button_pdf').addEventListener('click', () => {
         let _all_radio_buttons = document.querySelectorAll('input[type="radio"]');

@@ -1,32 +1,52 @@
 [
   {
-    "id": "1",
-    "name": "Fuerza y Corazón por Durango",
-    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PAN-PRI-PRD.svg"
-  },
+    "id": 2,
+    "name": "Partido Acción Nacional",
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PAN.svg"
+  },   
   {
-    "id": "2",
-    "name": "Sigamos Haciendo Historia en Durango",
-    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PVEM-MORENA.svg"
-  },
+    "id": 3,
+    "name": "Partido Revolucionario Institucional",
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PRI.svg"
+  },  
   {
-    "id": "3",
+    "id": 4,
     "name": "Partido Verde Ecologista de México",
     "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PVEM.svg"
   },
   {
-    "id": "4",
+    "id": 5,
     "name": "Partido del Trabajo",
     "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PT.svg"
   },
   {
-    "id": "5",
+    "id": 6,
     "name": "Movimiento Ciudadano",
     "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/MC.svg"
   },
   {
-    "id": "6",
+    "id": 7,
     "name": "MORENA",
     "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/MORENA.svg"
+  },
+  {
+    "id": 8,
+    "name": "Partido Encuentro Solidario",
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PES.svg"
+  },
+  {
+    "id": 9,
+    "name": "Partido Villista",
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PV.svg"
+  },
+  {
+    "id": 10,
+    "name": "Partido Estatal Renovación",
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/RENOVACION.svg"
+  },
+  {
+    "id":  11,
+    "name": "Sigamos Haciendo Historia en Durango",
+    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PVEM-PT-MORENA.svg"
   }
 ]

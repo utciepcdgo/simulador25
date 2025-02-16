@@ -6,15 +6,11 @@ import Parties from '../public/data/_parties.json';
  * @async
  * @param selectorEl {HTMLSelectElement} - The selector element
  */
-export async function PartySelector(selectorEl)
+export function PartySelector(selectorEl)
 {
 	/**
 	 * @typedef {Object} parties
-	 * @type {Promise<axios.AxiosResponse<any>> | *}
 	 */
-	/* let data = axios({
-		method: 'get', url: 'https://restcountries.com/v3.1/region/americas?fields=name', responseType: 'json',
-	}); */
 
 	/**
 	 * @type {Array<parties>}
@@ -41,7 +37,6 @@ export async function PartySelector(selectorEl)
 
 		// Add the parties
 		party.forEach((p, i) => {
-			console.log("Partido en selector: ", p)
 			selectorEl.options.add(new Option(p.name, p.id, false, false))
 		});
 	}

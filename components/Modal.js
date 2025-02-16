@@ -22,7 +22,7 @@ export default class Modal
                         <button class="close">&times;</button> 
                     </div>
                     <div class="content"></div>
-                    <div class="footer flex flex-row mt-6 space-x-2 justify-evenly">
+                    <div class="footer flex flex-row mt-6 space-x-2 justify-end">
                         <button class="close">Cerrar</button>
                     </div>
                 </div>                        

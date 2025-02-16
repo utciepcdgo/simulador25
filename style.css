@@ -35,7 +35,6 @@
     padding: 20px;
     font-weight: 600;
     justify-content: space-between;
-    border-bottom: 1px solid #e6e9ec;
     align-items: center;
 }
 
@@ -84,19 +83,6 @@
     display: flex;
 }*/
 
-.modal .container .footer button.alt {
-    font-weight: 500;
-    background-color: #dadbdd;
-    color: #606266;
-}
-
-.modal .container .footer button.alt:hover {
-    background-color: #d5d6d8;
-}
-
-.modal .container .footer button.right {
-    margin-left: auto;
-}
 
 .modal.small .container {
     width: 400px;
@@ -107,7 +93,7 @@
 }
 
 .modal.large .container {
-    width: 900px;
+    width: 1200px;
 }
 
 .modal.full .container {
@@ -131,7 +117,7 @@
 
 @layer components {
     .modal .container .footer button {
-        @apply w-full py-3 text-sm text-center text-gray-500 transition duration-150 ease-linear bg-white border border-gray-200 rounded-lg hover:bg-gray-100
+        @apply text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700
     }
 }
 

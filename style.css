@@ -15,6 +15,12 @@
     justify-content: center;
 }
 
+.modal-content {
+    max-height: 80vh; /* El modal no debe superar el 80% de la altura de la ventana */
+    overflow-y: auto;  /* Habilitar scroll vertical si el contenido es demasiado grande */
+    padding: 1rem; /* Espaciado interno para mejor visibilidad */
+}
+
 /*.modal .container {
     display: flex;
     flex-flow: column;

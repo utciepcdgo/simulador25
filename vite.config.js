@@ -7,7 +7,5 @@ export default defineConfig({
         },
     },
     // Puedes descomentar y ajustar la configuración del servidor si es necesario
-    // server: {
-    //     port: 3000,
-    // },
+    server: { host: '0.0.0.0', },
 });

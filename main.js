@@ -364,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Asegurar que el evento proviene del botón y no de un elemento hijo
                 const targetButton = event.currentTarget;
 
-                const municipalityName = targetButton.dataset.municipality || "Desconocido";
+                const municipalityName = targetButton.dataset.municipality.replace(/\s+/g, '_') || "Desconocido";
                 const block = targetButton.dataset.block || "Sin bloque";
                 const totalCouncils = parseInt(targetButton.dataset.councils) || 0; // Número de regidurías
                 const modalId = `modal-${municipalityName.replace(/\s+/g, '-').toLowerCase()}-${block}`;
@@ -381,19 +381,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 let councilsHTMLArray = [];
 
                 for (let i = 0; i < totalCouncils; i++) {
-                    // const savedCouncil = modalStates[modalId].councils[i] || {proprietor: "", substitute: ""};
+                    const savedCouncil = modalStates[modalId]?.councils[i] || { proprietor: "", substitute: "" };
+                    console.log("savedCouncil: ", savedCouncil?.proprietor);
                     councilsHTMLArray.push(`         
                         <div class="grid grid-cols-2 gap-2">
                             <div>
                                 <p class="font-semibold text-md mb-1">Propietario:</p>
                                 <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
-                                    ${generateRadioButtons(modalId, `councils-${i}`, "proprietor")}
+                                    ${generateRadioButtons(modalId, `councils-${i}`, "proprietor",  savedCouncil?.proprietor)}
                                 </div>
                             </div>
                             <div>
                                 <p class="font-semibold text-md mb-1">Suplente:</p>
                                 <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
-                                    ${generateRadioButtons(modalId, `councils-${i}`, "substitute")}
+                                    ${generateRadioButtons(modalId, `councils-${i}`, "substitute",  savedCouncil?.substitute)}
                                 </div>
                             </div>
                         </div>
@@ -414,13 +415,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <div>
                                     <p class="font-semibold text-md mb-1">Propietario:</p>
                                     <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
-                                        ${generateRadioButtons(modalId, "presidency", "proprietor")}
+                                        ${generateRadioButtons(modalId, "presidency", "proprietor", modalStates[modalId].presidency.proprietor)}
                                     </div>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-md mb-1">Suplente:</p>
                                     <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
-                                        ${generateRadioButtons(modalId, "presidency", "substitute")}
+                                        ${generateRadioButtons(modalId, "presidency", "substitute", modalStates[modalId].presidency.substitute)}
                                     </div>
                                 </div>
                             </div>
@@ -430,13 +431,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <div>
                                     <p class="font-semibold text-md mb-1">Propietario:</p>
                                     <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
-                                        ${generateRadioButtons(modalId, "sindicature", "proprietor")}
+                                        ${generateRadioButtons(modalId, "sindicature", "proprietor", modalStates[modalId].sindicature.proprietor)}
                                     </div>
                                 </div>
                                 <div>
                                     <p class="font-semibold text-md mb-1">Suplente:</p>
                                     <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
-                                        ${generateRadioButtons(modalId, "sindicature", "substitute")}
+                                        ${generateRadioButtons(modalId, "sindicature", "substitute", modalStates[modalId].sindicature.substitute)}
                                     </div>
                                 </div>
                             </div>
@@ -470,9 +471,10 @@ document.addEventListener('DOMContentLoaded', () => {
                     blockModal.options.element.querySelectorAll(`input[name^="gender-${modalId}-councils-"], input[name^="special-${modalId}-councils-"]`).forEach(radio => {
                         radio.addEventListener("change", (e) => {
                             const nameParts = e.target.name.split("-");
-                            const index = parseInt(nameParts[6]); // Obtener el índice de la Regiduría
+                            const index = parseInt(nameParts[5]); // Obtener el índice de la Regiduría
                             const type = nameParts.pop();
                             const attribute = nameParts[0] === "gender" ? "gender" : "special";
+
                             console.log("nameParts: ", nameParts, "index: ", index, "type: ", type, "attribute: ", attribute);
 
                             if (!modalStates[modalId].councils[index]) {
@@ -565,13 +567,15 @@ document.addEventListener('DOMContentLoaded', () => {
         let blocksWithWomenFormula = 0;
 
         firstMunicipalities.forEach((municipality) => {
-            if (modalStates['modal-' + municipality.dataset.municipality.replace(/\s+/g, '-').toLowerCase() + "-" + municipality.dataset.block]?.presidency?.proprietor?.gender === "Mujer" &&
-                modalStates['modal-' + municipality.dataset.municipality.replace(/\s+/g, '-').toLowerCase() + "-" + municipality.dataset.block]?.sindicature?.proprietor?.gender === "Mujer" &&
-                modalStates['modal-' + municipality.dataset.municipality.replace(/\s+/g, '-').toLowerCase() + "-" + municipality.dataset.block]?.presidency?.substitute?.gender === "Mujer" &&
-                modalStates['modal-' + municipality.dataset.municipality.replace(/\s+/g, '-').toLowerCase() + "-" + municipality.dataset.block]?.sindicature?.substitute?.gender === "Mujer") {
+            if (modalStates['modal-' + municipality.dataset.municipality.replace(/\s+/g, '_').toLowerCase() + "-" + municipality.dataset.block]?.presidency?.proprietor?.gender === "Mujer" &&
+                modalStates['modal-' + municipality.dataset.municipality.replace(/\s+/g, '_').toLowerCase() + "-" + municipality.dataset.block]?.sindicature?.proprietor?.gender === "Mujer" &&
+                modalStates['modal-' + municipality.dataset.municipality.replace(/\s+/g, '_').toLowerCase() + "-" + municipality.dataset.block]?.presidency?.substitute?.gender === "Mujer" &&
+                modalStates['modal-' + municipality.dataset.municipality.replace(/\s+/g, '_').toLowerCase() + "-" + municipality.dataset.block]?.sindicature?.substitute?.gender === "Mujer") {
                 blocksWithWomenFormula++;
             }
         });
+
+        console.log("Bloques con fórmula de mujeres: ", blocksWithWomenFormula, "Primeras municipios: ", firstMunicipalities);
 
         // Validar si al menos un bloque tiene fórmula femenina en ambos cargos
         blocksWithWomenFormula > 0 ? _c__two.classList.replace('text-gray-400', 'text-green-400') : _c__two.classList.replace('text-green-400', 'text-gray-400');
@@ -700,13 +704,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    function generateRadioButtons(modalId, category, type) {
+    function generateRadioButtons(modalId, category, type, selectedValue = "") {
         const saveGender = modalStates[modalId]?.[category]?.[type]?.gender || "";
         const savedSpecial = modalStates[modalId]?.[category]?.[type]?.special || "";
+        const ec = category.split("-")[0]; // Extracted Category
+        console.log("real_category: ", ec);
         return `
             <ul class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <li>
-                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-m" value="Mujer" ${saveGender === "Mujer" ? "checked" : ""} class="hidden peer">
+                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-m" value="Mujer" ${ec === "councils" ? (selectedValue === "Mujer" ? "checked" : "") : (selectedValue.gender === "Mujer" ? "checked" : "") } class="hidden peer">
                     <label for="gender-${modalId}-${category}-${type}-m" id="gender-${modalId}-${category}-${type}-m" data-gender="Mujer" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
                         <div class="block">
                             <div class="w-full text-sm">Mujer</div>
@@ -723,7 +729,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </label>
                 </li>
                 <li>
-                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-n" value="No-Binario" ${saveGender === "No-Binario" ? "checked" : ""} class="hidden peer">
+                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-n" value="No-Binario" ${ec === "councils" ? (selectedValue === "No-Binario" ? "checked" : "") : (selectedValue.gender === "No-Binario" ? "checked" : "")}  class="hidden peer">
                     <label for="gender-${modalId}-${category}-${type}-n" id="gender-${modalId}-${category}-${type}-n" data-gender="No-Binario" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <div class="block">
                             <div class="w-full text-sm">No Binario</div>
@@ -738,7 +744,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </label>
                 </li>
                 <li>
-                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-h" value="Hombre" ${saveGender === "Hombre" ? "checked" : ""} class="hidden peer">
+                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-h" value="Hombre" ${ec === "councils" ? (selectedValue === "Hombre" ? "checked" : "") : (selectedValue.gender === "Hombre" ? "checked" : "")}  class="hidden peer">
                     <label for="gender-${modalId}-${category}-${type}-h" id="gender-${modalId}-${category}-${type}-h" data-gender="Hombre" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <div class="block">
                             <div class="w-full text-sm">Hombre</div>
@@ -756,8 +762,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </li>
             </ul>
             <p class="mt-2">Grupos:</p>
-            <label><input type="radio" name="special-${modalId}-${category}-${type}" value="Joven" ${savedSpecial === "Joven" ? "checked" : ""}> Jóven</label>
-            <label><input type="radio" name="special-${modalId}-${category}-${type}" value="Vulnerable" ${savedSpecial === "Vulnerable" ? "checked" : ""}>Vulnerable</label>
+            <label><input type="radio" name="special-${modalId}-${category}-${type}" value="Joven" ${ec === "councils" ? (selectedValue === "Joven" ? "checked" : "") : (selectedValue.gender === "Joven" ? "checked" : "")} > Jóven</label>
+            <label><input type="radio" name="special-${modalId}-${category}-${type}" value="Vulnerable" ${ec === "councils" ? (selectedValue === "Vulnerable" ? "checked" : "") : (selectedValue.gender === "Vulnerable" ? "checked" : "")} >Vulnerable</label>
             
     `;
     }

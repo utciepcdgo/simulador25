@@ -126,7 +126,8 @@ document.querySelector('#app').innerHTML = `
 
 // document.querySelector('div._sim__spacing').prepend("<p class='font-bold bg-amber-50 text-amber-900 p-4 rounded border border-amber-200'>Ya seleccionó uno :D.</p>")
 
-let partySelectorEl = document.querySelector('#parties'), rows_grouped = [], rows_grouped_rp_array = [], rows_grouped_rp = [], _c__check_array = [], _c_result;
+let partySelectorEl = document.querySelector('#parties'), rows_grouped = [], rows_grouped_rp_array = [],
+    rows_grouped_rp = [], _c__check_array = [], _c_result;
 
 let _c__button_check = document.querySelector('._c__button_check'), _c__check = document.querySelectorAll('._c__check');
 
@@ -192,7 +193,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    let _e__blocks = document.querySelector('._e__blocks_mr'), _e__blocks_rp = document.querySelector('._e__blocks_rp'), _p__emblema = document.querySelector('._p__emblema'), _e__female, // All female
+    let _e__blocks = document.querySelector('._e__blocks_mr'), _e__blocks_rp = document.querySelector('._e__blocks_rp'),
+        _p__emblema = document.querySelector('._p__emblema'), _e__female, // All female
         _e__male, // All male
         _e__pride, // All pride
         _e__buttons;
@@ -357,10 +359,10 @@ document.addEventListener('DOMContentLoaded', () => {
             _HTML__content_rp += `<div class="bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md"><h1 class="font-sans font-semibold text-2xl py-3 my-4">Representación Proporcional</h1>`
             for (let i = 0; i < 5; i++) {
                 _HTML__content_rp += `
-		        <div class="flex-col bg-gray-100 dark:bg-gray-900 mb-5 p-5 w-full">
+		        <div class="flex-col bg-gray-100 dark:bg-gray-100 dark:bg-gray-900 mb-5 p-5 w-full">
 		            <h1 class="text-lg font-sans font-semibold">Fórmula ` + (i + 1) + `</h1>
 		            <div class="flex divide-x divide-gray-600">
-		                <div class="p-2 bg-gray-100 dark:bg-gray-900 rounded flex-col space-y-3">
+		                <div class="p-2 bg-gray-100 dark:bg-gray-100 dark:bg-gray-900 rounded flex-col space-y-3">
 		                    <span class="font-bold py-3">Propietario(a)</span>
 		                    <ul class="grid w-full gap-3 md:grid-cols-3">
 		                        <li>
@@ -438,7 +440,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		                        </li>
 		                    </ul>
 		                </div>
-		                <div class="p-3 bg-gray-100 dark:bg-gray-900 rounded flex-col space-y-3">
+		                <div class="p-3 bg-gray-100 dark:bg-gray-100 dark:bg-gray-900 rounded flex-col space-y-3">
 		                    <span class="font-bold">Suplente</span>
 		                    <ul class="grid w-full gap-3 md:grid-cols-3">
 		                        <li>
@@ -543,7 +545,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Inicializar datos del estado del modal si no existen
                 if (!modalStates[modalId]) {
                     modalStates[modalId] = {
-                        text: "", selection: "", presidency: {proprietor: "", substitute: ""}, sindicature: {proprietor: "", substitute: ""}
+                        text: "",
+                        selection: "",
+                        presidency: {proprietor: "", substitute: ""},
+                        sindicature: {proprietor: "", substitute: ""}
                     };
                 }
 
@@ -556,13 +561,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="grid grid-cols-2 gap-2">
                             <div>
                                 <p class="font-semibold text-md mb-1">Propietario:</p>
-                                <div class="bg-gray-900 p-2 rounded-2xl shadow">
+                                <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
                                     ${generateRadioButtons(modalId, "presidency", "proprietor")}
                                 </div>
                             </div>
                             <div>
                                 <p class="font-semibold text-md mb-1">Suplente:</p>
-                                <div class="bg-gray-900 p-2 rounded-2xl shadow">
+                                <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
                                     ${generateRadioButtons(modalId, "presidency", "substitute")}
                                 </div>
                             </div>
@@ -572,13 +577,13 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="grid grid-cols-2 gap-2">
                             <div>
                                 <p class="font-semibold text-md mb-1">Propietario:</p>
-                                <div class="bg-gray-900 p-2 rounded-2xl shadow">
+                                <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
                                     ${generateRadioButtons(modalId, "sindicature", "proprietor")}
                                 </div>
                             </div>
                             <div>
                                 <p class="font-semibold text-md mb-1">Suplente:</p>
-                                <div class="bg-gray-900 p-2 rounded-2xl shadow">
+                                <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
                                     ${generateRadioButtons(modalId, "sindicature", "substitute")}
                                 </div>
                             </div>
@@ -617,7 +622,8 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('change', (El) => {
         console.log(modalStates);
         // Buscamos las palomitas
-        let _c__one = document.querySelector('._c__one'), _c__two = document.querySelector('._c__two'), _c__three = document.querySelector('._c__three'), _c__four = document.querySelector('._c__four');
+        let _c__one = document.querySelector('._c__one'), _c__two = document.querySelector('._c__two'),
+            _c__three = document.querySelector('._c__three'), _c__four = document.querySelector('._c__four');
 
         // SI EL PROPIETARIO ES MUJER, NO PERMITIR QUE EL SUPLENTE SEA HOMBRE
         Object.keys(modalStates).forEach((modalId) => {
@@ -688,7 +694,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // INTEGRACIÓN PARITARIA EN CADA BLOQUE
         // Dado que se guarda el número de bloque en el nombre de la llave en modalStates, podemos agrupar por bloque y contar cuántas fórmulas de mujeres y hombres hay.
         //  Filtramos los bloques y separamos en objetos distintos
-        const {blockOne, blockTwo, blockThree} = {};
+        const blockOne = {}, blockTwo = {}, blockThree = {};
 
         const countMunicipalitiesByBlock = _.groupBy(totalMunicipalities, function (e) {
             return e.dataset.block;
@@ -707,38 +713,41 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Obtenemos el tamaño de cada bloque
-        const blockOneSize = countMunicipalitiesByBlock['1']?.length || 0, blockTwoSize = countMunicipalitiesByBlock['2']?.length || 0, blockThreeSize = countMunicipalitiesByBlock['3']?.length || 0;
+        const blockOneSize = countMunicipalitiesByBlock['1']?.length || 0,
+            blockTwoSize = countMunicipalitiesByBlock['2']?.length || 0,
+            blockThreeSize = countMunicipalitiesByBlock['3']?.length || 0;
         // Verificar si los bloque tienen un número impar de municipios.
-        const isBlockOneOdd = blockOneSize % 2 !== 0, isBlockTwoOdd = blockTwoSize % 2 !== 0, isBlockThreeOdd = blockThreeSize % 2 !== 0;
+        const isBlockOneOdd = blockOneSize % 2 !== 0, isBlockTwoOdd = blockTwoSize % 2 !== 0,
+            isBlockThreeOdd = blockThreeSize % 2 !== 0;
 
         const oddBlocks = [];           // Nombres de bloques impares
         const oddBlocksMajorityWomen = []; // Nombres de bloques impares con mayoría de fórmulas de mujeres
 
         if (isBlockOneOdd) {
-            oddBlocks.push("blockOne");
+            oddBlocks.push(blockOne);
             if (isBlockMajorityWomen(blockOne)) {
-                oddBlocksMajorityWomen.push("blockOne");
+                oddBlocksMajorityWomen.push(blockOne);
             }
         }
 
         if (isBlockTwoOdd) {
-            oddBlocks.push("blockTwo");
+            oddBlocks.push(blockTwo);
             if (isBlockMajorityWomen(blockTwo)) {
-                oddBlocksMajorityWomen.push("blockTwo");
+                oddBlocksMajorityWomen.push(blockTwo);
             }
         }
 
         if (isBlockThreeOdd) {
-            oddBlocks.push("blockThree");
+            oddBlocks.push(blockThree);
             if (isBlockMajorityWomen(blockThree)) {
-                oddBlocksMajorityWomen.push("blockThree");
+                oddBlocksMajorityWomen.push(blockThree);
             }
         }
 
         console.log("Bloques impares:", oddBlocks);
         console.log("De ellos, los que integran mayoría femenina:", oddBlocksMajorityWomen);
 
-// 6. Aplicar las reglas de validación
+        // 6. Aplicar las reglas de validación
         if (oddBlocks.length === 3) {
             // Regla (i): Si los 3 bloques son impares, al menos 2 deben tener mayoría de fórmulas de mujeres.
             if (oddBlocksMajorityWomen.length >= 2) {
@@ -1464,54 +1473,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Revisar la sección 'presidency'
         if (municipality.presidency) {
-            if (municipality.presidency.proprietor) {
-                totalFormulas++;
-                if (municipality.presidency.proprietor.gender === "Mujer") {
-                    femaleCount++;
-                }
-            }
-            if (municipality.presidency.substitute) {
-                totalFormulas++;
-                if (municipality.presidency.substitute.gender === "Mujer") {
-                    femaleCount++;
+            if (municipality.presidency.proprietor && municipality.presidency.substitute) {
+                femaleCount++;
+                if (municipality.presidency.proprietor.gender === "Mujer" && municipality.presidency.substitute.gender === "Mujer") {
+                    totalFormulas++;
                 }
             }
         }
 
         // Revisar la sección 'sindicature'
         if (municipality.sindicature) {
-            if (municipality.sindicature.proprietor) {
-                totalFormulas++;
-                if (municipality.sindicature.proprietor.gender === "Mujer") {
-                    femaleCount++;
-                }
-            }
-            if (municipality.sindicature.substitute) {
-                totalFormulas++;
-                if (municipality.sindicature.substitute.gender === "Mujer") {
-                    femaleCount++;
+            if (municipality.sindicature.proprietor && municipality.sindicature.substitute) {
+                femaleCount++;
+                if (municipality.sindicature.proprietor.gender === "Mujer" && municipality.sindicature.substitute.gender === "Mujer") {
+                    totalFormulas++;
                 }
             }
         }
 
+        console.log("totalFormulas ", totalFormulas, "femaleCount ", femaleCount);
+
         // Se considera mayoría si las fórmulas femeninas superan la mitad del total
         return femaleCount > totalFormulas / 2;
-    }
-
-    // 4. Función para determinar si un bloque se integra por mayoría de fórmulas de mujeres
-    // (se evalúa cada municipio del bloque)
-    function isBlockMajorityWomen(block) {
-        const municipios = Object.values(block);
-        let countMajority = 0;
-
-        municipios.forEach(municipio => {
-            if (isMunicipalityMajorityWomen(municipio)) {
-                countMajority++;
-            }
-        });
-
-        // Se espera que más de la mitad de los municipios del bloque tengan integración mayoritaria femenina.
-        return countMajority > municipios.length / 2;
+        // return femaleCount > totalFormulas / 2;
     }
 
     // 4. Función para determinar si un bloque se integra por mayoría de fórmulas de mujeres

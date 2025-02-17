@@ -683,7 +683,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // ALTERNAR
         Object.keys(modalStates).forEach((modalId) => {
             // Si se selecciona un hombre en la presidencia, se debe seleccionar una mujer en la sindicatura.
-            if (modalStates[modalId].presidency?.proprietor.gender === "Hombre"){
+            if (modalStates[modalId].presidency?.proprietor.gender === "Hombre") {
                 // Buscamos el radio de la sindicatura mujer.
                 const sindicatureWoman = document.querySelector(`input[name="gender-${modalId}-sindicature-proprietor"]`);
                 // Seleccionamos el radio de la sindicatura mujer.
@@ -692,6 +692,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 // gender-modal-santiago-papasquiaro-1-councils-0-proprietor
                 const firstCouncilMan = document.querySelector(`input[name="gender-${modalId}-councils-0-proprietor"][value="Hombre"]`);
                 firstCouncilMan.checked = true;
+
+                console.log("sindicatureWoman: ", sindicatureWoman.value);
+                // Avisamos al usuario
+                Modal.alert(`Si por la presidencia municipal contiende un hombre, la candidatura para la sindicatura deberá ser para una mujer, la primera regiduría para un hombre, la segunda para una mujer, y así sucesivamente hasta agotar todas las posiciones (Art. 184 inciso a) II de la LIPEED) </br> <small>LIPEED: Ley de Instituciones y Procedimientos Electorales Para el Estado de Durango.</small>`);
             }
         });
     });

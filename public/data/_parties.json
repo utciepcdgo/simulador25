@@ -30,21 +30,6 @@
     "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/MORENA.svg"
   },
   {
-    "id": 8,
-    "name": "Partido Encuentro Solidario",
-    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PES.svg"
-  },
-  {
-    "id": 9,
-    "name": "Partido Villista",
-    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PV.svg"
-  },
-  {
-    "id": 10,
-    "name": "Partido Estatal Renovación",
-    "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/RENOVACION.svg"
-  },
-  {
     "id":  11,
     "name": "Sigamos Haciendo Historia en Durango",
     "logo": "https://s3.amazonaws.com/static.appsiepcdurango.mx/emblemas/PVEM-PT-MORENA.svg"

@@ -11,96 +11,95 @@ import _ from "lodash";
 
 
 document.querySelector('#app').innerHTML = `
-	<div class="dark:text-white">
-		<div class="mx-auto">
-            <div class="grid w-full gap-6 md:grid-cols-6 grid-flow-row-dense auto-cols-max">
-                <div data-sticky-container class="relative h-full">
-                    <label for="parties" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Seleccione un Partido Político  o Coalición</label>
-                    <select name="parties" id="parties" class="mb-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ">
-                        <option value="0">Seleccione un Partido Político o Coalición</option>
-                    </select>
-                    <div class="_p__emblema mb-10"></div>
-                    <div class="_e__sticky">
-					    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Reglas:</h2>
-                        <ul class="max-w-md flex-col space-y-2 text-gray-500 list-inside dark:text-gray-400 top-0 mb-3">
-                            <li class="flex items-start text-justify">
-                                <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__one _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                </svg>
-                                Al menos el 50% de las candidaturas a Presidencias Municipales deben ser mujeres.
-                            </li>
-                            <li class="flex items-start text-justify">
-                                <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__two _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                </svg>
-                                Al menos un bloque encabezado por fórmula de mujeres.
-                            </li>
-                            <li class="flex items-start text-justify">
-                                <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-green-400 _c__three _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                </svg>
-                                No postular mujeres en las presidencias municipales de los dos últimos municipios del último bloque.
-                            </li>
-                            <li class="flex items-center text-justify">
-                                <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__four _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                </svg>
-                                <div>
-                                    <p>Integración paritaria en cada bloque.</p>
-                                </div>
-                            </li>
-                            <li class="flex items-center text-justify">
-                                <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__five _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                </svg>
-                                Fórmula de Jóvenes (Al menos dos) en alguna de las candidaturas a Presidencia Municipal o Sindicatura.
-                            </li>
-                            <li class="flex items-center text-justify">
-                                <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__six _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                </svg>
-                                Fórmula de candidaturas a Presidente Municipal o Síndicatura perteneciente a grupos vulnerables.
-                            </li>
-                            <li class="flex items-start text-justify">
-                                <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__seven  _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
-                                </svg>
-                                Fórmula de candidaturas en Representación Proporcional perteneciente a grupos vulnerables.
-                            </li>
-                        </ul>
-                        <div class="flex space-x-3 mb-5">
-                            <div class="flex-col text-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                <div class="flex items-center justify-between mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <path d="M10 16v5"/>
-                                        <path d="M14 16v5"/>
-                                        <path d="M8 16h8l-2 -7h-4z"/>
-                                        <path d="M5 11c1.667 -1.333 3.333 -2 5 -2"/>
-                                        <path d="M19 11c-1.667 -1.333 -3.333 -2 -5 -2"/>
-                                        <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
-                                    </svg>
-                                    <span class="_e__female_counter">0</span>
-                                </div>
-                                <span class="font-bold">Mujeres</span>
+	<div class="dark:text-white w-full">
+        <div class="flex gap-6 justify-between">
+            <div data-sticky-container class="relative h-full">
+                <label for="parties" class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400">Seleccione un Partido Político  o Coalición</label>
+                <select name="parties" id="parties" class="mb-10 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ">
+                    <option value="0">Seleccione un Partido Político o Coalición</option>
+                </select>
+                <div class="_p__emblema mb-10"></div>
+                <div class="_e__sticky z-10">
+                    <h2 class="mb-2 text-lg font-semibold text-gray-900 dark:text-white">Reglas:</h2>
+                    <ul class="max-w-md flex-col space-y-2 text-gray-500 list-inside dark:text-gray-400 top-0 mb-3">
+                        <li class="flex items-start text-justify">
+                            <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__one _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                            </svg>
+                            Al menos el 50% de las candidaturas a Presidencias Municipales deben ser mujeres.
+                        </li>
+                        <li class="flex items-start text-justify">
+                            <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__two _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                            </svg>
+                            Al menos un bloque encabezado por fórmula de mujeres.
+                        </li>
+                        <li class="flex items-start text-justify">
+                            <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-green-400 _c__three _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                            </svg>
+                            No postular mujeres en las presidencias municipales de los dos últimos municipios del último bloque.
+                        </li>
+                        <li class="flex items-center text-justify">
+                            <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__four _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                            </svg>
+                            <div>
+                                <p>Integración paritaria en cada bloque.</p>
                             </div>
-                            <div class="flex-col text-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
-                                <div class="flex items-center justify-between mb-2">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                        <path d="M10 16v5"/>
-                                        <path d="M14 16v5"/>
-                                        <path d="M9 9h6l-1 7h-4z"/>
-                                        <path d="M5 11c1.333 -1.333 2.667 -2 4 -2"/>
-                                        <path d="M19 11c-1.333 -1.333 -2.667 -2 -4 -2"/>
-                                        <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
-                                    </svg>
-                                    <span class="_e__male_counter">0</span>
-                                </div>
-                                <span class="font-bold">Hombres</span>
+                        </li>
+                        <li class="flex items-center text-justify">
+                            <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__five _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                            </svg>
+                            Fórmula de Jóvenes (Al menos dos) en alguna de las candidaturas a Presidencia Municipal o Sindicatura.
+                        </li>
+                        <li class="flex items-center text-justify">
+                            <svg class="w-3.5 h-3.5 me-2 flex-shrink-0 text-gray-400 _c__six _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                            </svg>
+                            Fórmula de candidaturas a Presidente Municipal o Síndicatura perteneciente a grupos vulnerables.
+                        </li>
+                        <li class="flex items-start text-justify">
+                            <svg class="w-3.5 h-3.5 me-2 mt-2 flex-shrink-0 text-gray-400 _c__seven  _c__check" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>
+                            </svg>
+                            Fórmula de candidaturas en Representación Proporcional perteneciente a grupos vulnerables.
+                        </li>
+                    </ul>
+                    <div class="flex space-x-3 mb-5">
+                        <div class="flex-col text-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M10 16v5"/>
+                                    <path d="M14 16v5"/>
+                                    <path d="M8 16h8l-2 -7h-4z"/>
+                                    <path d="M5 11c1.667 -1.333 3.333 -2 5 -2"/>
+                                    <path d="M19 11c-1.667 -1.333 -3.333 -2 -5 -2"/>
+                                    <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
+                                </svg>
+                                <span class="_e__female_counter">0</span>
                             </div>
+                            <span class="font-bold">Mujeres</span>
                         </div>
-                        <div class="flex">
+                        <div class="flex-col text-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                            <div class="flex items-center justify-between mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M10 16v5"/>
+                                    <path d="M14 16v5"/>
+                                    <path d="M9 9h6l-1 7h-4z"/>
+                                    <path d="M5 11c1.333 -1.333 2.667 -2 4 -2"/>
+                                    <path d="M19 11c-1.333 -1.333 -2.667 -2 -4 -2"/>
+                                    <path d="M12 4m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/>
+                                </svg>
+                                <span class="_e__male_counter">0</span>
+                            </div>
+                            <span class="font-bold">Hombres</span>
+                        </div>
+                    </div>
+                    <div class="flex">
 <!--                            <button class="_c__button_check w-full justify-center flex items-center focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800">-->
 <!--                                <svg class="w-3.5 h-3.5 me-2 flex-shrink-0" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">-->
 <!--                                    <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5Zm3.707 8.207-4 4a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1 1.414-1.414L9 10.586l3.293-3.293a1 1 0 0 1 1.414 1.414Z"/>-->
@@ -110,16 +109,13 @@ document.querySelector('#app').innerHTML = `
 <!--                            <button class="_c__button_pdf w-full text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">-->
 <!--                                <span>Generar archivo</span>-->
 <!--                            </button>-->
-                        </div>
                     </div>
                 </div>
-                <div class="col-span-5 flex mx-auto _sim__spacing space-x-5">            
-                    <div class="_e__blocks_mr"></div>
-                    <div class="_e__blocks_rp">
-                    </div>
-                </div>
-		    </div>
-		</div>
+            </div>
+            <div class="w-1/2 mx-auto _sim__spacing">            
+                <div class="_e__blocks_mr"></div>
+            </div>
+        </div>
 	</div>
 `
 
@@ -162,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
            <ol class="list-decimal ml-4 text-sm">
                <li class="text-justify">La información que el usuario ingrese en el Simulador no se almacena por ningún motivo, tenga a bien guardar su archivo de configuración si así lo desea.</li>
                <li class="text-justify">Este sistema es una herramienta didáctica que <b><u>NO</u></b> sustituye la revisión que se hará al momento del registro de candidaturas.</li>
-               <li class="text-justify">Las personas que se auto adscriban como no binarias, serán consideradas para ocupar los lugares que le correspondan al género masculino, por ser este el sector que no ha sido históricamente discriminado. (Art. 13 numeral 1, fracción 1, inciso c de los Lineamientos para el registro de Candidaturas, integración de listas de representación proporcional e integración paritaria del Congreso del Estado de Durango para el Proceso Electoral Local 2023 – 2024).</li>
+               <li class="text-justify">Para efectos de la integración de la planilla del Ayuntamiento y las postulaciones que en materia de paridad tienen obligación los partidos políticos, coaliciones y candidaturas comunes, las personas que se autoadscriban como no binarias, serán consideradas para ocupar los lugares que le correspondan al género masculino, por ser este el sector que no ha sido históricamente discriminado. (Artículo 13, numeral 1, fracción II, inciso c) de los Lineamientos para el Registro de Candidaturas para la renovación de los Ayuntamientos del Estado de Durango, para el Proceso Electoral Local 2024-2025)</li>
            </ol>`,
     }).open();
 
@@ -191,7 +187,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    let _e__blocks = document.querySelector('._e__blocks_mr'), _e__blocks_rp = document.querySelector('._e__blocks_rp'),
+    let _e__blocks = document.querySelector('._e__blocks_mr'),
         _p__emblema = document.querySelector('._p__emblema'), _e__female, // All female
         _e__male, // All male
         _e__pride, // All pride
@@ -312,7 +308,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         _e__blocks.innerHTML = "";
-        _e__blocks_rp.innerHTML = "";
         let _HTML__content = '';
 
         for (let entity of Blocks) {
@@ -320,28 +315,25 @@ document.addEventListener('DOMContentLoaded', () => {
                 for (let block of entity.blocks) {
                     for (let key in block) {
                         // Prints the block number
-                        _HTML__content += '<div class="animate__animated animate__faster animate__zoomIn bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md" data-block="' + key + '" data-blocktype="electoral_block">' + '<h1 class="text-2xl font-sans font-semibold py-3 text-red-400 _c__block_' + key + '_text">Bloque ' + key + '</h1>'
+                        _HTML__content += '<div class="animate__animated animate__faster animate__zoomIn w-full bg-gray-200 p-4 my-4 dark:bg-gray-800 dark:text-white rounded-md" data-block="' + key + '" data-blocktype="electoral_block">' + '<h1 class="text-2xl font-sans font-semibold py-3 text-red-400 _c__block_' + key + '_text">Bloque ' + key + '</h1>'
 
-                            + '<div class="grid w-full gap-6 md:grid-cols-6 sm:grid-cols-4 grid-cols-2 grid-flow-row-dense auto-cols-max">'
+                            + '<div class="w-full flex flex-col">'
                         for (const [index, municipality] of block[key].municipalities.entries()) {
                             _HTML__content += `
-                                        <button class="municipality-button relative flex items-end py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
-                                            data-municipality="${municipality.municipality.name}" 
-                                            data-rentability="${municipality.rentability}"
-                                            data-councils="${municipality.municipality.councils}"
-                                            data-first="${index === 0 ? 'true' : 'false'}" 
-                                            data-block="${key}">
-                                            <svg class="shrink-0 inline w-4 h-4 me-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
-                                                <path d="M10 .5a9.5 9.5 0 1 0 9.5 9.5A9.51 9.51 0 0 0 10 .5ZM9.5 4a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3ZM12 15H8a1 1 0 0 1 0-2h1v-3H8a1 1 0 0 1 0-2h2a1 1 0 1 1 1 1v4h1a1 1 0 1 1 0 2Z"/>
-                                            </svg>
-                                            <span class="sr-only">Estatus</span>
-                                            <div class="flex w-full">
-                                                <span class="font-medium self-start">${municipality.municipality.name}</span>
-                                            </div>
-                                            <div class="absolute inline-flex items-center justify-center h-6 px-1 text-xs text-white bg-green-500/50 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">
-                                                ${municipality.rentability}%
-                                            </div>
-                                        </button>
+                                <button class="municipality-button relative flex items-end py-2.5 px-5 me-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+                                    data-municipality="${municipality.municipality.name}" 
+                                    data-rentability="${municipality.rentability}"
+                                    data-councils="${municipality.municipality.councils}"
+                                    data-first="${index === 0 ? 'true' : 'false'}" 
+                                    data-block="${key}">
+                                    <span class="sr-only">Estatus</span>
+                                    <div class="flex w-full">
+                                        <span class="font-medium self-start">${municipality.municipality.name}</span>
+                                    </div>
+                                    <div class="absolute inline-flex items-center justify-center h-6 px-1 text-xs text-white bg-green-500/50 border-2 border-white rounded-full -top-2 -end-2 dark:border-gray-900">
+                                        ${municipality.rentability}%
+                                    </div>
+                                </button>
                             `
                             // Prints the municipality capital inside n block
                         }
@@ -381,27 +373,27 @@ document.addEventListener('DOMContentLoaded', () => {
                 let councilsHTMLArray = [];
 
                 for (let i = 0; i < totalCouncils; i++) {
-                    const savedCouncil = modalStates[modalId]?.councils[i] || { proprietor: "", substitute: "" };
-                    console.log("savedCouncil: ", savedCouncil?.proprietor);
+                    const savedCouncil = modalStates[modalId]?.councils[i] || {proprietor: "", substitute: ""};
+                    console.log("savedCouncil: ", savedCouncil);
                     councilsHTMLArray.push(`         
                         <div class="grid grid-cols-2 gap-2">
                             <div>
                                 <p class="font-semibold text-md mb-1">Propietario:</p>
                                 <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
-                                    ${generateRadioButtons(modalId, `councils-${i}`, "proprietor",  savedCouncil?.proprietor)}
+                                    ${generateRadioButtons(modalId, `councils-${i}`, "proprietor", savedCouncil?.proprietor)}
                                 </div>
                             </div>
                             <div>
                                 <p class="font-semibold text-md mb-1">Suplente:</p>
                                 <div class="bg-gray-100 dark:bg-gray-900 p-2 rounded-2xl shadow">
-                                    ${generateRadioButtons(modalId, `councils-${i}`, "substitute",  savedCouncil?.substitute)}
+                                    ${generateRadioButtons(modalId, `councils-${i}`, "substitute", savedCouncil?.substitute)}
                                 </div>
                             </div>
                         </div>
                     `);
                 }
 
-                const councilsHTML = `<h3 class="mt-4 font-semibold">Regidurías</h3>` + councilsHTMLArray.join("");
+                const councilsHTML = `<h3 class="mt-4 font-semibold text-lg text-red-400">Regidurías</h3>` + councilsHTMLArray.join("");
 
                 // Crear el modal y personalizar el contenido
                 const blockModal = new Modal({
@@ -410,7 +402,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <div class="modal-content">
                             <p>Bloque: ${block}</p>
                             
-                            <h3 class="mt-4 font-semibold text-lg">Presidencia Municipal</h3>
+                            <h3 class="mt-4 font-semibold text-lg text-red-400">Presidencia Municipal</h3>
                             <div class="grid grid-cols-2 gap-2">
                                 <div>
                                     <p class="font-semibold text-md mb-1">Propietario:</p>
@@ -426,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
                                 </div>
                             </div>
             
-                            <h3 class="mt-4 font-semibold text-lg">Sindicatura</h3>
+                            <h3 class="mt-4 font-semibold text-lg text-red-400">Sindicatura</h3>
                             <div class="grid grid-cols-2 gap-2">
                                 <div>
                                     <p class="font-semibold text-md mb-1">Propietario:</p>
@@ -457,6 +449,8 @@ document.addEventListener('DOMContentLoaded', () => {
                             const category = nameParts.pop(); // Penúltimo elemento (presidency/sindicature)
                             const attribute = nameParts[0] === "gender" ? "gender" : "special";
 
+                            console.warn("nameParts: ", nameParts, "type: ", type, "category: ", category, "attribute: ", attribute);
+
                             // Guardar selección en modalStates
                             if (!modalStates[modalId][category][type]) {
                                 modalStates[modalId][category][type] = {};
@@ -475,12 +469,12 @@ document.addEventListener('DOMContentLoaded', () => {
                             const type = nameParts.pop();
                             const attribute = nameParts[0] === "gender" ? "gender" : "special";
 
-                            console.log("nameParts: ", nameParts, "index: ", index, "type: ", type, "attribute: ", attribute);
+                            console.warn("CouncilNameParts", "nameParts: ", nameParts, "index: ", index, "type: ", type, "attribute: ", attribute);
 
                             if (!modalStates[modalId].councils[index]) {
-                                modalStates[modalId].councils[index] = {proprietor: "", substitute: ""};
+                                modalStates[modalId].councils[index] = {proprietor: {gender: "", special: ""}, substitute: {gender: "", special: ""}};
                             }
-                            modalStates[modalId].councils[index][type] = e.target.value;
+                            modalStates[modalId].councils[index][type][attribute] = e.target.value;
                         });
                     });
 
@@ -699,7 +693,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                 console.log("sindicatureWoman: ", sindicatureWoman.value);
                 // Avisamos al usuario
-                Modal.alert(`Si por la presidencia municipal contiende un hombre, la candidatura para la sindicatura deberá ser para una mujer, la primera regiduría para un hombre, la segunda para una mujer, y así sucesivamente hasta agotar todas las posiciones (Art. 184 inciso a) II de la LIPEED) </br> <small>LIPEED: Ley de Instituciones y Procedimientos Electorales Para el Estado de Durango.</small>`);
+                // Modal.alert(`Si por la presidencia municipal contiende un hombre, la candidatura para la sindicatura deberá ser para una mujer, la primera regiduría para un hombre, la segunda para una mujer, y así sucesivamente hasta agotar todas las posiciones (Art. 184 inciso a) II de la LIPEED) </br> <small>LIPEED: Ley de Instituciones y Procedimientos Electorales Para el Estado de Durango.</small>`);
             }
         });
     });
@@ -709,10 +703,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const savedSpecial = modalStates[modalId]?.[category]?.[type]?.special || "";
         const ec = category.split("-")[0]; // Extracted Category
         console.log("real_category: ", ec);
+        console.log("selectedValue: ", selectedValue, "name: ", 'special-' + modalId + '-' + category + '-' + type);
         return `
             <ul class="grid w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 <li>
-                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-m" value="Mujer" ${ec === "councils" ? (selectedValue === "Mujer" ? "checked" : "") : (selectedValue.gender === "Mujer" ? "checked" : "") } class="hidden peer">
+                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-m" value="Mujer" ${(selectedValue.gender === "Mujer" ? "checked" : "")} class="hidden peer">
                     <label for="gender-${modalId}-${category}-${type}-m" id="gender-${modalId}-${category}-${type}-m" data-gender="Mujer" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">                           
                         <div class="block">
                             <div class="w-full text-sm">Mujer</div>
@@ -729,7 +724,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </label>
                 </li>
                 <li>
-                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-n" value="No-Binario" ${ec === "councils" ? (selectedValue === "No-Binario" ? "checked" : "") : (selectedValue.gender === "No-Binario" ? "checked" : "")}  class="hidden peer">
+                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-n" value="No-Binario" ${(selectedValue.gender === "No-Binario" ? "checked" : "")}  class="hidden peer">
                     <label for="gender-${modalId}-${category}-${type}-n" id="gender-${modalId}-${category}-${type}-n" data-gender="No-Binario" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <div class="block">
                             <div class="w-full text-sm">No Binario</div>
@@ -744,7 +739,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     </label>
                 </li>
                 <li>
-                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-h" value="Hombre" ${ec === "councils" ? (selectedValue === "Hombre" ? "checked" : "") : (selectedValue.gender === "Hombre" ? "checked" : "")}  class="hidden peer">
+                    <input type="radio" name="gender-${modalId}-${category}-${type}" id="gender-${modalId}-${category}-${type}-h" value="Hombre" ${(selectedValue.gender === "Hombre" ? "checked" : "")}  class="hidden peer">
                     <label for="gender-${modalId}-${category}-${type}-h" id="gender-${modalId}-${category}-${type}-h" data-gender="Hombre" class="inline-flex items-center justify-between w-full p-5 text-gray-500 bg-white border-2 border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 dark:peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                         <div class="block">
                             <div class="w-full text-sm">Hombre</div>
@@ -762,8 +757,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 </li>
             </ul>
             <p class="mt-2">Grupos:</p>
-            <label><input type="radio" name="special-${modalId}-${category}-${type}" value="Joven" ${ec === "councils" ? (selectedValue === "Joven" ? "checked" : "") : (selectedValue.gender === "Joven" ? "checked" : "")} > Jóven</label>
-            <label><input type="radio" name="special-${modalId}-${category}-${type}" value="Vulnerable" ${ec === "councils" ? (selectedValue === "Vulnerable" ? "checked" : "") : (selectedValue.gender === "Vulnerable" ? "checked" : "")} >Vulnerable</label>
+            <label><input type="radio" name="special-${modalId}-${category}-${type}" value="Joven" ${(selectedValue.special === "Joven" ? "checked" : "")} > Jóven</label>
+            <label><input type="radio" name="special-${modalId}-${category}-${type}" value="Vulnerable" ${(selectedValue.special === "Vulnerable" ? "checked" : "")} >Vulnerable</label>
             
     `;
     }
